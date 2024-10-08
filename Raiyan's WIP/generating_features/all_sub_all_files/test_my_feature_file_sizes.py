@@ -1,9 +1,9 @@
 import numpy as np
 
 # Load the feature maps for train, validate, and test sets
-data_train = np.load('train_features_all_sub_all_files_wooutlier.npy')
-data_validate = np.load('val_features_all_sub_all_files_wooutlier.npy')
-data_test = np.load('test_features_all_sub_all_files_wooutlier.npy')
+data_train = np.load('woutlier/train_features_all_sub_all_files_woutlier.npy')
+data_validate = np.load('woutlier/val_features_all_sub_all_files_woutlier.npy')
+data_test = np.load('woutlier/test_features_all_sub_all_files_woutlier.npy')
 
 # Get the number of samples in each set (assuming the first dimension represents samples)
 train_size = np.shape(data_train)[3]
@@ -29,12 +29,14 @@ print(f"Validate Ratio: {validate_ratio:.2f}")
 print(f"Test Ratio: {test_ratio:.2f}")
 
 # Output from running:
-# Train Shape: (8, 8, 5, 24013)
-# Validate Shape: (8, 8, 5, 8004)
-# Test Shape: (8, 8, 5, 8005)
+# Train Shape: (8, 8, 5, 24050)
+# Validate Shape: (8, 8, 5, 8017)
+# Test Shape: (8, 8, 5, 8016)
 # Train Ratio: 0.60
 # Validate Ratio: 0.20
 # Test Ratio: 0.20
+
+# Total Frames: 40083
 
 # ----------------------------------------------
 # ORIGINAL FEATURE_MAP SIZES IN REPOSITORY:
@@ -45,4 +47,6 @@ print(f"Test Ratio: {test_ratio:.2f}")
 # Train Ratio: 0.60
 # Validate Ratio: 0.20
 # Test Ratio: 0.20
+
+# Total Frames: 40083
 # ----------------------------------------------
