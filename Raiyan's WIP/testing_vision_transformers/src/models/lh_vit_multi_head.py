@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from einops import rearrange
 
 # 1. RES-SE Block Definition
 class ResSEBlock(nn.Module):
@@ -73,6 +72,7 @@ class LHVITMultiHead(nn.Module):
         )
         self.feature_enhancer = RadarViT(input_dim=5, embed_dim=16, num_heads=4)
         self.classifier = nn.Sequential(
+            nn.Dropout(p=0.3),  # 30% chance to drop neurons
             nn.Linear(256, num_classes)  # Adjust based on flattened input size
         )
 
