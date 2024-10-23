@@ -36,9 +36,9 @@ class SqueezeExcitation(nn.Module):
         out = torch.sigmoid(self.fc2(out)).view(batch_size, channels, 1, 1)
         return x * out
 
-# 2. Radar-ViT: Vision Transformer for Feature Enhancement
+# 2. RadarViT: Vision Transformer with Single Head Attention
 class RadarViT(nn.Module):
-    def __init__(self, dim=5, num_heads=1, mlp_ratio=4.0):  # Set num_heads to 1
+    def __init__(self, dim=5, num_heads=1, mlp_ratio=4.0):
         super(RadarViT, self).__init__()
         self.norm1 = nn.LayerNorm(dim)
         self.attn = nn.MultiheadAttention(dim, num_heads, batch_first=True)
@@ -53,7 +53,7 @@ class RadarViT(nn.Module):
         B, C, N, F = x.size()
         x = x.view(B, N, F)  # Reshape to [B, N, F]
 
-        # Apply multi-head attention
+        # Apply single head attention
         attn_out, _ = self.attn(self.norm1(x), self.norm1(x), self.norm1(x))
         x = x + attn_out  # Residual connection
 
@@ -64,9 +64,9 @@ class RadarViT(nn.Module):
         return x
 
 # 3. LH-ViT Network: Combining Feature Extraction and Enhancement
-class LHVIT(nn.Module):
+class LHVITSingleHead(nn.Module):
     def __init__(self, in_channels=1, num_classes=10):  # Adjust num_classes if needed
-        super(LHVIT, self).__init__()
+        super(LHVITSingleHead, self).__init__()
         self.feature_extractor = nn.Sequential(
             ResSEBlock(in_channels),
             nn.MaxPool2d((2, 1)),  # Pool along points, not features

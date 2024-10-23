@@ -2,7 +2,8 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader, TensorDataset
-from models.lh_vit import LHVIT  # Ensure your model is in the models folder
+from models.lh_vit_single_head import LHVITSingleHead
+from models.lh_vit_multi_head import LHVITMultiHead
 
 # Load pre-split data
 X_train, y_train = torch.load('../data/processed/train_data.pt')
@@ -20,7 +21,7 @@ val_loader = DataLoader(TensorDataset(X_val, y_val), batch_size=16)
 
 # Initialize the model, loss function, and optimizer
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model = LHVIT(in_channels=1, num_classes=10).to(device)
+model = LHVITMultiHead(in_channels=1, num_classes=10).to(device)
 
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.01)
@@ -36,6 +37,7 @@ for epoch in range(2):  # Run for 2 epochs
 
         # Forward pass
         outputs = model(inputs)
+        
         loss = criterion(outputs, labels)
 
         # Backward pass and optimization
