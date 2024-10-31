@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import time
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV
+from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV, RandomizedSearchCV
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.metrics import accuracy_score, confusion_matrix
 import xgboost as xgb
@@ -60,13 +60,17 @@ X_train_selected = X_train[:, indices[:top_n]]
 X_val_selected = X_val[:, indices[:top_n]]
 X_test_selected = X_test[:, indices[:top_n]]
 
-# Hyperparameter grid for full training (using single parameters for this run)
+# Hyperparameter grid for full training
 param_grid = {
-    'max_depth': [9],              
-    'learning_rate': [0.1],   
-    'n_estimators': [1000],      
-    'subsample': [0.8],          
-    'colsample_bytree': [1]
+    'max_depth': [9, 12, 15],
+    'learning_rate': [0.05, 0.1],
+    'n_estimators': [300, 500, 1000],
+    'subsample': [0.75, 0.8],
+    'colsample_bytree': [0.6, 0.8, 1.0],
+    'gamma': [0, 0.1, 0.3],
+    'min_child_weight': [3, 5],
+    'reg_alpha': [0, 1, 5],  # L1 regularization
+    'reg_lambda': [1, 5]     # L2 regularization
 }
 
 # XGBoost model with GPU support
@@ -84,8 +88,14 @@ skf = StratifiedKFold(n_splits=k, shuffle=True, random_state=42)
 logging.info(f"Number of stratified cross-validation folds: {k} folds")
 
 # Initialize GridSearchCV
-grid_search = GridSearchCV(
-    estimator=xgb_model, param_grid=param_grid, scoring='accuracy', cv=skf, n_jobs=-1, verbose=0
+# param_search = GridSearchCV(
+#     estimator=xgb_model, param_grid=param_grid, scoring='accuracy', cv=skf, n_jobs=-1, verbose=0
+# )
+
+# Initialize RandomizedSearchCV
+param_search = RandomizedSearchCV(
+    estimator=xgb_model, param_distributions=param_grid, scoring='accuracy', cv=skf, n_jobs=-1,
+    n_iter=5, verbose=0, random_state=42
 )
 
 # Start timing the training process
@@ -93,7 +103,7 @@ start_time = time.time()
 logging.info("Starting full cross-validation and training with selected features...")
 
 # Fit the model using only the selected features
-grid_search.fit(X_train_selected, y_train)
+param_search.fit(X_train_selected, y_train)
 
 # Calculate time taken
 end_time = time.time()
@@ -101,8 +111,8 @@ elapsed_time = end_time - start_time
 logging.info(f"Training completed in {elapsed_time:.2f} seconds.")
 
 # Log the best parameters and cross-validation accuracy
-best_params = grid_search.best_params_
-best_score = grid_search.best_score_ * 100
+best_params = param_search.best_params_
+best_score = param_search.best_score_ * 100
 
 logging.info(f"Best Parameters: {best_params}")
 logging.info(f"Best Cross-Validation Accuracy: {best_score:.2f}%")
@@ -111,12 +121,12 @@ print(f"Best Parameters: {best_params}")
 print(f"Best Cross-Validation Accuracy: {best_score:.2f}%")
 
 # Evaluate on validation set
-y_val_pred = grid_search.best_estimator_.predict(X_val_selected)
+y_val_pred = param_search.best_estimator_.predict(X_val_selected)
 val_accuracy = accuracy_score(y_val, y_val_pred)
 logging.info(f"Validation Accuracy: {val_accuracy * 100:.2f}%")
 
 # Evaluate on test set
-y_test_pred = grid_search.best_estimator_.predict(X_test_selected)
+y_test_pred = param_search.best_estimator_.predict(X_test_selected)
 test_accuracy = accuracy_score(y_test, y_test_pred)
 logging.info(f"Test Accuracy: {test_accuracy * 100:.2f}%")
 
