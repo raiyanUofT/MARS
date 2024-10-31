@@ -18,15 +18,19 @@ logging.basicConfig(filename='feature_selection.log', level=logging.INFO,
 np.random.seed(42)
 
 # Load the full dataset and drop missing values
-data = pd.read_csv('allRadarData.csv').dropna()
+data = pd.read_csv('allRadarDataWithExtendedFeatures.csv').dropna()
 
 # Select relevant features and labels
 relevant_features = [
     'NumPoints', 'MeanX', 'StdX', 'MeanY', 'StdY', 'MeanZ', 'StdZ',
     'MeanDoppler', 'StdDoppler', 'MeanIntensity', 'StdIntensity',
     'RangeX', 'RangeY', 'RangeZ', 'SkewX', 'KurtX', 'SkewY', 
-    'KurtY', 'SkewZ', 'KurtZ', 'NumOccupiedVoxels'
+    'KurtY', 'SkewZ', 'KurtZ', 'NumOccupiedVoxels',
+    'VoxelDensity', 'MaxIntensity', 'MinIntensity', 'MeanRadialDist',
+    'StdRadialDist', 'VoxelEntropy', 'PCA_DirectionX', 'PCA_DirectionY',
+    'PCA_DirectionZ', 'ExplainedVariance', 'MeanGradX', 'MeanGradY', 'MeanGradZ'
 ]
+
 X = data[relevant_features]
 y = LabelEncoder().fit_transform(data['ExerciseLabel'])
 
@@ -51,7 +55,7 @@ importances = rf_model.feature_importances_
 indices = np.argsort(importances)[::-1]  # Sort in descending order
 
 # Select top N features
-top_n = 22
+top_n = 25
 top_features = [relevant_features[i] for i in indices[:top_n]]
 logging.info(f"Top {top_n} features selected: {top_features}")
 
@@ -61,16 +65,28 @@ X_val_selected = X_val[:, indices[:top_n]]
 X_test_selected = X_test[:, indices[:top_n]]
 
 # Hyperparameter grid for full training
+# param_grid = {
+#     'max_depth': [9, 12, 15],
+#     'learning_rate': [0.05, 0.1],
+#     'n_estimators': [300, 500, 1000],
+#     'subsample': [0.75, 0.8],
+#     'colsample_bytree': [0.6, 0.8, 1.0],
+#     'gamma': [0, 0.1, 0.3],
+#     'min_child_weight': [3, 5],
+#     'reg_alpha': [0, 1, 5],  # L1 regularization
+#     'reg_lambda': [1, 5]     # L2 regularization
+# }
+
 param_grid = {
-    'max_depth': [9, 12, 15],
-    'learning_rate': [0.05, 0.1],
-    'n_estimators': [300, 500, 1000],
-    'subsample': [0.75, 0.8],
-    'colsample_bytree': [0.6, 0.8, 1.0],
-    'gamma': [0, 0.1, 0.3],
-    'min_child_weight': [3, 5],
-    'reg_alpha': [0, 1, 5],  # L1 regularization
-    'reg_lambda': [1, 5]     # L2 regularization
+    'max_depth': [9],
+    'learning_rate': [0.1],
+    'n_estimators': [300],
+    'subsample': [0.8],
+    'colsample_bytree': [1.0],
+    'gamma': [0.1],
+    'min_child_weight': [3],
+    'reg_alpha': [1],  # L1 regularization
+    'reg_lambda': [1]     # L2 regularization
 }
 
 # XGBoost model with GPU support
@@ -83,20 +99,20 @@ xgb_model = xgb.XGBClassifier(
 )
 
 # Stratified K-Fold Cross-Validation
-k = 10
+k = 5
 skf = StratifiedKFold(n_splits=k, shuffle=True, random_state=42)
 logging.info(f"Number of stratified cross-validation folds: {k} folds")
 
 # Initialize GridSearchCV
-# param_search = GridSearchCV(
-#     estimator=xgb_model, param_grid=param_grid, scoring='accuracy', cv=skf, n_jobs=-1, verbose=0
-# )
+param_search = GridSearchCV(
+    estimator=xgb_model, param_grid=param_grid, scoring='accuracy', cv=skf, n_jobs=-1, verbose=0
+)
 
 # Initialize RandomizedSearchCV
-param_search = RandomizedSearchCV(
-    estimator=xgb_model, param_distributions=param_grid, scoring='accuracy', cv=skf, n_jobs=-1,
-    n_iter=5, verbose=0, random_state=42
-)
+# param_search = RandomizedSearchCV(
+#     estimator=xgb_model, param_distributions=param_grid, scoring='accuracy', cv=skf, n_jobs=-1,
+#     n_iter=5, verbose=0, random_state=42
+# )
 
 # Start timing the training process
 start_time = time.time()
@@ -150,8 +166,9 @@ print("Confusion matrix saved as 'full_confusion_matrix.png'.")
 
 
 ###################################################################################################################################################
-# Best Parameter combination so far: {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 9, 'n_estimators': 1000, 'subsample': 0.8}
-# Best Cross-Validation Accuracy: 70.91%
-# Validation Accuracy: 71.64%
-# Test Accuracy: 70.58%
+# 2024-10-31 12:46:30,787 - INFO - Training completed in 161.39 seconds.
+# 2024-10-31 12:46:30,788 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 9, 'n_estimators': 300, 'subsample': 0.8}, 5 folds, top 30 features
+# 2024-10-31 12:46:30,789 - INFO - Best Cross-Validation Accuracy: 73.81%
+# 2024-10-31 12:46:30,959 - INFO - Validation Accuracy: 74.42%
+# 2024-10-31 12:46:31,062 - INFO - Test Accuracy: 73.80%
 ###################################################################################################################################################
