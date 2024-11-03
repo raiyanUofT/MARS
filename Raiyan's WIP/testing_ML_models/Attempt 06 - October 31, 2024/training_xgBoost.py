@@ -1,14 +1,14 @@
 import pandas as pd
 import numpy as np
 import time
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV, RandomizedSearchCV
-from sklearn.preprocessing import LabelEncoder, StandardScaler
-from sklearn.metrics import accuracy_score, confusion_matrix
 import xgboost as xgb
 import matplotlib.pyplot as plt
 import seaborn as sns
 import logging
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV, RandomizedSearchCV
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.metrics import accuracy_score, confusion_matrix
 
 # Configure logging
 logging.basicConfig(filename='training_xgboost.log', level=logging.INFO, 

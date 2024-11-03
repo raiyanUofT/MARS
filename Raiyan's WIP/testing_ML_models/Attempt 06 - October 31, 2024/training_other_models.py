@@ -1,12 +1,12 @@
 import pandas as pd
 import numpy as np
 import time
-from sklearn.model_selection import train_test_split, cross_val_score, GridSearchCV
-from sklearn.preprocessing import LabelEncoder, StandardScaler
-from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
 import logging
+from sklearn.model_selection import train_test_split, cross_val_score, GridSearchCV
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
@@ -167,3 +167,5 @@ for model_name, model in models.items():
                  f"'{model_name.lower().replace(' ', '_')}_confusion_matrix.png'.")
     plt.close()
     print(f"{model_name} confusion matrix saved.")
+    
+logging.info("########################################################################################################################")
