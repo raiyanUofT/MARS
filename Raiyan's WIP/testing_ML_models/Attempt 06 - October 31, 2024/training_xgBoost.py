@@ -11,7 +11,7 @@ import seaborn as sns
 import logging
 
 # Configure logging
-logging.basicConfig(filename='training.log', level=logging.INFO, 
+logging.basicConfig(filename='training_xgboost.log', level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Set random seed for reproducibility
@@ -58,7 +58,7 @@ importances = rf_model.feature_importances_
 indices = np.argsort(importances)[::-1]  # Sort in descending order
 
 # Select top N features
-top_n = 40
+top_n = 20
 top_features = [relevant_features[i] for i in indices[:top_n]]
 logging.info(f"Top {top_n} features selected: {top_features}")
 
@@ -69,14 +69,14 @@ X_test_selected = X_test[:, indices[:top_n]]
 
 # Hyperparameter grid for full training
 # param_grid = {
-#     'max_depth': [9, 12, 15],
-#     'learning_rate': [0.05, 0.1],
-#     'n_estimators': [300, 500, 1000],
+#     'max_depth': [9, 12],
+#     'learning_rate': [0.1],
+#     'n_estimators': [300, 500],
 #     'subsample': [0.75, 0.8],
-#     'colsample_bytree': [0.6, 0.8, 1.0],
+#     'colsample_bytree': [0.8, 1.0],
 #     'gamma': [0, 0.1, 0.3],
 #     'min_child_weight': [3, 5],
-#     'reg_alpha': [0, 1, 5],  # L1 regularization
+#     'reg_alpha': [1, 5],  # L1 regularization
 #     'reg_lambda': [1, 5]     # L2 regularization
 # }
 
@@ -88,8 +88,8 @@ param_grid = {
     'colsample_bytree': [1.0],
     'gamma': [0.1],
     'min_child_weight': [3],
-    'reg_alpha': [1],  # L1 regularization
-    'reg_lambda': [1]     # L2 regularization
+    'reg_alpha': [5],  # L1 regularization
+    'reg_lambda': [5]     # L2 regularization
 }
 
 # XGBoost model with GPU support
@@ -110,12 +110,6 @@ logging.info(f"Number of stratified cross-validation folds: {k} folds")
 param_search = GridSearchCV(
     estimator=xgb_model, param_grid=param_grid, scoring='accuracy', cv=skf, n_jobs=-1, verbose=0
 )
-
-# Initialize RandomizedSearchCV
-# param_search = RandomizedSearchCV(
-#     estimator=xgb_model, param_distributions=param_grid, scoring='accuracy', cv=skf, n_jobs=-1,
-#     n_iter=5, verbose=0, random_state=42
-# )
 
 # Start timing the training process
 start_time = time.time()
@@ -169,18 +163,15 @@ print("Confusion matrix saved as 'full_confusion_matrix.png'.")
 
 
 ###################################################################################################################################################
-# 2024-10-31 14:00:33,360 - INFO - Top 40 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 
+# 2024-11-02 07:39:17,260 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 
 # 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 
-# 'TotalIntensity', 'CovXZ', 'EigVal1', 'VoxelEntropy', 'CovYZ', 'CorrXZ', 'SkewY', 'StdZ', 'RangeY', 'ConvexHullVolume', 'RangeZ', 'StdY', 
-# 'MeanGradX', 'CorrYZ', 'KurtX', 'EigVal2', 'MaxIntensity', 'StdIntensity', 'NumPoints', 'KurtDoppler', 'EigVal3', 'MeanDoppler', 'VoxelDensity']
-
-# 2024-10-31 14:00:33,367 - INFO - Number of stratified cross-validation folds: 5 folds
-# 2024-10-31 14:02:52,031 - INFO - Training completed in 138.66 seconds.
-
-# 2024-10-31 14:02:52,033 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3, 
-# 'n_estimators': 300, 'reg_alpha': 1, 'reg_lambda': 1, 'subsample': 0.8}
-
-# 2024-10-31 14:02:52,034 - INFO - Best Cross-Validation Accuracy: 76.56%
-# 2024-10-31 14:02:52,225 - INFO - Validation Accuracy: 77.00%
-# 2024-10-31 14:02:52,388 - INFO - Test Accuracy: 76.44%
+# 'TotalIntensity', 'CovXZ', 'EigVal1']
+# 2024-11-02 07:39:17,264 - INFO - Number of stratified cross-validation folds: 5 folds
+# 2024-11-02 07:39:17,264 - INFO - Starting full cross-validation and training with selected features...
+# 2024-11-02 07:43:45,474 - INFO - Training completed in 268.21 seconds.
+# 2024-11-02 07:43:45,475 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 15, 'min_child_weight': 3, 
+# 'n_estimators': 1500, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+# 2024-11-02 07:43:45,475 - INFO - Best Cross-Validation Accuracy: 75.83%
+# 2024-11-02 07:43:45,922 - INFO - Validation Accuracy: 75.95%
+# 2024-11-02 07:43:46,368 - INFO - Test Accuracy: 75.87%
 ###################################################################################################################################################
