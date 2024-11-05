@@ -1,0 +1,167 @@
+2024-11-05 10:40:42,522 - INFO - Training set: 31114 samples
+2024-11-05 10:40:42,523 - INFO - Test set: 7779 samples
+2024-11-05 10:40:42,523 - INFO - Starting feature selection with Random Forest...
+2024-11-05 10:40:46,684 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ']
+2024-11-05 10:40:46,690 - INFO - Using 5-fold cross-validation.
+2024-11-05 10:40:46,701 - INFO - Starting hyperparameter tuning for Logistic Regression...
+2024-11-05 10:40:46,701 - INFO - Using GridSearchCV for Logistic Regression
+2024-11-05 10:40:50,716 - INFO - Logistic Regression hyperparameter tuning completed in 4.02 seconds.
+2024-11-05 10:40:50,717 - INFO - Logistic Regression Best Parameters: {'C': 1, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-05 10:40:50,717 - INFO - Logistic Regression Best Cross-Validation Accuracy: 57.37%
+2024-11-05 10:40:50,722 - INFO - Logistic Regression Test Accuracy: 57.68%
+2024-11-05 10:40:50,727 - INFO - Logistic Regression Confusion Matrix:
+[[405   0  36  41 108   1  33  35 114  18]
+ [  0 695  18   3   4  69   1   3   3  76]
+ [ 26  14 277  89  30   8  57  91  53 131]
+ [ 88   2  47 449  88   3  36  72  52  15]
+ [ 57   3  38  43 478   0   6  21  20   9]
+ [  2  98   3   2   2 584  17   3  10  87]
+ [ 29   1 110  49  40   6 220  61  36  79]
+ [ 43   7  72 102  34   4  61 267  93  70]
+ [ 44   0  13  16  27   3  48  34 549   8]
+ [ 19  48  63   2  10  76  41  38  19 563]]
+2024-11-05 10:40:50,756 - INFO - Logistic Regression Precision: 56.61%
+2024-11-05 10:40:50,757 - INFO - Logistic Regression Recall: 57.08%
+2024-11-05 10:40:50,757 - INFO - Logistic Regression F1 Score: 56.51%
+2024-11-05 10:40:50,757 - INFO - Logistic Regression Specificity: 95.30%
+2024-11-05 10:40:50,766 - INFO - Logistic Regression confusion matrix saved as CSV for MATLAB at 'Results/logistic_regression_confusion_matrix.csv'.
+2024-11-05 10:40:50,766 - INFO - ########################################################################################################################
+2024-11-05 10:40:50,767 - INFO - Starting hyperparameter tuning for Decision Tree...
+2024-11-05 10:40:50,767 - INFO - Using GridSearchCV for Decision Tree
+2024-11-05 10:40:53,591 - INFO - Decision Tree hyperparameter tuning completed in 2.82 seconds.
+2024-11-05 10:40:53,592 - INFO - Decision Tree Best Parameters: {'criterion': 'gini', 'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2}
+2024-11-05 10:40:53,592 - INFO - Decision Tree Best Cross-Validation Accuracy: 60.31%
+2024-11-05 10:40:53,595 - INFO - Decision Tree Test Accuracy: 61.22%
+2024-11-05 10:40:53,597 - INFO - Decision Tree Confusion Matrix:
+[[446   1  24  45  74   2  50  29 106  14]
+ [  4 738  19   3   2  38   3   3   1  61]
+ [ 41  11 335  57  23  12 106  95  16  80]
+ [ 54   4  73 515  49   6  62  45  32  12]
+ [ 85   7  26  49 442   2  19  21  18   6]
+ [  3  37  11   2   0 636  11  18   4  86]
+ [ 41   6  79  54  30  20 261  55  39  46]
+ [ 28  10  91  68  21  18  62 381  40  34]
+ [116   0  16  30  22   6  30  29 486   7]
+ [ 16  42  91  19   6  63  65  45  10 522]]
+2024-11-05 10:40:53,612 - INFO - Decision Tree Precision: 60.65%
+2024-11-05 10:40:53,613 - INFO - Decision Tree Recall: 60.57%
+2024-11-05 10:40:53,613 - INFO - Decision Tree F1 Score: 60.60%
+2024-11-05 10:40:53,614 - INFO - Decision Tree Specificity: 95.69%
+2024-11-05 10:40:53,620 - INFO - Decision Tree confusion matrix saved as CSV for MATLAB at 'Results/decision_tree_confusion_matrix.csv'.
+2024-11-05 10:40:53,621 - INFO - ########################################################################################################################
+2024-11-05 10:40:53,621 - INFO - Starting hyperparameter tuning for K-Nearest Neighbors...
+2024-11-05 10:40:53,622 - INFO - Using GridSearchCV for K-Nearest Neighbors
+2024-11-05 10:40:55,449 - INFO - K-Nearest Neighbors hyperparameter tuning completed in 1.83 seconds.
+2024-11-05 10:40:55,449 - INFO - K-Nearest Neighbors Best Parameters: {'metric': 'euclidean', 'n_neighbors': 5, 'weights': 'uniform'}
+2024-11-05 10:40:55,450 - INFO - K-Nearest Neighbors Best Cross-Validation Accuracy: 66.39%
+2024-11-05 10:40:56,081 - INFO - K-Nearest Neighbors Test Accuracy: 66.95%
+2024-11-05 10:40:56,084 - INFO - K-Nearest Neighbors Confusion Matrix:
+[[459   0  21  38  97   1  42  14 111   8]
+ [  1 740  29   5   3  22   4   6   4  58]
+ [ 49  12 405  65  15   5  73  77  19  56]
+ [ 60   7  56 572  28   2  37  41  32  17]
+ [ 78   0  30  48 474   1  19   1  21   3]
+ [  4  31  11   2   0 672  20  12   5  51]
+ [ 55   6 109  40  16  10 296  39  30  30]
+ [ 41   3  90  40  17   6  49 444  28  35]
+ [ 82   0  13  17  21   4  31  22 551   1]
+ [ 18  27  84  18   7  50  44  23  13 595]]
+2024-11-05 10:40:56,095 - INFO - K-Nearest Neighbors Precision: 66.70%
+2024-11-05 10:40:56,095 - INFO - K-Nearest Neighbors Recall: 66.34%
+2024-11-05 10:40:56,096 - INFO - K-Nearest Neighbors F1 Score: 66.46%
+2024-11-05 10:40:56,096 - INFO - K-Nearest Neighbors Specificity: 96.33%
+2024-11-05 10:40:56,103 - INFO - K-Nearest Neighbors confusion matrix saved as CSV for MATLAB at 'Results/k-nearest_neighbors_confusion_matrix.csv'.
+2024-11-05 10:40:56,103 - INFO - ########################################################################################################################
+2024-11-05 10:40:56,103 - INFO - Starting hyperparameter tuning for Support Vector Machine...
+2024-11-05 10:40:56,104 - INFO - Using GridSearchCV for Support Vector Machine
+2024-11-05 10:41:41,689 - INFO - Support Vector Machine hyperparameter tuning completed in 45.58 seconds.
+2024-11-05 10:41:41,689 - INFO - Support Vector Machine Best Parameters: {'C': 1, 'gamma': 'scale', 'kernel': 'rbf'}
+2024-11-05 10:41:41,690 - INFO - Support Vector Machine Best Cross-Validation Accuracy: 69.89%
+2024-11-05 10:41:49,363 - INFO - Support Vector Machine Test Accuracy: 70.61%
+2024-11-05 10:41:49,367 - INFO - Support Vector Machine Confusion Matrix:
+[[446   0  29  16 114   0  35   8 135   8]
+ [  0 764   7   2   4  24   5   1   3  62]
+ [ 23   7 388  44  18   5  69  94  35  93]
+ [ 49   5  37 578  52   1  30  43  51   6]
+ [ 29   0  18  25 553   0  15   0  33   2]
+ [  2  24   5   1   1 676  19  10   9  61]
+ [ 22   0  89  31  23   6 339  45  33  43]
+ [ 23   2  40  34  20   1  54 490  52  37]
+ [ 33   0   8   5  27   0  30  16 621   2]
+ [ 10  18  46   9  10  46  62  26  14 638]]
+2024-11-05 10:41:49,397 - INFO - Support Vector Machine Precision: 70.36%
+2024-11-05 10:41:49,398 - INFO - Support Vector Machine Recall: 70.25%
+2024-11-05 10:41:49,398 - INFO - Support Vector Machine F1 Score: 69.92%
+2024-11-05 10:41:49,399 - INFO - Support Vector Machine Specificity: 96.74%
+2024-11-05 10:41:49,410 - INFO - Support Vector Machine confusion matrix saved as CSV for MATLAB at 'Results/support_vector_machine_confusion_matrix.csv'.
+2024-11-05 10:41:49,410 - INFO - ########################################################################################################################
+2024-11-05 10:41:49,410 - INFO - Starting hyperparameter tuning for Naive Bayes...
+2024-11-05 10:41:49,411 - INFO - Using GridSearchCV for Naive Bayes
+2024-11-05 10:41:49,607 - INFO - Naive Bayes hyperparameter tuning completed in 0.20 seconds.
+2024-11-05 10:41:49,608 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 1e-09}
+2024-11-05 10:41:49,608 - INFO - Naive Bayes Best Cross-Validation Accuracy: 42.91%
+2024-11-05 10:41:49,615 - INFO - Naive Bayes Test Accuracy: 42.99%
+2024-11-05 10:41:49,619 - INFO - Naive Bayes Confusion Matrix:
+[[476   0  11  68  17   2  22  23  70 102]
+ [  2 431  27  75   4 161   2   9   0 161]
+ [ 64   4  59 173   0   8  20  91  16 341]
+ [123   4  15 472  14   1  25  94  26  78]
+ [387   0  15 100  83   0   4  18   8  60]
+ [  4  75   3  16   0 562   8   2   7 131]
+ [ 59   0  22 115   4   7 105  41  11 267]
+ [ 90   2  15 171   1   4  21 198  38 213]
+ [208   0   0  94   3   5  35   6 318  73]
+ [ 23  18  28  15   2  92  23  30   8 640]]
+2024-11-05 10:41:49,631 - INFO - Naive Bayes Precision: 48.47%
+2024-11-05 10:41:49,631 - INFO - Naive Bayes Recall: 41.31%
+2024-11-05 10:41:49,632 - INFO - Naive Bayes F1 Score: 39.82%
+2024-11-05 10:41:49,632 - INFO - Naive Bayes Specificity: 93.63%
+2024-11-05 10:41:49,641 - INFO - Naive Bayes confusion matrix saved as CSV for MATLAB at 'Results/naive_bayes_confusion_matrix.csv'.
+2024-11-05 10:41:49,642 - INFO - ########################################################################################################################
+2024-11-05 10:41:49,642 - INFO - Starting hyperparameter tuning for Random Forest...
+2024-11-05 10:41:49,643 - INFO - Using GridSearchCV for Random Forest
+2024-11-05 10:42:17,569 - INFO - Random Forest hyperparameter tuning completed in 27.93 seconds.
+2024-11-05 10:42:17,570 - INFO - Random Forest Best Parameters: {'bootstrap': True, 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}
+2024-11-05 10:42:17,570 - INFO - Random Forest Best Cross-Validation Accuracy: 73.96%
+2024-11-05 10:42:17,696 - INFO - Random Forest Test Accuracy: 73.99%
+2024-11-05 10:42:17,698 - INFO - Random Forest Confusion Matrix:
+[[494   0  13  25  98   0  28  12 118   3]
+ [  1 787  11   3   2  27   1   1   2  37]
+ [ 28   6 422  55  13   3  56  90  21  82]
+ [ 54   4  22 624  32   1  27  49  28  11]
+ [ 37   0  12  32 558   0   8   5  22   1]
+ [  2  21   1   3   1 700   8  16   3  53]
+ [ 27   2  72  42  13   1 369  46  25  34]
+ [ 20   3  45  40  14   1  42 525  34  29]
+ [ 54   0   9   5  26   0  22  13 613   0]
+ [  6  24  53  11   4  38  42  32   5 664]]
+2024-11-05 10:42:17,710 - INFO - Random Forest Precision: 73.43%
+2024-11-05 10:42:17,711 - INFO - Random Forest Recall: 73.60%
+2024-11-05 10:42:17,711 - INFO - Random Forest F1 Score: 73.37%
+2024-11-05 10:42:17,712 - INFO - Random Forest Specificity: 97.11%
+2024-11-05 10:42:17,719 - INFO - Random Forest confusion matrix saved as CSV for MATLAB at 'Results/random_forest_confusion_matrix.csv'.
+2024-11-05 10:42:17,720 - INFO - ########################################################################################################################
+2024-11-05 10:42:17,720 - INFO - Starting hyperparameter tuning for XGBoost...
+2024-11-05 10:42:17,721 - INFO - Using GridSearchCV for XGBoost
+2024-11-05 10:42:30,906 - INFO - XGBoost hyperparameter tuning completed in 13.19 seconds.
+2024-11-05 10:42:30,906 - INFO - XGBoost Best Parameters: {'colsample_bytree': 0.8, 'gamma': 0, 'learning_rate': 0.1, 'max_depth': 6, 'min_child_weight': 1, 'n_estimators': 100, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2024-11-05 10:42:30,906 - INFO - XGBoost Best Cross-Validation Accuracy: 72.99%
+2024-11-05 10:42:30,932 - INFO - XGBoost Test Accuracy: 73.35%
+2024-11-05 10:42:30,934 - INFO - XGBoost Confusion Matrix:
+[[483   0  20  29  89   0  36  12 119   3]
+ [  0 780  13   1   3  20   5   1   2  47]
+ [ 17   6 424  60  11   3  55  93  26  81]
+ [ 43   3  25 629  32   0  31  47  31  11]
+ [ 43   0  15  26 555   1  10   5  20   0]
+ [  2  26   3   2   1 698  14   7   4  51]
+ [ 24   1  93  38  15   3 350  50  26  31]
+ [ 13   3  43  47  14   2  52 503  44  32]
+ [ 36   0   7   9  28   1  22  17 622   0]
+ [  3  19  56  16   2  35  46  33   7 662]]
+2024-11-05 10:42:30,947 - INFO - XGBoost Precision: 72.84%
+2024-11-05 10:42:30,947 - INFO - XGBoost Recall: 72.90%
+2024-11-05 10:42:30,947 - INFO - XGBoost F1 Score: 72.69%
+2024-11-05 10:42:30,947 - INFO - XGBoost Specificity: 97.04%
+2024-11-05 10:42:30,951 - INFO - XGBoost confusion matrix saved as CSV for MATLAB at 'Results/xgboost_confusion_matrix.csv'.
+2024-11-05 10:42:30,952 - INFO - ########################################################################################################################
+2024-11-05 10:42:30,957 - INFO - Model results saved to 'Results/metrics.csv'

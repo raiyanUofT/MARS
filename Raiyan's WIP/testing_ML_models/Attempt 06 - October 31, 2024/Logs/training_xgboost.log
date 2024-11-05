@@ -1,0 +1,848 @@
+2024-10-31 08:07:55,607 - INFO - Training set: 23619 samples
+2024-10-31 08:07:55,607 - INFO - Validation set: 7873 samples
+2024-10-31 08:07:55,608 - INFO - Test set: 7873 samples
+2024-10-31 08:07:55,608 - INFO - Starting feature selection with Random Forest...
+2024-10-31 08:07:57,188 - INFO - Top 10 features selected: ['MeanX', 'MeanY', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'StdZ', 'StdY']
+2024-10-31 08:07:57,190 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 08:09:12,767 - INFO - Training completed in 75.58 seconds.
+2024-10-31 08:09:12,768 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 9, 'n_estimators': 150, 'subsample': 0.8}
+2024-10-31 08:09:12,769 - INFO - Best Cross-Validation Accuracy: 65.98%
+2024-10-31 08:09:12,832 - INFO - Validation Accuracy: 66.24%
+2024-10-31 08:09:12,978 - INFO - Test Accuracy: 65.62%
+2024-10-31 08:09:12,982 - INFO - Confusion Matrix:
+[[458   1  43  42 101   1  36  13 107   9]
+ [  6 680  16  32   8  61  13   7   1  51]
+ [ 24   5 359  87  20   3  90  95  27  68]
+ [ 48   6  53 562  41   2  32  72  27  13]
+ [ 43   2  14  28 555   0  12   8  36   3]
+ [  2  54  19   3   0 612  10  23   7  80]
+ [ 27   4 116  40  20   2 308  43  17  56]
+ [ 32   3  78  52  23  10  37 453  35  34]
+ [ 74   1  13  13  12   3  20  35 595   6]
+ [ 17  41  58  22   3  54  57  33  11 584]]
+2024-10-31 08:09:13,386 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 08:09:41,902 - INFO - Training set: 23619 samples
+2024-10-31 08:09:41,902 - INFO - Validation set: 7873 samples
+2024-10-31 08:09:41,903 - INFO - Test set: 7873 samples
+2024-10-31 08:09:41,903 - INFO - Starting feature selection with Random Forest...
+2024-10-31 08:09:43,653 - INFO - Top 15 features selected: ['MeanX', 'MeanY', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'StdZ', 'StdY', 'SkewY', 'StdIntensity', 'RangeY', 'RangeZ', 'KurtX']
+2024-10-31 08:09:43,656 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 08:11:03,083 - INFO - Training completed in 79.43 seconds.
+2024-10-31 08:11:03,084 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 9, 'n_estimators': 150, 'subsample': 0.8}
+2024-10-31 08:11:03,084 - INFO - Best Cross-Validation Accuracy: 68.20%
+2024-10-31 08:11:03,143 - INFO - Validation Accuracy: 68.68%
+2024-10-31 08:11:03,201 - INFO - Test Accuracy: 67.88%
+2024-10-31 08:11:03,204 - INFO - Confusion Matrix:
+[[480   0  34  39  92   0  35  16 107   8]
+ [  3 705  18  21  10  60   5   8   1  44]
+ [ 22   3 358  91  19   1  93  94  28  69]
+ [ 47   4  48 584  40   1  28  62  29  13]
+ [ 37   2  16  25 563   0   7   7  42   2]
+ [  3  46  13   2   1 635  10  22   7  71]
+ [ 27   1 111  44  17   1 322  42  21  47]
+ [ 28   2  72  46  22   6  36 483  29  33]
+ [ 68   0  21  17  20   0  16  16 609   5]
+ [ 11  35  58  22   6  43  51  40   9 605]]
+2024-10-31 08:11:03,587 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 08:11:39,837 - INFO - Training set: 23619 samples
+2024-10-31 08:11:39,837 - INFO - Validation set: 7873 samples
+2024-10-31 08:11:39,838 - INFO - Test set: 7873 samples
+2024-10-31 08:11:39,838 - INFO - Starting feature selection with Random Forest...
+2024-10-31 08:11:41,593 - INFO - Top 15 features selected: ['MeanX', 'MeanY', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'StdZ', 'StdY', 'SkewY', 'StdIntensity', 'RangeY', 'RangeZ', 'KurtX']
+2024-10-31 08:11:41,596 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 08:14:07,400 - INFO - Training completed in 145.80 seconds.
+2024-10-31 08:14:07,401 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 9, 'n_estimators': 150, 'subsample': 0.8}
+2024-10-31 08:14:07,402 - INFO - Best Cross-Validation Accuracy: 68.73%
+2024-10-31 08:14:07,460 - INFO - Validation Accuracy: 68.68%
+2024-10-31 08:14:07,512 - INFO - Test Accuracy: 67.88%
+2024-10-31 08:14:07,515 - INFO - Confusion Matrix:
+[[480   0  34  39  92   0  35  16 107   8]
+ [  3 705  18  21  10  60   5   8   1  44]
+ [ 22   3 358  91  19   1  93  94  28  69]
+ [ 47   4  48 584  40   1  28  62  29  13]
+ [ 37   2  16  25 563   0   7   7  42   2]
+ [  3  46  13   2   1 635  10  22   7  71]
+ [ 27   1 111  44  17   1 322  42  21  47]
+ [ 28   2  72  46  22   6  36 483  29  33]
+ [ 68   0  21  17  20   0  16  16 609   5]
+ [ 11  35  58  22   6  43  51  40   9 605]]
+2024-10-31 08:14:07,885 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 08:14:50,238 - INFO - Training set: 23619 samples
+2024-10-31 08:14:50,238 - INFO - Validation set: 7873 samples
+2024-10-31 08:14:50,239 - INFO - Test set: 7873 samples
+2024-10-31 08:14:50,239 - INFO - Starting feature selection with Random Forest...
+2024-10-31 08:14:52,313 - INFO - Top 20 features selected: ['MeanX', 'MeanY', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'StdZ', 'StdY', 'SkewY', 'StdIntensity', 'RangeY', 'RangeZ', 'KurtX', 'NumPoints', 'MeanDoppler', 'SkewZ', 'KurtZ', 'KurtY']
+2024-10-31 08:14:52,317 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 08:17:20,387 - INFO - Training completed in 148.07 seconds.
+2024-10-31 08:17:20,388 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 9, 'n_estimators': 150, 'subsample': 0.8}
+2024-10-31 08:17:20,389 - INFO - Best Cross-Validation Accuracy: 69.82%
+2024-10-31 08:17:20,448 - INFO - Validation Accuracy: 70.29%
+2024-10-31 08:17:20,504 - INFO - Test Accuracy: 69.25%
+2024-10-31 08:17:20,507 - INFO - Confusion Matrix:
+[[490   0  34  35  99   0  29  10 108   6]
+ [  4 711  17  26   9  51   6   5   1  45]
+ [ 27   3 386  73  21   2  89  91  22  64]
+ [ 46   2  42 593  36   0  27  63  33  14]
+ [ 39   0  14  20 562   0   8   9  46   3]
+ [  1  42  15   4   2 640  10  24  10  62]
+ [ 22   0 101  38  17   3 341  41  19  51]
+ [ 25   2  69  47  18   7  37 485  25  42]
+ [ 67   0  17  23  19   0  17  12 613   4]
+ [  4  29  52  25   3  45  42  37  12 631]]
+2024-10-31 08:17:20,936 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 08:19:11,068 - INFO - Training set: 23619 samples
+2024-10-31 08:19:11,068 - INFO - Validation set: 7873 samples
+2024-10-31 08:19:11,069 - INFO - Test set: 7873 samples
+2024-10-31 08:19:11,069 - INFO - Starting feature selection with Random Forest...
+2024-10-31 08:19:13,065 - INFO - Top 22 features selected: ['MeanX', 'MeanY', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'StdZ', 'StdY', 'SkewY', 'StdIntensity', 'RangeY', 'RangeZ', 'KurtX', 'NumPoints', 'MeanDoppler', 'SkewZ', 'KurtZ', 'KurtY', 'NumOccupiedVoxels']
+2024-10-31 08:19:13,070 - INFO - Number of stratified cross-validation folds: 10 folds
+2024-10-31 08:19:13,071 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 08:21:47,257 - INFO - Training completed in 154.19 seconds.
+2024-10-31 08:21:47,258 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 9, 'n_estimators': 150, 'subsample': 0.8}
+2024-10-31 08:21:47,259 - INFO - Best Cross-Validation Accuracy: 69.74%
+2024-10-31 08:21:47,318 - INFO - Validation Accuracy: 70.13%
+2024-10-31 08:21:47,376 - INFO - Test Accuracy: 69.41%
+2024-10-31 08:21:47,378 - INFO - Confusion Matrix:
+[[481   0  39  34  98   0  26  13 114   6]
+ [  2 720  20  24   9  50   5   2   2  41]
+ [ 22   4 377  76  20   2  93  92  26  66]
+ [ 47   1  43 592  39   1  30  56  33  14]
+ [ 32   0  13  19 572   0  10  10  42   3]
+ [  2  49  11   6   1 639   9  23   9  61]
+ [ 20   2  98  32  18   1 346  47  22  47]
+ [ 29   1  72  39  17   9  35 496  22  37]
+ [ 62   1  18  17  23   0  18  12 617   4]
+ [  6  30  51  23   6  45  39  45  10 625]]
+2024-10-31 08:21:47,758 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 08:22:23,739 - INFO - Training set: 23619 samples
+2024-10-31 08:22:23,740 - INFO - Validation set: 7873 samples
+2024-10-31 08:22:23,740 - INFO - Test set: 7873 samples
+2024-10-31 08:22:23,741 - INFO - Starting feature selection with Random Forest...
+2024-10-31 08:22:25,811 - INFO - Top 22 features selected: ['MeanX', 'MeanY', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'StdZ', 'StdY', 'SkewY', 'StdIntensity', 'RangeY', 'RangeZ', 'KurtX', 'NumPoints', 'MeanDoppler', 'SkewZ', 'KurtZ', 'KurtY', 'NumOccupiedVoxels']
+2024-10-31 08:22:25,816 - INFO - Number of stratified cross-validation folds: 20 folds
+2024-10-31 08:22:25,817 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 08:27:12,969 - INFO - Training completed in 287.15 seconds.
+2024-10-31 08:27:12,988 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 9, 'n_estimators': 150, 'subsample': 0.8}
+2024-10-31 08:27:12,989 - INFO - Best Cross-Validation Accuracy: 69.85%
+2024-10-31 08:27:13,174 - INFO - Validation Accuracy: 70.13%
+2024-10-31 08:27:13,291 - INFO - Test Accuracy: 69.41%
+2024-10-31 08:27:13,340 - INFO - Confusion Matrix:
+[[481   0  39  34  98   0  26  13 114   6]
+ [  2 720  20  24   9  50   5   2   2  41]
+ [ 22   4 377  76  20   2  93  92  26  66]
+ [ 47   1  43 592  39   1  30  56  33  14]
+ [ 32   0  13  19 572   0  10  10  42   3]
+ [  2  49  11   6   1 639   9  23   9  61]
+ [ 20   2  98  32  18   1 346  47  22  47]
+ [ 29   1  72  39  17   9  35 496  22  37]
+ [ 62   1  18  17  23   0  18  12 617   4]
+ [  6  30  51  23   6  45  39  45  10 625]]
+2024-10-31 08:27:14,901 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 08:30:51,412 - INFO - Training set: 23619 samples
+2024-10-31 08:30:51,412 - INFO - Validation set: 7873 samples
+2024-10-31 08:30:51,412 - INFO - Test set: 7873 samples
+2024-10-31 08:30:51,413 - INFO - Starting feature selection with Random Forest...
+2024-10-31 08:30:53,326 - INFO - Top 22 features selected: ['MeanX', 'MeanY', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'StdZ', 'StdY', 'SkewY', 'StdIntensity', 'RangeY', 'RangeZ', 'KurtX', 'NumPoints', 'MeanDoppler', 'SkewZ', 'KurtZ', 'KurtY', 'NumOccupiedVoxels']
+2024-10-31 08:30:53,334 - INFO - Number of stratified cross-validation folds: 10 folds
+2024-10-31 08:30:53,335 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 08:35:12,965 - INFO - Training completed in 259.63 seconds.
+2024-10-31 08:35:12,968 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 9, 'n_estimators': 300, 'subsample': 0.8}
+2024-10-31 08:35:12,969 - INFO - Best Cross-Validation Accuracy: 70.40%
+2024-10-31 08:35:13,183 - INFO - Validation Accuracy: 71.35%
+2024-10-31 08:35:13,281 - INFO - Test Accuracy: 70.28%
+2024-10-31 08:35:13,286 - INFO - Confusion Matrix:
+[[486   0  34  34 100   0  26  12 114   5]
+ [  2 718  19  22   9  48   6   3   2  46]
+ [ 21   4 387  73  19   2  99  81  24  68]
+ [ 45   2  42 598  37   1  25  59  35  12]
+ [ 34   0  13  17 568   0  10   9  47   3]
+ [  2  45  10   4   2 654   8  23   8  54]
+ [ 24   1  94  33  16   1 351  45  21  47]
+ [ 23   1  68  43  17   8  35 507  21  34]
+ [ 64   0  19  21  21   0  14   8 622   3]
+ [  5  28  48  21   4  45  37  40  10 642]]
+2024-10-31 08:35:13,751 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 08:42:03,129 - INFO - Training set: 23619 samples
+2024-10-31 08:42:03,130 - INFO - Validation set: 7873 samples
+2024-10-31 08:42:03,130 - INFO - Test set: 7873 samples
+2024-10-31 08:42:03,131 - INFO - Starting feature selection with Random Forest...
+2024-10-31 08:42:04,752 - INFO - Top 22 features selected: ['MeanX', 'MeanY', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'StdZ', 'StdY', 'SkewY', 'StdIntensity', 'RangeY', 'RangeZ', 'KurtX', 'NumPoints', 'MeanDoppler', 'SkewZ', 'KurtZ', 'KurtY', 'NumOccupiedVoxels']
+2024-10-31 08:42:04,756 - INFO - Number of stratified cross-validation folds: 10 folds
+2024-10-31 08:42:04,757 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 08:49:33,938 - INFO - Training completed in 449.17 seconds.
+2024-10-31 08:49:33,962 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 9, 'n_estimators': 500, 'subsample': 0.8}
+2024-10-31 08:49:33,966 - INFO - Best Cross-Validation Accuracy: 70.50%
+2024-10-31 08:49:34,362 - INFO - Validation Accuracy: 70.95%
+2024-10-31 08:49:34,540 - INFO - Test Accuracy: 70.25%
+2024-10-31 08:49:34,611 - INFO - Confusion Matrix:
+[[486   0  39  31 102   1  24   9 111   8]
+ [  1 725  19  22   8  44   5   5   2  44]
+ [ 23   3 396  67  17   2  92  93  26  59]
+ [ 47   3  40 596  40   1  26  61  33   9]
+ [ 36   1  14  16 568   0  11   8  45   2]
+ [  1  44  10   5   2 652  10  19   9  58]
+ [ 25   1 104  37  16   1 337  38  20  54]
+ [ 29   1  64  41  15   5  31 508  26  37]
+ [ 62   0  15  19  15   0  17  16 625   3]
+ [  4  31  53  25   4  45  36  33  11 638]]
+2024-10-31 08:49:36,240 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 08:53:33,998 - INFO - Training set: 23619 samples
+2024-10-31 08:53:33,998 - INFO - Validation set: 7873 samples
+2024-10-31 08:53:33,999 - INFO - Test set: 7873 samples
+2024-10-31 08:53:33,999 - INFO - Starting feature selection with Random Forest...
+2024-10-31 08:53:35,625 - INFO - Top 22 features selected: ['MeanX', 'MeanY', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'StdZ', 'StdY', 'SkewY', 'StdIntensity', 'RangeY', 'RangeZ', 'KurtX', 'NumPoints', 'MeanDoppler', 'SkewZ', 'KurtZ', 'KurtY', 'NumOccupiedVoxels']
+2024-10-31 08:53:35,629 - INFO - Number of stratified cross-validation folds: 10 folds
+2024-10-31 08:53:35,630 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 09:07:30,182 - INFO - Training completed in 834.55 seconds.
+2024-10-31 09:07:30,200 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 9, 'n_estimators': 500, 'subsample': 0.8}
+2024-10-31 09:07:30,201 - INFO - Best Cross-Validation Accuracy: 68.08%
+2024-10-31 09:07:30,561 - INFO - Validation Accuracy: 68.16%
+2024-10-31 09:07:30,758 - INFO - Test Accuracy: 67.56%
+2024-10-31 09:07:30,809 - INFO - Confusion Matrix:
+[[465   0  39  31 103   2  27  13 121  10]
+ [  2 694  20  31   9  50   6   7   1  55]
+ [ 21   4 354  75  22   3  94  95  31  79]
+ [ 45   2  41 580  42   1  27  62  39  17]
+ [ 31   1  17  26 557   0  11   8  47   3]
+ [  1  48  16   3   1 629   8  23  11  70]
+ [ 27   1 100  41  17   1 322  41  23  60]
+ [ 31   1  66  35  24   4  34 478  33  51]
+ [ 58   1  15  20  22   1  16  17 619   3]
+ [  9  30  43  25   6  51  45  38  12 621]]
+2024-10-31 09:07:32,048 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 09:08:23,314 - INFO - Training set: 23619 samples
+2024-10-31 09:08:23,314 - INFO - Validation set: 7873 samples
+2024-10-31 09:08:23,315 - INFO - Test set: 7873 samples
+2024-10-31 09:08:23,315 - INFO - Starting feature selection with Random Forest...
+2024-10-31 09:08:25,031 - INFO - Top 22 features selected: ['MeanX', 'MeanY', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'StdZ', 'StdY', 'SkewY', 'StdIntensity', 'RangeY', 'RangeZ', 'KurtX', 'NumPoints', 'MeanDoppler', 'SkewZ', 'KurtZ', 'KurtY', 'NumOccupiedVoxels']
+2024-10-31 09:08:25,037 - INFO - Number of stratified cross-validation folds: 10 folds
+2024-10-31 09:08:25,037 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 09:20:37,925 - INFO - Training completed in 732.88 seconds.
+2024-10-31 09:20:37,944 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 9, 'n_estimators': 1000, 'subsample': 0.8}
+2024-10-31 09:20:37,944 - INFO - Best Cross-Validation Accuracy: 70.91%
+2024-10-31 09:20:38,513 - INFO - Validation Accuracy: 71.64%
+2024-10-31 09:20:39,193 - INFO - Test Accuracy: 70.58%
+2024-10-31 09:20:39,248 - INFO - Confusion Matrix:
+[[486   0  35  28 104   1  27  10 113   7]
+ [  1 726  15  18  11  49   4   4   2  45]
+ [ 22   2 398  67  23   0  97  85  21  63]
+ [ 44   2  47 596  39   1  27  54  36  10]
+ [ 42   1  11  15 572   0   7   9  42   2]
+ [  3  44  10   4   2 657   5  23   8  54]
+ [ 20   1  92  32  19   3 356  40  23  47]
+ [ 23   1  59  48  14   7  40 508  24  33]
+ [ 66   0  16  18  18   0  16   9 625   4]
+ [  5  29  54  26   4  47  34  39   9 633]]
+2024-10-31 09:20:40,859 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 09:24:57,590 - INFO - Training set: 23619 samples
+2024-10-31 09:24:57,591 - INFO - Validation set: 7873 samples
+2024-10-31 09:24:57,591 - INFO - Test set: 7873 samples
+2024-10-31 09:24:57,592 - INFO - Starting feature selection with Random Forest...
+2024-10-31 09:24:59,148 - INFO - Top 22 features selected: ['MeanX', 'MeanY', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'StdZ', 'StdY', 'SkewY', 'StdIntensity', 'RangeY', 'RangeZ', 'KurtX', 'NumPoints', 'MeanDoppler', 'SkewZ', 'KurtZ', 'KurtY', 'NumOccupiedVoxels']
+2024-10-31 09:24:59,152 - INFO - Number of stratified cross-validation folds: 10 folds
+2024-10-31 09:24:59,153 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 09:34:49,917 - INFO - Training completed in 590.76 seconds.
+2024-10-31 09:34:49,917 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 15, 'n_estimators': 500, 'subsample': 0.8}
+2024-10-31 09:34:49,918 - INFO - Best Cross-Validation Accuracy: 70.87%
+2024-10-31 09:34:50,151 - INFO - Validation Accuracy: 71.14%
+2024-10-31 09:34:50,360 - INFO - Test Accuracy: 70.39%
+2024-10-31 09:34:50,363 - INFO - Confusion Matrix:
+[[487   0  36  29 103   1  29  13 107   6]
+ [  3 721  12  25  10  52   7   2   1  42]
+ [ 26   4 399  63  20   2  87  84  27  66]
+ [ 43   2  43 588  42   2  29  61  35  11]
+ [ 41   1  14  14 573   0   9   7  39   3]
+ [  1  47  12   4   3 657   5  21   9  51]
+ [ 25   0  96  34  17   2 347  38  22  52]
+ [ 26   2  64  40  15   6  37 511  27  29]
+ [ 61   0  14  23  19   0  12  10 631   2]
+ [  7  35  52  23   3  52  33  37  10 628]]
+2024-10-31 09:34:50,845 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 09:36:13,197 - INFO - Training set: 23619 samples
+2024-10-31 09:36:13,198 - INFO - Validation set: 7873 samples
+2024-10-31 09:36:13,198 - INFO - Test set: 7873 samples
+2024-10-31 09:36:13,199 - INFO - Starting feature selection with Random Forest...
+2024-10-31 09:36:15,327 - INFO - Top 22 features selected: ['MeanX', 'MeanY', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'StdZ', 'StdY', 'SkewY', 'StdIntensity', 'RangeY', 'RangeZ', 'KurtX', 'NumPoints', 'MeanDoppler', 'SkewZ', 'KurtZ', 'KurtY', 'NumOccupiedVoxels']
+2024-10-31 09:36:15,330 - INFO - Number of stratified cross-validation folds: 10 folds
+2024-10-31 09:36:15,331 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 09:45:34,719 - INFO - Training completed in 559.39 seconds.
+2024-10-31 09:45:34,721 - INFO - Best Parameters: {'colsample_bytree': 0.6, 'learning_rate': 0.1, 'max_depth': 12, 'n_estimators': 500, 'subsample': 0.8}
+2024-10-31 09:45:34,722 - INFO - Best Cross-Validation Accuracy: 70.46%
+2024-10-31 09:45:34,990 - INFO - Validation Accuracy: 70.51%
+2024-10-31 09:45:35,453 - INFO - Test Accuracy: 70.05%
+2024-10-31 09:45:35,468 - INFO - Confusion Matrix:
+[[487   1  33  30  99   1  30  11 111   8]
+ [  2 716  14  20   9  53   6   3   2  50]
+ [ 25   3 379  80  19   2  93  86  22  69]
+ [ 46   4  37 595  44   1  26  60  33  10]
+ [ 35   1  12  13 572   0  10   9  46   3]
+ [  3  41   9   3   3 661   6  19  12  53]
+ [ 24   1 109  32  16   1 340  38  26  46]
+ [ 26   1  61  36  19  10  33 502  27  42]
+ [ 57   0  18  22  17   0  14  12 629   3]
+ [  5  33  51  23   3  43  38  39  11 634]]
+2024-10-31 09:45:35,934 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 09:46:40,128 - INFO - Training set: 23619 samples
+2024-10-31 09:46:40,129 - INFO - Validation set: 7873 samples
+2024-10-31 09:46:40,129 - INFO - Test set: 7873 samples
+2024-10-31 09:46:40,130 - INFO - Starting feature selection with Random Forest...
+2024-10-31 09:46:41,824 - INFO - Top 22 features selected: ['MeanX', 'MeanY', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'StdZ', 'StdY', 'SkewY', 'StdIntensity', 'RangeY', 'RangeZ', 'KurtX', 'NumPoints', 'MeanDoppler', 'SkewZ', 'KurtZ', 'KurtY', 'NumOccupiedVoxels']
+2024-10-31 09:46:41,829 - INFO - Number of stratified cross-validation folds: 10 folds
+2024-10-31 09:46:41,829 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 10:03:34,089 - INFO - Training completed in 1012.25 seconds.
+2024-10-31 10:03:34,101 - INFO - Best Parameters: {'colsample_bytree': 0.6, 'learning_rate': 0.1, 'max_depth': 15, 'n_estimators': 1000, 'subsample': 0.8}
+2024-10-31 10:03:34,102 - INFO - Best Cross-Validation Accuracy: 70.40%
+2024-10-31 10:03:34,539 - INFO - Validation Accuracy: 70.88%
+2024-10-31 10:03:34,889 - INFO - Test Accuracy: 70.04%
+2024-10-31 10:03:34,936 - INFO - Confusion Matrix:
+[[486   1  36  27 105   1  29   9 109   8]
+ [  3 728  14  17   7  49   6   4   2  45]
+ [ 27   3 380  70  18   3  89  90  25  73]
+ [ 49   3  40 589  40   3  31  57  33  11]
+ [ 38   1   8  16 573   0   9  11  44   1]
+ [  3  47   9   3   2 658   7  20  10  51]
+ [ 26   2  95  37  15   1 347  36  28  46]
+ [ 26   2  60  45  20   7  34 496  27  40]
+ [ 62   0  13  22  21   0  13  14 625   2]
+ [  8  35  48  23   4  46  36  36  12 632]]
+2024-10-31 10:03:36,134 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 12:39:33,152 - INFO - Training set: 23619 samples
+2024-10-31 12:39:33,152 - INFO - Validation set: 7873 samples
+2024-10-31 12:39:33,153 - INFO - Test set: 7873 samples
+2024-10-31 12:39:33,153 - INFO - Starting feature selection with Random Forest...
+2024-10-31 12:39:36,140 - INFO - Top 20 features selected: ['MeanRadialDist', 'MeanX', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'PCA_DirectionX', 'PCA_DirectionY', 'StdDoppler', 'RangeY', 'PCA_DirectionZ', 'StdZ', 'SkewY', 'VoxelEntropy', 'StdY', 'MeanGradX', 'RangeZ']
+2024-10-31 12:39:36,144 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-10-31 12:39:36,144 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 12:42:30,526 - INFO - Training completed in 174.38 seconds.
+2024-10-31 12:42:30,527 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 9, 'n_estimators': 300, 'subsample': 0.8}
+2024-10-31 12:42:30,528 - INFO - Best Cross-Validation Accuracy: 73.15%
+2024-10-31 12:42:30,680 - INFO - Validation Accuracy: 73.86%
+2024-10-31 12:42:30,819 - INFO - Test Accuracy: 73.29%
+2024-10-31 12:42:30,824 - INFO - Confusion Matrix:
+[[491   0  29  25 104   2  29  17 111   3]
+ [  1 789  10   5   3  19   6   5   2  35]
+ [ 23   8 434  61  17   0  79  85  20  51]
+ [ 38   2  44 618  33   0  22  61  28  10]
+ [ 36   1  10  24 578   0   9   8  35   0]
+ [  3  30  11   1   0 688  11  16   8  42]
+ [ 24   0 105  33  16   2 358  41  18  36]
+ [ 18   4  54  37  15   4  35 547  21  22]
+ [ 70   0  17  19  15   2  17  12 618   2]
+ [  3  32  56  20   2  31  44  33  10 649]]
+2024-10-31 12:42:31,333 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 12:43:47,070 - INFO - Training set: 23619 samples
+2024-10-31 12:43:47,070 - INFO - Validation set: 7873 samples
+2024-10-31 12:43:47,071 - INFO - Test set: 7873 samples
+2024-10-31 12:43:47,071 - INFO - Starting feature selection with Random Forest...
+2024-10-31 12:43:49,388 - INFO - Top 30 features selected: ['MeanRadialDist', 'MeanX', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'PCA_DirectionX', 'PCA_DirectionY', 'StdDoppler', 'RangeY', 'PCA_DirectionZ', 'StdZ', 'SkewY', 'VoxelEntropy', 'StdY', 'MeanGradX', 'RangeZ', 'KurtX', 'StdIntensity', 'MaxIntensity', 'MeanDoppler', 'NumPoints', 'VoxelDensity', 'ExplainedVariance', 'SkewZ', 'MeanGradY', 'KurtY']
+2024-10-31 12:43:49,394 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-10-31 12:43:49,395 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 12:46:30,787 - INFO - Training completed in 161.39 seconds.
+2024-10-31 12:46:30,788 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 9, 'n_estimators': 300, 'subsample': 0.8}
+2024-10-31 12:46:30,789 - INFO - Best Cross-Validation Accuracy: 73.81%
+2024-10-31 12:46:30,959 - INFO - Validation Accuracy: 74.42%
+2024-10-31 12:46:31,062 - INFO - Test Accuracy: 73.80%
+2024-10-31 12:46:31,066 - INFO - Confusion Matrix:
+[[503   0  29  25  97   3  25  14 110   5]
+ [  1 788  14   8   3  21   4   3   2  31]
+ [ 20   8 423  65  19   1  87  86  18  51]
+ [ 36   3  31 621  35   1  24  64  28  13]
+ [ 36   0  10  21 578   0   8   9  39   0]
+ [  2  30  11   2   1 691  11  18   9  35]
+ [ 22   0  97  33  18   1 362  41  18  41]
+ [ 23   4  58  35  14   2  32 540  25  24]
+ [ 57   0  12  20  17   1  14  12 638   1]
+ [  5  28  45  17   4  30  43  35   7 666]]
+2024-10-31 12:46:31,483 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 12:49:08,629 - INFO - Training set: 23619 samples
+2024-10-31 12:49:08,630 - INFO - Validation set: 7873 samples
+2024-10-31 12:49:08,631 - INFO - Test set: 7873 samples
+2024-10-31 12:49:08,631 - INFO - Starting feature selection with Random Forest...
+2024-10-31 12:49:10,535 - INFO - Top 30 features selected: ['MeanRadialDist', 'MeanX', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'PCA_DirectionX', 'PCA_DirectionY', 'StdDoppler', 'RangeY', 'PCA_DirectionZ', 'StdZ', 'SkewY', 'VoxelEntropy', 'StdY', 'MeanGradX', 'RangeZ', 'KurtX', 'StdIntensity', 'MaxIntensity', 'MeanDoppler', 'NumPoints', 'VoxelDensity', 'ExplainedVariance', 'SkewZ', 'MeanGradY', 'KurtY']
+2024-10-31 12:49:10,542 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-10-31 12:49:10,542 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 12:51:20,338 - INFO - Training completed in 129.80 seconds.
+2024-10-31 12:51:20,339 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3, 'n_estimators': 300, 'reg_alpha': 1, 'reg_lambda': 1, 'subsample': 0.8}
+2024-10-31 12:51:20,339 - INFO - Best Cross-Validation Accuracy: 73.56%
+2024-10-31 12:51:20,598 - INFO - Validation Accuracy: 74.04%
+2024-10-31 12:51:20,698 - INFO - Test Accuracy: 73.56%
+2024-10-31 12:51:20,701 - INFO - Confusion Matrix:
+[[498   0  31  28  97   3  25  11 112   6]
+ [  1 785  11   7   6  26   5   1   2  31]
+ [ 19   8 429  67  16   1  88  82  21  47]
+ [ 36   2  35 631  35   1  20  57  26  13]
+ [ 35   0  10  17 578   0   9  10  41   1]
+ [  2  32  10   2   1 687   7  17  13  39]
+ [ 23   0  94  33  15   2 370  36  18  42]
+ [ 22   6  60  40  16   1  34 530  21  27]
+ [ 68   0  14  17  16   2  14  13 627   1]
+ [  7  35  48  16   2  35  35  37   9 656]]
+2024-10-31 12:51:21,058 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 12:51:58,123 - INFO - Training set: 23619 samples
+2024-10-31 12:51:58,123 - INFO - Validation set: 7873 samples
+2024-10-31 12:51:58,124 - INFO - Test set: 7873 samples
+2024-10-31 12:51:58,124 - INFO - Starting feature selection with Random Forest...
+2024-10-31 12:52:00,186 - INFO - Top 30 features selected: ['MeanRadialDist', 'MeanX', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'PCA_DirectionX', 'PCA_DirectionY', 'StdDoppler', 'RangeY', 'PCA_DirectionZ', 'StdZ', 'SkewY', 'VoxelEntropy', 'StdY', 'MeanGradX', 'RangeZ', 'KurtX', 'StdIntensity', 'MaxIntensity', 'MeanDoppler', 'NumPoints', 'VoxelDensity', 'ExplainedVariance', 'SkewZ', 'MeanGradY', 'KurtY']
+2024-10-31 12:52:00,192 - INFO - Number of stratified cross-validation folds: 10 folds
+2024-10-31 12:52:00,192 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 12:56:00,559 - INFO - Training completed in 240.37 seconds.
+2024-10-31 12:56:00,560 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3, 'n_estimators': 300, 'reg_alpha': 1, 'reg_lambda': 1, 'subsample': 0.8}
+2024-10-31 12:56:00,560 - INFO - Best Cross-Validation Accuracy: 74.15%
+2024-10-31 12:56:00,904 - INFO - Validation Accuracy: 74.04%
+2024-10-31 12:56:01,009 - INFO - Test Accuracy: 73.56%
+2024-10-31 12:56:01,012 - INFO - Confusion Matrix:
+[[498   0  31  28  97   3  25  11 112   6]
+ [  1 785  11   7   6  26   5   1   2  31]
+ [ 19   8 429  67  16   1  88  82  21  47]
+ [ 36   2  35 631  35   1  20  57  26  13]
+ [ 35   0  10  17 578   0   9  10  41   1]
+ [  2  32  10   2   1 687   7  17  13  39]
+ [ 23   0  94  33  15   2 370  36  18  42]
+ [ 22   6  60  40  16   1  34 530  21  27]
+ [ 68   0  14  17  16   2  14  13 627   1]
+ [  7  35  48  16   2  35  35  37   9 656]]
+2024-10-31 12:56:01,422 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 12:56:36,035 - INFO - Training set: 23619 samples
+2024-10-31 12:56:36,035 - INFO - Validation set: 7873 samples
+2024-10-31 12:56:36,036 - INFO - Test set: 7873 samples
+2024-10-31 12:56:36,036 - INFO - Starting feature selection with Random Forest...
+2024-10-31 12:56:38,558 - INFO - Top 10 features selected: ['MeanRadialDist', 'MeanX', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'PCA_DirectionX']
+2024-10-31 12:56:38,562 - INFO - Number of stratified cross-validation folds: 10 folds
+2024-10-31 12:56:38,562 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 13:00:34,771 - INFO - Training completed in 236.21 seconds.
+2024-10-31 13:00:34,772 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3, 'n_estimators': 300, 'reg_alpha': 1, 'reg_lambda': 1, 'subsample': 0.8}
+2024-10-31 13:00:34,772 - INFO - Best Cross-Validation Accuracy: 69.85%
+2024-10-31 13:00:34,896 - INFO - Validation Accuracy: 70.23%
+2024-10-31 13:00:35,023 - INFO - Test Accuracy: 69.26%
+2024-10-31 13:00:35,025 - INFO - Confusion Matrix:
+[[483   0  30  35 107   0  29  16 104   7]
+ [  1 743  15   7   4  55   9   3   2  36]
+ [ 29   9 387  75  13   4  85  89  22  65]
+ [ 52   2  54 581  38   1  27  72  23   6]
+ [ 35   1  12  29 567   0  11   9  35   2]
+ [  3  50  11   3   0 651  16  14   8  54]
+ [ 36   1 101  46  20   3 322  51  14  39]
+ [ 18   5  66  51  12   4  37 509  32  23]
+ [ 71   0  15  17  18   3  15  29 602   2]
+ [  4  47  72  14   5  48  42  32   8 608]]
+2024-10-31 13:00:35,478 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 13:01:42,015 - INFO - Training set: 23619 samples
+2024-10-31 13:01:42,015 - INFO - Validation set: 7873 samples
+2024-10-31 13:01:42,015 - INFO - Test set: 7873 samples
+2024-10-31 13:01:42,016 - INFO - Starting feature selection with Random Forest...
+2024-10-31 13:01:44,339 - INFO - Top 34 features selected: ['MeanRadialDist', 'MeanX', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'PCA_DirectionX', 'PCA_DirectionY', 'StdDoppler', 'RangeY', 'PCA_DirectionZ', 'StdZ', 'SkewY', 'VoxelEntropy', 'StdY', 'MeanGradX', 'RangeZ', 'KurtX', 'StdIntensity', 'MaxIntensity', 'MeanDoppler', 'NumPoints', 'VoxelDensity', 'ExplainedVariance', 'SkewZ', 'MeanGradY', 'KurtY', 'KurtZ', 'MeanGradZ', 'NumOccupiedVoxels', 'MinIntensity']
+2024-10-31 13:01:44,347 - INFO - Number of stratified cross-validation folds: 20 folds
+2024-10-31 13:01:44,348 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 13:11:20,984 - INFO - Training completed in 576.63 seconds.
+2024-10-31 13:11:21,000 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3, 'n_estimators': 500, 'reg_alpha': 1, 'reg_lambda': 1, 'subsample': 0.8}
+2024-10-31 13:11:21,001 - INFO - Best Cross-Validation Accuracy: 74.25%
+2024-10-31 13:11:21,312 - INFO - Validation Accuracy: 73.92%
+2024-10-31 13:11:21,521 - INFO - Test Accuracy: 73.25%
+2024-10-31 13:11:21,580 - INFO - Confusion Matrix:
+[[501   0  29  29  98   3  21  11 112   7]
+ [  1 780  12   7   6  28   4   1   2  34]
+ [ 22   6 421  56  21   2  92  84  20  54]
+ [ 41   2  34 619  36   1  25  60  26  12]
+ [ 41   0   7  19 572   1  10   7  44   0]
+ [  2  32   5   2   1 691   8  18  11  40]
+ [ 28   0 100  33  14   3 359  35  18  43]
+ [ 19   3  59  37  17   1  35 536  24  26]
+ [ 64   0  10  21  19   2  16  15 624   1]
+ [  8  29  47  14   3  36  33  39   7 664]]
+2024-10-31 13:11:23,103 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 13:16:42,596 - INFO - Training set: 23619 samples
+2024-10-31 13:16:42,596 - INFO - Validation set: 7873 samples
+2024-10-31 13:16:42,597 - INFO - Test set: 7873 samples
+2024-10-31 13:16:42,597 - INFO - Starting feature selection with Random Forest...
+2024-10-31 13:16:44,615 - INFO - Top 20 features selected: ['MeanRadialDist', 'MeanX', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'PCA_DirectionX', 'PCA_DirectionY', 'StdDoppler', 'RangeY', 'PCA_DirectionZ', 'StdZ', 'SkewY', 'VoxelEntropy', 'StdY', 'MeanGradX', 'RangeZ']
+2024-10-31 13:16:44,619 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-10-31 13:16:44,620 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 13:18:46,339 - INFO - Training completed in 121.72 seconds.
+2024-10-31 13:18:46,340 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3, 'n_estimators': 300, 'reg_alpha': 1, 'reg_lambda': 1, 'subsample': 0.8}
+2024-10-31 13:18:46,340 - INFO - Best Cross-Validation Accuracy: 73.07%
+2024-10-31 13:18:46,438 - INFO - Validation Accuracy: 73.52%
+2024-10-31 13:18:46,540 - INFO - Test Accuracy: 72.93%
+2024-10-31 13:18:46,542 - INFO - Confusion Matrix:
+[[489   0  29  26 102   1  28  16 114   6]
+ [  1 777  11   6   3  29   7   5   2  34]
+ [ 23   9 433  61  19   0  78  84  17  54]
+ [ 39   3  40 612  37   1  19  66  28  11]
+ [ 43   0  11  22 572   0   9  10  34   0]
+ [  3  33  10   1   0 686   9  13  10  45]
+ [ 31   0 101  31  16   2 351  42  16  43]
+ [ 20   5  58  32  15   3  31 547  21  25]
+ [ 62   0  10  17  19   2  17  11 631   3]
+ [  4  31  53  22   2  39  44  33   8 644]]
+2024-10-31 13:18:46,916 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 13:20:28,623 - INFO - Training set: 23619 samples
+2024-10-31 13:20:28,624 - INFO - Validation set: 7873 samples
+2024-10-31 13:20:28,624 - INFO - Test set: 7873 samples
+2024-10-31 13:20:28,624 - INFO - Starting feature selection with Random Forest...
+2024-10-31 13:20:30,573 - INFO - Top 25 features selected: ['MeanRadialDist', 'MeanX', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'PCA_DirectionX', 'PCA_DirectionY', 'StdDoppler', 'RangeY', 'PCA_DirectionZ', 'StdZ', 'SkewY', 'VoxelEntropy', 'StdY', 'MeanGradX', 'RangeZ', 'KurtX', 'StdIntensity', 'MaxIntensity', 'MeanDoppler', 'NumPoints']
+2024-10-31 13:20:30,578 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-10-31 13:20:30,578 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 13:22:41,928 - INFO - Training completed in 131.35 seconds.
+2024-10-31 13:22:41,929 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3, 'n_estimators': 300, 'reg_alpha': 1, 'reg_lambda': 1, 'subsample': 0.8}
+2024-10-31 13:22:41,929 - INFO - Best Cross-Validation Accuracy: 73.80%
+2024-10-31 13:22:42,032 - INFO - Validation Accuracy: 74.44%
+2024-10-31 13:22:42,140 - INFO - Test Accuracy: 73.48%
+2024-10-31 13:22:42,143 - INFO - Confusion Matrix:
+[[496   0  35  24 104   0  21  11 112   8]
+ [  1 789   9   7   3  25   7   2   2  30]
+ [ 24   7 428  58  14   0  83  92  18  54]
+ [ 36   3  41 618  37   1  19  64  28   9]
+ [ 41   0   7  15 581   0   7   9  41   0]
+ [  3  29  10   2   1 691  11  16   9  38]
+ [ 26   0  92  35  18   3 355  43  17  44]
+ [ 23   3  56  36  16   3  28 539  23  30]
+ [ 66   0  11  18  18   2  15  13 628   1]
+ [  7  31  46  16   3  37  38  35   7 660]]
+2024-10-31 13:22:42,516 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 13:57:26,091 - INFO - Training set: 23335 samples
+2024-10-31 13:57:26,091 - INFO - Validation set: 7779 samples
+2024-10-31 13:57:26,092 - INFO - Test set: 7779 samples
+2024-10-31 13:57:26,092 - INFO - Starting feature selection with Random Forest...
+2024-10-31 13:57:28,837 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 'TotalIntensity', 'CovXZ', 'EigVal1']
+2024-10-31 13:57:28,844 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-10-31 13:57:28,844 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 13:59:34,650 - INFO - Training completed in 125.81 seconds.
+2024-10-31 13:59:34,651 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3, 'n_estimators': 300, 'reg_alpha': 1, 'reg_lambda': 1, 'subsample': 0.8}
+2024-10-31 13:59:34,651 - INFO - Best Cross-Validation Accuracy: 75.67%
+2024-10-31 13:59:34,864 - INFO - Validation Accuracy: 76.26%
+2024-10-31 13:59:34,984 - INFO - Test Accuracy: 75.58%
+2024-10-31 13:59:34,987 - INFO - Confusion Matrix:
+[[495   0  11  33  92   1  34  13 110   2]
+ [  2 796  12   4   4  17   2   2   0  34]
+ [ 17   5 462  50  16   2  58  74  14  78]
+ [ 32   5  33 646  24   0  33  37  26  16]
+ [ 38   0  10  32 561   0   6   4  22   2]
+ [  2  16   4   2   1 715   7  16   6  39]
+ [ 20   0  73  25  12   2 393  46  24  36]
+ [ 15   2  61  41  15   7  35 519  28  30]
+ [ 42   0  11  18  21   2  16  13 616   3]
+ [  4  33  40  20   2  26  43  28   6 676]]
+2024-10-31 13:59:35,361 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-10-31 14:00:30,532 - INFO - Training set: 23335 samples
+2024-10-31 14:00:30,532 - INFO - Validation set: 7779 samples
+2024-10-31 14:00:30,533 - INFO - Test set: 7779 samples
+2024-10-31 14:00:30,533 - INFO - Starting feature selection with Random Forest...
+2024-10-31 14:00:33,360 - INFO - Top 40 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 'TotalIntensity', 'CovXZ', 'EigVal1', 'VoxelEntropy', 'CovYZ', 'CorrXZ', 'SkewY', 'StdZ', 'RangeY', 'ConvexHullVolume', 'RangeZ', 'StdY', 'MeanGradX', 'CorrYZ', 'KurtX', 'EigVal2', 'MaxIntensity', 'StdIntensity', 'NumPoints', 'KurtDoppler', 'EigVal3', 'MeanDoppler', 'VoxelDensity']
+2024-10-31 14:00:33,367 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-10-31 14:00:33,367 - INFO - Starting full cross-validation and training with selected features...
+2024-10-31 14:02:52,031 - INFO - Training completed in 138.66 seconds.
+2024-10-31 14:02:52,033 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3, 'n_estimators': 300, 'reg_alpha': 1, 'reg_lambda': 1, 'subsample': 0.8}
+2024-10-31 14:02:52,034 - INFO - Best Cross-Validation Accuracy: 76.56%
+2024-10-31 14:02:52,225 - INFO - Validation Accuracy: 77.00%
+2024-10-31 14:02:52,388 - INFO - Test Accuracy: 76.44%
+2024-10-31 14:02:52,393 - INFO - Confusion Matrix:
+[[494   1  13  33  97   0  26  14 112   1]
+ [  1 804  12   3   3  18   4   3   1  24]
+ [ 19   5 450  44  15   1  62  81  18  81]
+ [ 37   4  22 663  24   2  27  35  25  13]
+ [ 29   0  15  24 574   0  10   3  18   2]
+ [  2  16   5   2   1 727   3  17   6  29]
+ [ 20   1  79  23   9   4 397  52  16  30]
+ [ 10   2  49  38  14   4  39 534  30  33]
+ [ 44   0   9  15  20   1  25  11 614   3]
+ [  4  24  44  16   2  27  35  29   8 689]]
+2024-10-31 14:02:53,080 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-11-02 06:34:33,281 - INFO - Training set: 23335 samples
+2024-11-02 06:34:33,282 - INFO - Validation set: 7779 samples
+2024-11-02 06:34:33,282 - INFO - Test set: 7779 samples
+2024-11-02 06:34:33,282 - INFO - Starting feature selection with Random Forest...
+2024-11-02 06:34:36,475 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 'TotalIntensity', 'CovXZ', 'EigVal1']
+2024-11-02 06:34:36,483 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-11-02 06:34:36,483 - INFO - Starting full cross-validation and training with selected features...
+2024-11-02 06:36:17,050 - INFO - Training completed in 100.57 seconds.
+2024-11-02 06:36:17,050 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3, 'n_estimators': 300, 'reg_alpha': 5, 'reg_lambda': 5, 'subsample': 0.75}
+2024-11-02 06:36:17,051 - INFO - Best Cross-Validation Accuracy: 74.87%
+2024-11-02 06:36:17,146 - INFO - Validation Accuracy: 75.16%
+2024-11-02 06:36:17,237 - INFO - Test Accuracy: 75.16%
+2024-11-02 06:36:17,239 - INFO - Confusion Matrix:
+[[490   0  14  40  95   1  29   9 112   1]
+ [  1 798  11   3   4  22   1   2   0  31]
+ [ 20   7 443  53  16   3  55  85  18  76]
+ [ 34   5  31 645  26   0  34  40  23  14]
+ [ 32   0  11  29 565   0   6   7  22   3]
+ [  3  19   5   2   1 715  11  14   4  34]
+ [ 20   0  77  26  15   4 389  48  19  33]
+ [ 11   2  62  37  12   6  36 524  36  27]
+ [ 47   0  12  13  21   2  21  11 613   2]
+ [  5  30  48  14   2  31  41  35   7 665]]
+2024-11-02 06:36:17,645 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-11-02 06:45:21,905 - INFO - Training set: 23335 samples
+2024-11-02 06:45:21,905 - INFO - Validation set: 7779 samples
+2024-11-02 06:45:21,906 - INFO - Test set: 7779 samples
+2024-11-02 06:45:21,906 - INFO - Starting feature selection with Random Forest...
+2024-11-02 06:45:24,301 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 'TotalIntensity', 'CovXZ', 'EigVal1']
+2024-11-02 06:45:24,305 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-11-02 06:45:24,305 - INFO - Starting full cross-validation and training with selected features...
+2024-11-02 06:47:05,508 - INFO - Training completed in 101.20 seconds.
+2024-11-02 06:47:05,508 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3, 'n_estimators': 300, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2024-11-02 06:47:05,509 - INFO - Best Cross-Validation Accuracy: 75.54%
+2024-11-02 06:47:05,610 - INFO - Validation Accuracy: 76.04%
+2024-11-02 06:47:05,701 - INFO - Test Accuracy: 75.58%
+2024-11-02 06:47:05,704 - INFO - Confusion Matrix:
+[[485   0  14  37  94   1  29  12 117   2]
+ [  0 800  15   4   4  16   2   2   1  29]
+ [ 18   5 465  49  14   5  53  76  16  75]
+ [ 34   5  36 649  24   0  33  35  22  14]
+ [ 32   0  10  28 568   0   6   7  22   2]
+ [  4  17   4   3   0 713   5  16   7  39]
+ [ 26   0  78  26  11   1 386  50  17  36]
+ [ 14   2  62  40  13   4  39 520  28  31]
+ [ 46   0  11  14  21   2  18  14 612   4]
+ [  4  26  47  19   2  23  40  29   7 681]]
+2024-11-02 06:47:06,058 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-11-02 06:47:42,851 - INFO - Training set: 23335 samples
+2024-11-02 06:47:42,852 - INFO - Validation set: 7779 samples
+2024-11-02 06:47:42,852 - INFO - Test set: 7779 samples
+2024-11-02 06:47:42,853 - INFO - Starting feature selection with Random Forest...
+2024-11-02 06:47:45,356 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 'TotalIntensity', 'CovXZ', 'EigVal1']
+2024-11-02 06:47:45,361 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-11-02 06:47:45,362 - INFO - Starting full cross-validation and training with selected features...
+2024-11-02 06:50:15,586 - INFO - Training completed in 150.22 seconds.
+2024-11-02 06:50:15,587 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 15, 'min_child_weight': 3, 'n_estimators': 500, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2024-11-02 06:50:15,588 - INFO - Best Cross-Validation Accuracy: 75.79%
+2024-11-02 06:50:15,752 - INFO - Validation Accuracy: 75.96%
+2024-11-02 06:50:16,037 - INFO - Test Accuracy: 75.82%
+2024-11-02 06:50:16,040 - INFO - Confusion Matrix:
+[[497   0  13  33  95   1  29  11 110   2]
+ [  1 801  12   4   2  16   3   1   0  33]
+ [ 20   7 449  43  19   4  54  81  16  83]
+ [ 32   5  32 662  23   0  34  26  24  14]
+ [ 32   0   9  26 570   0   7   7  22   2]
+ [  2  17   4   3   0 716   9  14   6  37]
+ [ 23   0  81  27  13   4 381  50  17  35]
+ [  9   2  59  37  13   5  39 528  30  31]
+ [ 48   0  10  15  23   1  19  13 608   5]
+ [  5  30  43  16   2  25  37  29   5 686]]
+2024-11-02 06:50:16,393 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-11-02 07:36:15,496 - INFO - Training set: 23335 samples
+2024-11-02 07:36:15,497 - INFO - Validation set: 7779 samples
+2024-11-02 07:36:15,497 - INFO - Test set: 7779 samples
+2024-11-02 07:36:15,498 - INFO - Starting feature selection with Random Forest...
+2024-11-02 07:36:17,731 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 'TotalIntensity', 'CovXZ', 'EigVal1']
+2024-11-02 07:36:17,736 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-11-02 07:36:17,736 - INFO - Starting full cross-validation and training with selected features...
+2024-11-02 07:38:55,142 - INFO - Training completed in 157.41 seconds.
+2024-11-02 07:38:55,143 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 15, 'min_child_weight': 5, 'n_estimators': 500, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2024-11-02 07:38:55,143 - INFO - Best Cross-Validation Accuracy: 75.72%
+2024-11-02 07:38:55,450 - INFO - Validation Accuracy: 75.96%
+2024-11-02 07:38:55,731 - INFO - Test Accuracy: 75.45%
+2024-11-02 07:38:55,734 - INFO - Confusion Matrix:
+[[487   0  11  38  94   1  31  13 114   2]
+ [  1 803  12   3   3  16   3   1   0  31]
+ [ 18   5 452  48  13   4  57  78  16  85]
+ [ 36   5  34 649  28   0  32  30  22  16]
+ [ 35   0  11  31 562   0   7   6  19   4]
+ [  2  17   3   3   0 717   5  17   7  37]
+ [ 19   0  80  27  12   4 391  50  19  29]
+ [ 12   2  62  44  13   8  38 511  30  33]
+ [ 46   0  11  15  21   3  16  11 615   4]
+ [  3  26  48  15   3  26  39  29   7 682]]
+2024-11-02 07:38:56,132 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-11-02 07:39:14,574 - INFO - Training set: 23335 samples
+2024-11-02 07:39:14,575 - INFO - Validation set: 7779 samples
+2024-11-02 07:39:14,575 - INFO - Test set: 7779 samples
+2024-11-02 07:39:14,575 - INFO - Starting feature selection with Random Forest...
+2024-11-02 07:39:17,260 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 'TotalIntensity', 'CovXZ', 'EigVal1']
+2024-11-02 07:39:17,264 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-11-02 07:39:17,264 - INFO - Starting full cross-validation and training with selected features...
+2024-11-02 07:43:45,474 - INFO - Training completed in 268.21 seconds.
+2024-11-02 07:43:45,475 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 15, 'min_child_weight': 3, 'n_estimators': 1500, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2024-11-02 07:43:45,475 - INFO - Best Cross-Validation Accuracy: 75.83%
+2024-11-02 07:43:45,922 - INFO - Validation Accuracy: 75.95%
+2024-11-02 07:43:46,368 - INFO - Test Accuracy: 75.87%
+2024-11-02 07:43:46,371 - INFO - Confusion Matrix:
+[[499   0  13  33  95   1  30  11 107   2]
+ [  1 802  12   4   2  15   3   1   0  33]
+ [ 17   8 454  43  18   4  54  81  16  81]
+ [ 33   5  33 659  24   0  34  25  24  15]
+ [ 32   0   9  26 570   0   7   6  22   3]
+ [  2  16   4   3   0 716   9  15   6  37]
+ [ 22   0  80  28  14   4 381  49  17  36]
+ [ 10   2  59  36  12   5  41 527  30  31]
+ [ 48   0  10  15  23   1  19  13 608   5]
+ [  4  31  43  16   3  23  37  31   4 686]]
+2024-11-02 07:43:46,718 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-11-02 07:51:37,242 - INFO - Training set: 23335 samples
+2024-11-02 07:51:37,242 - INFO - Validation set: 7779 samples
+2024-11-02 07:51:37,243 - INFO - Test set: 7779 samples
+2024-11-02 07:51:37,243 - INFO - Starting feature selection with Random Forest...
+2024-11-02 07:51:40,547 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 'TotalIntensity', 'CovXZ', 'EigVal1']
+2024-11-02 07:51:40,552 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-11-02 07:51:40,553 - INFO - Starting full cross-validation and training with selected features...
+2024-11-02 07:53:28,290 - INFO - Training completed in 107.74 seconds.
+2024-11-02 07:53:28,290 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3, 'n_estimators': 300, 'reg_alpha': 1, 'reg_lambda': 1, 'subsample': 0.8}
+2024-11-02 07:53:28,291 - INFO - Best Cross-Validation Accuracy: 75.67%
+2024-11-02 07:53:28,495 - INFO - Validation Accuracy: 76.26%
+2024-11-02 07:53:28,665 - INFO - Test Accuracy: 75.58%
+2024-11-02 07:53:28,667 - INFO - Confusion Matrix:
+[[495   0  11  33  92   1  34  13 110   2]
+ [  2 796  12   4   4  17   2   2   0  34]
+ [ 17   5 462  50  16   2  58  74  14  78]
+ [ 32   5  33 646  24   0  33  37  26  16]
+ [ 38   0  10  32 561   0   6   4  22   2]
+ [  2  16   4   2   1 715   7  16   6  39]
+ [ 20   0  73  25  12   2 393  46  24  36]
+ [ 15   2  61  41  15   7  35 519  28  30]
+ [ 42   0  11  18  21   2  16  13 616   3]
+ [  4  33  40  20   2  26  43  28   6 676]]
+2024-11-02 07:53:29,038 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-11-02 07:54:09,282 - INFO - Training set: 23335 samples
+2024-11-02 07:54:09,283 - INFO - Validation set: 7779 samples
+2024-11-02 07:54:09,283 - INFO - Test set: 7779 samples
+2024-11-02 07:54:09,284 - INFO - Starting feature selection with Random Forest...
+2024-11-02 07:54:11,913 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 'TotalIntensity', 'CovXZ', 'EigVal1']
+2024-11-02 07:54:11,917 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-11-02 07:54:11,918 - INFO - Starting full cross-validation and training with selected features...
+2024-11-02 07:55:10,589 - INFO - Training completed in 58.67 seconds.
+2024-11-02 07:55:10,590 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 1, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3, 'n_estimators': 300, 'reg_alpha': 1, 'reg_lambda': 1, 'subsample': 0.8}
+2024-11-02 07:55:10,590 - INFO - Best Cross-Validation Accuracy: 74.37%
+2024-11-02 07:55:10,709 - INFO - Validation Accuracy: 74.74%
+2024-11-02 07:55:10,796 - INFO - Test Accuracy: 74.55%
+2024-11-02 07:55:10,799 - INFO - Confusion Matrix:
+[[485   0  16  39  92   1  33  11 112   2]
+ [  1 794  16   3   4  18   2   1   0  34]
+ [ 17   5 441  53  16   1  58  86  21  78]
+ [ 39   5  29 643  27   0  36  31  27  15]
+ [ 30   0  10  32 560   0   8   8  24   3]
+ [  2  20   6   3   0 711  11   9   6  40]
+ [ 20   0  81  26  15   3 379  51  19  37]
+ [ 13   2  53  42  15   6  36 520  34  32]
+ [ 48   0  11  14  24   2  17  14 609   3]
+ [  3  29  49  20   3  34  48  28   7 657]]
+2024-11-02 07:55:11,151 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-11-02 07:55:49,039 - INFO - Training set: 23335 samples
+2024-11-02 07:55:49,040 - INFO - Validation set: 7779 samples
+2024-11-02 07:55:49,040 - INFO - Test set: 7779 samples
+2024-11-02 07:55:49,041 - INFO - Starting feature selection with Random Forest...
+2024-11-02 07:55:51,674 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 'TotalIntensity', 'CovXZ', 'EigVal1']
+2024-11-02 07:55:51,681 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-11-02 07:55:51,682 - INFO - Starting full cross-validation and training with selected features...
+2024-11-02 07:58:18,950 - INFO - Training completed in 147.27 seconds.
+2024-11-02 07:58:18,951 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.01, 'max_depth': 9, 'min_child_weight': 3, 'n_estimators': 300, 'reg_alpha': 1, 'reg_lambda': 1, 'subsample': 0.8}
+2024-11-02 07:58:18,952 - INFO - Best Cross-Validation Accuracy: 72.06%
+2024-11-02 07:58:19,070 - INFO - Validation Accuracy: 72.43%
+2024-11-02 07:58:19,195 - INFO - Test Accuracy: 71.96%
+2024-11-02 07:58:19,198 - INFO - Confusion Matrix:
+[[458   0  15  42 103   1  36   8 126   2]
+ [  0 780  17   3   3  18   2   1   2  47]
+ [ 18   6 409  56  11   1  61  92  26  96]
+ [ 47   4  23 614  32   2  42  40  35  13]
+ [ 25   0  10  35 559   0   7  11  26   2]
+ [  3  26   9   3   0 682  15  13  10  47]
+ [ 30   1  79  34  22   1 335  62  19  48]
+ [ 13   4  52  46  17   1  49 502  38  31]
+ [ 46   0  10  14  22   1  28  10 608   3]
+ [  4  25  51  19   4  39  43  34   8 651]]
+2024-11-02 07:58:19,607 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-11-02 08:16:57,943 - INFO - Training set: 23335 samples
+2024-11-02 08:16:57,944 - INFO - Validation set: 7779 samples
+2024-11-02 08:16:57,944 - INFO - Test set: 7779 samples
+2024-11-02 08:16:57,945 - INFO - Starting feature selection with Random Forest...
+2024-11-02 08:17:00,655 - INFO - Top 40 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 'TotalIntensity', 'CovXZ', 'EigVal1', 'VoxelEntropy', 'CovYZ', 'CorrXZ', 'SkewY', 'StdZ', 'RangeY', 'ConvexHullVolume', 'RangeZ', 'StdY', 'MeanGradX', 'CorrYZ', 'KurtX', 'EigVal2', 'MaxIntensity', 'StdIntensity', 'NumPoints', 'KurtDoppler', 'EigVal3', 'MeanDoppler', 'VoxelDensity']
+2024-11-02 08:17:00,661 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-11-02 08:17:00,662 - INFO - Starting full cross-validation and training with selected features...
+2024-11-02 08:19:53,239 - INFO - Training completed in 172.58 seconds.
+2024-11-02 08:19:53,240 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 15, 'min_child_weight': 3, 'n_estimators': 500, 'reg_alpha': 1, 'reg_lambda': 1, 'subsample': 0.8}
+2024-11-02 08:19:53,240 - INFO - Best Cross-Validation Accuracy: 76.39%
+2024-11-02 08:19:53,395 - INFO - Validation Accuracy: 77.05%
+2024-11-02 08:19:53,681 - INFO - Test Accuracy: 76.62%
+2024-11-02 08:19:53,688 - INFO - Confusion Matrix:
+[[494   0  11  34  98   1  25  10 117   1]
+ [  1 804  12   2   4  18   4   3   1  24]
+ [ 19   6 450  43  15   2  65  75  21  80]
+ [ 32   4  19 666  28   2  30  37  22  12]
+ [ 28   0  12  26 573   0   9   4  21   2]
+ [  2  20   5   3   0 726   2  18   7  25]
+ [ 24   1  79  26  14   4 394  42  16  31]
+ [ 11   2  40  36  14   4  40 541  29  36]
+ [ 44   0  11  15  17   1  16   9 625   4]
+ [  4  28  32  18   2  28  39  32   8 687]]
+2024-11-02 08:19:54,096 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-11-02 08:20:17,216 - INFO - Training set: 23335 samples
+2024-11-02 08:20:17,216 - INFO - Validation set: 7779 samples
+2024-11-02 08:20:17,217 - INFO - Test set: 7779 samples
+2024-11-02 08:20:17,217 - INFO - Starting feature selection with Random Forest...
+2024-11-02 08:20:20,167 - INFO - Top 40 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 'TotalIntensity', 'CovXZ', 'EigVal1', 'VoxelEntropy', 'CovYZ', 'CorrXZ', 'SkewY', 'StdZ', 'RangeY', 'ConvexHullVolume', 'RangeZ', 'StdY', 'MeanGradX', 'CorrYZ', 'KurtX', 'EigVal2', 'MaxIntensity', 'StdIntensity', 'NumPoints', 'KurtDoppler', 'EigVal3', 'MeanDoppler', 'VoxelDensity']
+2024-11-02 08:20:20,178 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-11-02 08:20:20,179 - INFO - Starting full cross-validation and training with selected features...
+2024-11-02 08:23:35,574 - INFO - Training completed in 195.39 seconds.
+2024-11-02 08:23:35,574 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 15, 'min_child_weight': 3, 'n_estimators': 500, 'reg_alpha': 5, 'reg_lambda': 5, 'subsample': 0.8}
+2024-11-02 08:23:35,575 - INFO - Best Cross-Validation Accuracy: 75.65%
+2024-11-02 08:23:35,743 - INFO - Validation Accuracy: 76.49%
+2024-11-02 08:23:35,991 - INFO - Test Accuracy: 75.95%
+2024-11-02 08:23:35,995 - INFO - Confusion Matrix:
+[[485   0  12  36  99   1  28  12 117   1]
+ [  1 799  14   1   4  22   4   2   0  26]
+ [ 18   8 458  47  11   2  60  71  20  81]
+ [ 37   5  20 664  25   1  30  34  23  13]
+ [ 32   0  10  23 568   0  10   5  23   4]
+ [  3  19   4   2   1 721   5  14   8  31]
+ [ 18   2  82  31  11   4 380  58  16  29]
+ [ 11   2  43  39  13   5  37 536  33  34]
+ [ 39   0  12  15  19   2  21   9 621   4]
+ [  5  25  42  17   2  28  42  34   7 676]]
+2024-11-02 08:23:36,401 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-11-02 08:23:51,940 - INFO - Training set: 23335 samples
+2024-11-02 08:23:51,941 - INFO - Validation set: 7779 samples
+2024-11-02 08:23:51,942 - INFO - Test set: 7779 samples
+2024-11-02 08:23:51,942 - INFO - Starting feature selection with Random Forest...
+2024-11-02 08:23:55,200 - INFO - Top 40 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 'TotalIntensity', 'CovXZ', 'EigVal1', 'VoxelEntropy', 'CovYZ', 'CorrXZ', 'SkewY', 'StdZ', 'RangeY', 'ConvexHullVolume', 'RangeZ', 'StdY', 'MeanGradX', 'CorrYZ', 'KurtX', 'EigVal2', 'MaxIntensity', 'StdIntensity', 'NumPoints', 'KurtDoppler', 'EigVal3', 'MeanDoppler', 'VoxelDensity']
+2024-11-02 08:23:55,210 - INFO - Number of stratified cross-validation folds: 20 folds
+2024-11-02 08:23:55,211 - INFO - Starting full cross-validation and training with selected features...
+2024-11-02 08:37:13,837 - INFO - Training completed in 798.62 seconds.
+2024-11-02 08:37:13,855 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 15, 'min_child_weight': 3, 'n_estimators': 500, 'reg_alpha': 5, 'reg_lambda': 5, 'subsample': 0.8}
+2024-11-02 08:37:13,856 - INFO - Best Cross-Validation Accuracy: 76.49%
+2024-11-02 08:37:14,258 - INFO - Validation Accuracy: 76.49%
+2024-11-02 08:37:14,640 - INFO - Test Accuracy: 75.95%
+2024-11-02 08:37:14,699 - INFO - Confusion Matrix:
+[[485   0  12  36  99   1  28  12 117   1]
+ [  1 799  14   1   4  22   4   2   0  26]
+ [ 18   8 458  47  11   2  60  71  20  81]
+ [ 37   5  20 664  25   1  30  34  23  13]
+ [ 32   0  10  23 568   0  10   5  23   4]
+ [  3  19   4   2   1 721   5  14   8  31]
+ [ 18   2  82  31  11   4 380  58  16  29]
+ [ 11   2  43  39  13   5  37 536  33  34]
+ [ 39   0  12  15  19   2  21   9 621   4]
+ [  5  25  42  17   2  28  42  34   7 676]]
+2024-11-02 08:37:16,454 - INFO - Confusion matrix saved as 'full_confusion_matrix.png'.
+2024-11-05 09:59:06,665 - INFO - Training set: 23335 samples
+2024-11-05 09:59:06,666 - INFO - Validation set: 7779 samples
+2024-11-05 09:59:06,666 - INFO - Test set: 7779 samples
+2024-11-05 09:59:06,667 - INFO - Starting feature selection with Random Forest...
+2024-11-05 09:59:09,472 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 'TotalIntensity', 'CovXZ', 'EigVal1']
+2024-11-05 09:59:09,478 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-11-05 09:59:09,478 - INFO - Starting full cross-validation and training with selected features...
+2024-11-05 10:01:10,245 - INFO - Training completed in 120.77 seconds.
+2024-11-05 10:01:10,246 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3, 'n_estimators': 300, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2024-11-05 10:01:10,246 - INFO - Best Cross-Validation Accuracy: 75.54%
+2024-11-05 10:01:10,338 - INFO - Validation Accuracy: 76.04%
+2024-11-05 10:01:10,427 - INFO - Test Accuracy: 75.58%
+2024-11-05 10:01:10,441 - INFO - Precision: 75.11%
+2024-11-05 10:01:10,442 - INFO - Recall: 75.17%
+2024-11-05 10:01:10,442 - INFO - F1 Score: 75.01%
+2024-11-05 10:01:10,443 - INFO - Specificity: 97.29%
+2024-11-05 10:01:10,453 - INFO - Metrics and best parameters saved to 'Results/metrics_xgboost.csv'.
+2024-11-05 10:01:10,459 - INFO - Confusion matrix saved as CSV for MATLAB at 'Results/XGBoost/xgboost_confusion_matrix.csv'.
+2024-11-05 10:03:19,651 - INFO - Training set: 23335 samples
+2024-11-05 10:03:19,651 - INFO - Validation set: 7779 samples
+2024-11-05 10:03:19,652 - INFO - Test set: 7779 samples
+2024-11-05 10:03:19,652 - INFO - Starting feature selection with Random Forest...
+2024-11-05 10:03:22,052 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdX', 'StdRadialDist', 'RangeX', 'MeanZ', 'SkewX', 'MeanIntensity', 'StdDoppler', 'PCA_DirectionZ', 'PCA_DirectionY', 'PCA_DirectionX', 'TotalIntensity', 'CovXZ', 'EigVal1']
+2024-11-05 10:03:22,056 - INFO - Number of stratified cross-validation folds: 5 folds
+2024-11-05 10:03:22,057 - INFO - Starting full cross-validation and training with selected features...
+2024-11-05 10:05:21,850 - INFO - Training completed in 119.79 seconds.
+2024-11-05 10:05:21,850 - INFO - Best Parameters: {'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3, 'n_estimators': 300, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2024-11-05 10:05:21,851 - INFO - Best Cross-Validation Accuracy: 75.54%
+2024-11-05 10:05:21,965 - INFO - Validation Accuracy: 76.04%
+2024-11-05 10:05:22,072 - INFO - Test Accuracy: 75.58%
+2024-11-05 10:05:22,095 - INFO - Precision: 75.11%
+2024-11-05 10:05:22,096 - INFO - Recall: 75.17%
+2024-11-05 10:05:22,096 - INFO - F1 Score: 75.01%
+2024-11-05 10:05:22,097 - INFO - Specificity: 97.29%
+2024-11-05 10:05:22,114 - INFO - Metrics and best parameters saved to 'Results/metrics_xgboost.csv'.
+2024-11-05 10:05:22,123 - INFO - Confusion matrix saved as CSV for MATLAB at 'Results/XGBoost/xgboost_confusion_matrix.csv'.

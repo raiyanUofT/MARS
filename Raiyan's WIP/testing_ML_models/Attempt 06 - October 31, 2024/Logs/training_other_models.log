@@ -1,0 +1,1305 @@
+2024-11-03 09:16:10,861 - INFO - Training set: 23335 samples
+2024-11-03 09:16:10,861 - INFO - Validation set: 7779 samples
+2024-11-03 09:16:10,862 - INFO - Test set: 7779 samples
+2024-11-03 09:16:10,862 - INFO - Starting feature selection with Random Forest...
+2024-11-03 09:16:13,461 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'RangeX', 'StdX', 'SkewX', 'MeanZ', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'TotalIntensity', 'PCA_DirectionX', 'VoxelEntropy', 'CovXZ', 'EigVal1']
+2024-11-03 09:16:13,467 - INFO - Training Logistic Regression with top 20 features...
+2024-11-03 09:16:14,981 - INFO - Logistic Regression training completed in 1.51 seconds.
+2024-11-03 09:16:14,984 - INFO - Logistic Regression Validation Accuracy: 57.05%
+2024-11-03 09:16:14,988 - INFO - Logistic Regression Test Accuracy: 57.08%
+2024-11-03 09:16:14,992 - INFO - Logistic Regression Confusion Matrix:
+[[379   0  36  58 114   1  37  27 122  17]
+ [  0 697  18   3   5  65   2   6   2  74]
+ [ 29  16 277  74  32   8  69  97  48 126]
+ [ 75   2  48 431  90   3  40  93  52  18]
+ [ 51   2  43  49 474   0  10  19  20   7]
+ [  2 109   5   1   1 596  19   2  10  63]
+ [ 31   1  98  52  39   9 219  58  38  86]
+ [ 43   6  80  99  43   7  56 255 101  63]
+ [ 56   0   9  10  39   4  48  31 539   6]
+ [ 15  44  62   6  14  69  44  36  16 573]]
+2024-11-03 09:16:15,337 - INFO - Logistic Regression confusion matrix saved as 'logistic_regression_confusion_matrix.png'.
+2024-11-03 09:16:15,337 - INFO - Training Decision Tree with top 20 features...
+2024-11-03 09:16:16,060 - INFO - Decision Tree training completed in 0.72 seconds.
+2024-11-03 09:16:16,063 - INFO - Decision Tree Validation Accuracy: 60.48%
+2024-11-03 09:16:16,066 - INFO - Decision Tree Test Accuracy: 60.10%
+2024-11-03 09:16:16,068 - INFO - Decision Tree Confusion Matrix:
+[[426   6  25  53  85   4  40  28 115   9]
+ [  4 724  17   1   2  55   6   6   1  56]
+ [ 24  21 318  62  22   8  96  99  24 102]
+ [ 53   3  79 487  50   5  55  57  40  23]
+ [ 84   3  26  62 445   0  18  11  17   9]
+ [  4  47  13   4   1 648  13  11   7  60]
+ [ 45   7  93  63  21  12 248  59  28  55]
+ [ 29   9  90  61  17  13  66 388  40  40]
+ [119   1  21  23  32  10  27  28 471  10]
+ [ 13  48 105  19   4  67  49  43  11 520]]
+2024-11-03 09:16:16,319 - INFO - Decision Tree confusion matrix saved as 'decision_tree_confusion_matrix.png'.
+2024-11-03 09:16:16,319 - INFO - Training K-Nearest Neighbors with top 20 features...
+2024-11-03 09:16:16,323 - INFO - K-Nearest Neighbors training completed in 0.00 seconds.
+2024-11-03 09:16:16,806 - INFO - K-Nearest Neighbors Validation Accuracy: 66.90%
+2024-11-03 09:16:17,257 - INFO - K-Nearest Neighbors Test Accuracy: 65.83%
+2024-11-03 09:16:17,260 - INFO - K-Nearest Neighbors Confusion Matrix:
+[[452   0  27  22 102   2  43  23 109  11]
+ [  1 732  21   9   5  25   6   8   1  64]
+ [ 45  25 378  67  17   5  65  82  23  69]
+ [ 59  10  59 566  30   3  27  51  31  16]
+ [ 76   1  31  48 477   0  15   4  21   2]
+ [ 10  32   9   3   1 667  16  11   5  54]
+ [ 49   5 106  48  15  10 291  44  27  36]
+ [ 46   3  95  45  17   7  47 436  30  27]
+ [ 86   0  17   9  27   1  27  23 551   1]
+ [ 26  24  90  22   4  48  59  25  10 571]]
+2024-11-03 09:16:17,540 - INFO - K-Nearest Neighbors confusion matrix saved as 'k-nearest_neighbors_confusion_matrix.png'.
+2024-11-03 09:16:17,540 - INFO - Training Support Vector Machine with top 20 features...
+2024-11-03 09:16:27,747 - INFO - Support Vector Machine training completed in 10.21 seconds.
+2024-11-03 09:16:33,923 - INFO - Support Vector Machine Validation Accuracy: 70.39%
+2024-11-03 09:16:39,688 - INFO - Support Vector Machine Test Accuracy: 69.91%
+2024-11-03 09:16:39,691 - INFO - Support Vector Machine Confusion Matrix:
+[[432   0  23  18 114   0  45   9 147   3]
+ [  0 751   5   1   4  32   4   4   3  68]
+ [ 25  10 370  45  17   5  70  97  38  99]
+ [ 49   6  32 584  49   0  29  47  50   6]
+ [ 28   0  19  27 544   0  13   3  41   0]
+ [  3  30   4   2   1 674  17  10   7  60]
+ [ 28   1  84  38  24   6 334  45  32  39]
+ [ 17   2  56  37  19   2  51 483  55  31]
+ [ 34   0   6   6  23   0  22  16 633   2]
+ [  7  23  50  11  10  50  55  29  11 633]]
+2024-11-03 09:16:39,952 - INFO - Support Vector Machine confusion matrix saved as 'support_vector_machine_confusion_matrix.png'.
+2024-11-03 09:16:39,953 - INFO - Training Naive Bayes with top 20 features...
+2024-11-03 09:16:39,960 - INFO - Naive Bayes training completed in 0.01 seconds.
+2024-11-03 09:16:39,967 - INFO - Naive Bayes Validation Accuracy: 43.51%
+2024-11-03 09:16:39,973 - INFO - Naive Bayes Test Accuracy: 44.35%
+2024-11-03 09:16:39,975 - INFO - Naive Bayes Confusion Matrix:
+[[334   0  16  68  51   0  27  23 197  75]
+ [  0 445  39  56  19 147   1  11  13 141]
+ [ 57   7  71 169   7   2  16  84  87 276]
+ [ 74   6  23 467  36   1  28  88  96  33]
+ [214   0  14  99 213   0   5  26  91  13]
+ [  5  84   3  14   4 545   7   3  17 126]
+ [ 50   0  28 107  30   3 110  44  52 207]
+ [ 71   4  19 173  12   0  22 195 149 108]
+ [ 78   0   0  92  18   3  36  10 474  31]
+ [ 25  35  23  13  11  84  21  21  50 596]]
+2024-11-03 09:16:40,210 - INFO - Naive Bayes confusion matrix saved as 'naive_bayes_confusion_matrix.png'.
+2024-11-03 09:20:28,410 - INFO - Training set: 31114 samples
+2024-11-03 09:20:28,411 - INFO - Test set: 7779 samples
+2024-11-03 09:20:28,463 - INFO - Starting feature selection with Random Forest...
+2024-11-03 09:20:32,409 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ']
+2024-11-03 09:20:32,413 - INFO - Using 5-fold cross-validation.
+2024-11-03 09:20:32,414 - INFO - Training Logistic Regression with top 20 features...
+2024-11-03 09:20:34,914 - INFO - Logistic Regression cross-validation completed in 2.50 seconds.
+2024-11-03 09:20:34,914 - INFO - Logistic Regression Cross-Validation Accuracy: 57.37%
+2024-11-03 09:20:36,629 - INFO - Logistic Regression Test Accuracy: 57.68%
+2024-11-03 09:20:36,635 - INFO - Logistic Regression Confusion Matrix:
+[[405   0  36  41 108   1  33  35 114  18]
+ [  0 695  18   3   4  69   1   3   3  76]
+ [ 26  14 277  89  30   8  57  91  53 131]
+ [ 88   2  47 449  88   3  36  72  52  15]
+ [ 57   3  38  43 478   0   6  21  20   9]
+ [  2  98   3   2   2 584  17   3  10  87]
+ [ 29   1 110  49  40   6 220  61  36  79]
+ [ 43   7  72 102  34   4  61 267  93  70]
+ [ 44   0  13  16  27   3  48  34 549   8]
+ [ 19  48  63   2  10  76  41  38  19 563]]
+2024-11-03 09:20:36,988 - INFO - Logistic Regression confusion matrix saved as 'logistic_regression_confusion_matrix.png'.
+2024-11-03 09:20:36,988 - INFO - Training Decision Tree with top 20 features...
+2024-11-03 09:20:39,050 - INFO - Decision Tree cross-validation completed in 2.06 seconds.
+2024-11-03 09:20:39,051 - INFO - Decision Tree Cross-Validation Accuracy: 60.31%
+2024-11-03 09:20:40,275 - INFO - Decision Tree Test Accuracy: 61.22%
+2024-11-03 09:20:40,278 - INFO - Decision Tree Confusion Matrix:
+[[446   1  24  45  74   2  50  29 106  14]
+ [  4 738  19   3   2  38   3   3   1  61]
+ [ 41  11 335  57  23  12 106  95  16  80]
+ [ 54   4  73 515  49   6  62  45  32  12]
+ [ 85   7  26  49 442   2  19  21  18   6]
+ [  3  37  11   2   0 636  11  18   4  86]
+ [ 41   6  79  54  30  20 261  55  39  46]
+ [ 28  10  91  68  21  18  62 381  40  34]
+ [116   0  16  30  22   6  30  29 486   7]
+ [ 16  42  91  19   6  63  65  45  10 522]]
+2024-11-03 09:20:40,624 - INFO - Decision Tree confusion matrix saved as 'decision_tree_confusion_matrix.png'.
+2024-11-03 09:20:40,625 - INFO - Training K-Nearest Neighbors with top 20 features...
+2024-11-03 09:20:42,326 - INFO - K-Nearest Neighbors cross-validation completed in 1.70 seconds.
+2024-11-03 09:20:42,327 - INFO - K-Nearest Neighbors Cross-Validation Accuracy: 66.39%
+2024-11-03 09:20:42,966 - INFO - K-Nearest Neighbors Test Accuracy: 66.95%
+2024-11-03 09:20:42,968 - INFO - K-Nearest Neighbors Confusion Matrix:
+[[459   0  21  38  97   1  42  14 111   8]
+ [  1 740  29   5   3  22   4   6   4  58]
+ [ 49  12 405  65  15   5  73  77  19  56]
+ [ 60   7  56 572  28   2  37  41  32  17]
+ [ 78   0  30  48 474   1  19   1  21   3]
+ [  4  31  11   2   0 672  20  12   5  51]
+ [ 55   6 109  40  16  10 296  39  30  30]
+ [ 41   3  90  40  17   6  49 444  28  35]
+ [ 82   0  13  17  21   4  31  22 551   1]
+ [ 18  27  84  18   7  50  44  23  13 595]]
+2024-11-03 09:20:43,235 - INFO - K-Nearest Neighbors confusion matrix saved as 'k-nearest_neighbors_confusion_matrix.png'.
+2024-11-03 09:20:43,235 - INFO - Training Support Vector Machine with top 20 features...
+2024-11-03 09:21:14,239 - INFO - Support Vector Machine cross-validation completed in 31.00 seconds.
+2024-11-03 09:21:14,240 - INFO - Support Vector Machine Cross-Validation Accuracy: 69.89%
+2024-11-03 09:21:39,839 - INFO - Support Vector Machine Test Accuracy: 70.61%
+2024-11-03 09:21:39,841 - INFO - Support Vector Machine Confusion Matrix:
+[[446   0  29  16 114   0  35   8 135   8]
+ [  0 764   7   2   4  24   5   1   3  62]
+ [ 23   7 388  44  18   5  69  94  35  93]
+ [ 49   5  37 578  52   1  30  43  51   6]
+ [ 29   0  18  25 553   0  15   0  33   2]
+ [  2  24   5   1   1 676  19  10   9  61]
+ [ 22   0  89  31  23   6 339  45  33  43]
+ [ 23   2  40  34  20   1  54 490  52  37]
+ [ 33   0   8   5  27   0  30  16 621   2]
+ [ 10  18  46   9  10  46  62  26  14 638]]
+2024-11-03 09:21:40,126 - INFO - Support Vector Machine confusion matrix saved as 'support_vector_machine_confusion_matrix.png'.
+2024-11-03 09:21:40,126 - INFO - Training Naive Bayes with top 20 features...
+2024-11-03 09:21:40,296 - INFO - Naive Bayes cross-validation completed in 0.17 seconds.
+2024-11-03 09:21:40,296 - INFO - Naive Bayes Cross-Validation Accuracy: 42.91%
+2024-11-03 09:21:40,312 - INFO - Naive Bayes Test Accuracy: 42.99%
+2024-11-03 09:21:40,315 - INFO - Naive Bayes Confusion Matrix:
+[[476   0  11  68  17   2  22  23  70 102]
+ [  2 431  27  75   4 161   2   9   0 161]
+ [ 64   4  59 173   0   8  20  91  16 341]
+ [123   4  15 472  14   1  25  94  26  78]
+ [387   0  15 100  83   0   4  18   8  60]
+ [  4  75   3  16   0 562   8   2   7 131]
+ [ 59   0  22 115   4   7 105  41  11 267]
+ [ 90   2  15 171   1   4  21 198  38 213]
+ [208   0   0  94   3   5  35   6 318  73]
+ [ 23  18  28  15   2  92  23  30   8 640]]
+2024-11-03 09:21:40,621 - INFO - Naive Bayes confusion matrix saved as 'naive_bayes_confusion_matrix.png'.
+2024-11-03 09:27:32,719 - INFO - Training set: 31114 samples
+2024-11-03 09:27:32,720 - INFO - Test set: 7779 samples
+2024-11-03 09:27:32,720 - INFO - Starting feature selection with Random Forest...
+2024-11-03 09:27:36,295 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ']
+2024-11-03 09:27:36,299 - INFO - Using 5-fold cross-validation.
+2024-11-03 09:27:36,300 - INFO - Starting hyperparameter tuning for Logistic Regression...
+2024-11-03 09:27:43,219 - INFO - Logistic Regression hyperparameter tuning completed in 6.92 seconds.
+2024-11-03 09:27:43,220 - INFO - Logistic Regression Best Parameters: {'C': 1, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-03 09:27:43,220 - INFO - Logistic Regression Best Cross-Validation Accuracy: 57.37%
+2024-11-03 09:27:43,226 - INFO - Logistic Regression Test Accuracy: 57.68%
+2024-11-03 09:27:43,232 - INFO - Logistic Regression Confusion Matrix:
+[[405   0  36  41 108   1  33  35 114  18]
+ [  0 695  18   3   4  69   1   3   3  76]
+ [ 26  14 277  89  30   8  57  91  53 131]
+ [ 88   2  47 449  88   3  36  72  52  15]
+ [ 57   3  38  43 478   0   6  21  20   9]
+ [  2  98   3   2   2 584  17   3  10  87]
+ [ 29   1 110  49  40   6 220  61  36  79]
+ [ 43   7  72 102  34   4  61 267  93  70]
+ [ 44   0  13  16  27   3  48  34 549   8]
+ [ 19  48  63   2  10  76  41  38  19 563]]
+2024-11-03 09:27:43,558 - INFO - Logistic Regression confusion matrix saved as 'logistic_regression_confusion_matrix.png'.
+2024-11-03 09:27:43,559 - INFO - Starting hyperparameter tuning for Decision Tree...
+2024-11-03 09:28:39,169 - INFO - Decision Tree hyperparameter tuning completed in 55.61 seconds.
+2024-11-03 09:28:39,170 - INFO - Decision Tree Best Parameters: {'criterion': 'gini', 'max_depth': 15, 'min_samples_leaf': 4, 'min_samples_split': 2}
+2024-11-03 09:28:39,170 - INFO - Decision Tree Best Cross-Validation Accuracy: 62.17%
+2024-11-03 09:28:39,174 - INFO - Decision Tree Test Accuracy: 63.30%
+2024-11-03 09:28:39,176 - INFO - Decision Tree Confusion Matrix:
+[[451   3  27  44  87   2  39  31 103   4]
+ [  2 752  14   3   3  34   6   3   0  55]
+ [ 44  12 368  61  21   6  74  95  23  72]
+ [ 61   3  71 516  46   2  49  53  36  15]
+ [ 92   3  25  53 459   0  13  12  16   2]
+ [  7  39  10   3   0 646  11  18   5  69]
+ [ 50   9  78  58  25   8 276  60  27  40]
+ [ 35   8  93  78  15  10  56 395  32  31]
+ [ 84   1  21  20  25   3  29  21 534   4]
+ [ 10  48 105  18   7  64  54  40   6 527]]
+2024-11-03 09:28:39,448 - INFO - Decision Tree confusion matrix saved as 'decision_tree_confusion_matrix.png'.
+2024-11-03 09:28:39,449 - INFO - Starting hyperparameter tuning for K-Nearest Neighbors...
+2024-11-03 09:29:05,429 - INFO - K-Nearest Neighbors hyperparameter tuning completed in 25.98 seconds.
+2024-11-03 09:29:05,430 - INFO - K-Nearest Neighbors Best Parameters: {'metric': 'manhattan', 'n_neighbors': 7, 'weights': 'distance'}
+2024-11-03 09:29:05,430 - INFO - K-Nearest Neighbors Best Cross-Validation Accuracy: 69.35%
+2024-11-03 09:29:06,578 - INFO - K-Nearest Neighbors Test Accuracy: 69.39%
+2024-11-03 09:29:06,581 - INFO - K-Nearest Neighbors Confusion Matrix:
+[[438   0  14  35 109   1  45  10 131   8]
+ [  0 743  19  10   2  20   5   7   3  63]
+ [ 25   7 377  72  14   4  74  88  30  85]
+ [ 43   3  42 594  27   0  40  53  33  17]
+ [ 48   0  13  37 516   0  27   8  24   2]
+ [  3  23   5   1   1 675  17  16   8  59]
+ [ 30   1  88  42  19   9 311  45  31  55]
+ [ 27   0  65  29  16   4  49 490  34  39]
+ [ 58   0   9   8  25   3  22  20 591   6]
+ [ 10  19  47  13   9  30  48  28  12 663]]
+2024-11-03 09:29:06,864 - INFO - K-Nearest Neighbors confusion matrix saved as 'k-nearest_neighbors_confusion_matrix.png'.
+2024-11-03 09:29:06,865 - INFO - Starting hyperparameter tuning for Support Vector Machine...
+2024-11-03 09:37:44,726 - INFO - Support Vector Machine hyperparameter tuning completed in 517.86 seconds.
+2024-11-03 09:37:44,727 - INFO - Support Vector Machine Best Parameters: {'C': 10, 'gamma': 'scale', 'kernel': 'rbf'}
+2024-11-03 09:37:44,728 - INFO - Support Vector Machine Best Cross-Validation Accuracy: 73.43%
+2024-11-03 09:37:51,819 - INFO - Support Vector Machine Test Accuracy: 73.75%
+2024-11-03 09:37:51,821 - INFO - Support Vector Machine Confusion Matrix:
+[[491   0  12  20 106   0  31   9 118   4]
+ [  0 784   7   2   3  20   6   1   2  47]
+ [ 31   9 431  42  12   4  66  79  32  70]
+ [ 39   4  31 621  34   0  33  45  38   7]
+ [ 29   0  14  22 556   0  14   0  39   1]
+ [  3  27   5   3   1 700  12  10   4  43]
+ [ 27   0  92  36  15   6 369  42  16  28]
+ [ 23   2  55  40  18   5  49 490  40  31]
+ [ 29   0   7   9  19   2  23  14 639   0]
+ [  6  19  48  16   7  40  53  25   9 656]]
+2024-11-03 09:37:52,075 - INFO - Support Vector Machine confusion matrix saved as 'support_vector_machine_confusion_matrix.png'.
+2024-11-03 09:37:52,076 - INFO - Starting hyperparameter tuning for Naive Bayes...
+2024-11-03 09:37:52,403 - INFO - Naive Bayes hyperparameter tuning completed in 0.33 seconds.
+2024-11-03 09:37:52,404 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 1e-09}
+2024-11-03 09:37:52,404 - INFO - Naive Bayes Best Cross-Validation Accuracy: 42.91%
+2024-11-03 09:37:52,411 - INFO - Naive Bayes Test Accuracy: 42.99%
+2024-11-03 09:37:52,413 - INFO - Naive Bayes Confusion Matrix:
+[[476   0  11  68  17   2  22  23  70 102]
+ [  2 431  27  75   4 161   2   9   0 161]
+ [ 64   4  59 173   0   8  20  91  16 341]
+ [123   4  15 472  14   1  25  94  26  78]
+ [387   0  15 100  83   0   4  18   8  60]
+ [  4  75   3  16   0 562   8   2   7 131]
+ [ 59   0  22 115   4   7 105  41  11 267]
+ [ 90   2  15 171   1   4  21 198  38 213]
+ [208   0   0  94   3   5  35   6 318  73]
+ [ 23  18  28  15   2  92  23  30   8 640]]
+2024-11-03 09:37:52,701 - INFO - Naive Bayes confusion matrix saved as 'naive_bayes_confusion_matrix.png'.
+2024-11-03 09:48:17,854 - INFO - Training set: 31114 samples
+2024-11-03 09:48:17,855 - INFO - Test set: 7779 samples
+2024-11-03 09:48:17,855 - INFO - Starting feature selection with Random Forest...
+2024-11-03 09:48:21,463 - INFO - Top 40 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ', 'TotalIntensity', 'CorrXZ', 'VoxelEntropy', 'RangeY', 'SkewY', 'StdZ', 'RangeZ', 'MeanGradX', 'CorrYZ', 'ConvexHullVolume', 'KurtX', 'StdY', 'EigVal2', 'MaxIntensity', 'StdIntensity', 'KurtDoppler', 'NumPoints', 'EigVal3', 'MeanDoppler', 'VoxelDensity']
+2024-11-03 09:48:21,471 - INFO - Using 5-fold cross-validation.
+2024-11-03 09:48:21,471 - INFO - Starting hyperparameter tuning for Logistic Regression...
+2024-11-03 09:48:35,839 - INFO - Logistic Regression hyperparameter tuning completed in 14.37 seconds.
+2024-11-03 09:48:35,840 - INFO - Logistic Regression Best Parameters: {'C': 1, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-03 09:48:35,841 - INFO - Logistic Regression Best Cross-Validation Accuracy: 60.39%
+2024-11-03 09:48:35,865 - INFO - Logistic Regression Test Accuracy: 59.98%
+2024-11-03 09:48:35,883 - INFO - Logistic Regression Confusion Matrix:
+[[414   1  24  45 111   2  24  35 119  16]
+ [  0 706  21   3   6  68   3   5   2  58]
+ [ 25  14 290  68  25   9  63 107  50 125]
+ [ 74   1  49 455  85   2  35  81  50  20]
+ [ 62   3  33  37 472   0  14  25  24   5]
+ [  1  80   6   2   1 618  17   7  10  66]
+ [ 28   1 101  47  26  11 252  62  33  70]
+ [ 32   2  87  74  43   5  66 308  74  62]
+ [ 53   1  11  11  32   3  41  28 553   9]
+ [ 13  36  64   7  10  63  41  32  15 598]]
+2024-11-03 09:48:36,306 - INFO - Logistic Regression confusion matrix saved as 'logistic_regression_confusion_matrix.png'.
+2024-11-03 09:48:36,306 - INFO - Starting hyperparameter tuning for Decision Tree...
+2024-11-03 09:50:16,830 - INFO - Decision Tree hyperparameter tuning completed in 100.52 seconds.
+2024-11-03 09:50:16,831 - INFO - Decision Tree Best Parameters: {'criterion': 'gini', 'max_depth': 15, 'min_samples_leaf': 4, 'min_samples_split': 10}
+2024-11-03 09:50:16,831 - INFO - Decision Tree Best Cross-Validation Accuracy: 62.16%
+2024-11-03 09:50:16,834 - INFO - Decision Tree Test Accuracy: 63.08%
+2024-11-03 09:50:16,837 - INFO - Decision Tree Confusion Matrix:
+[[418   2  35  49 100   3  40  25 116   3]
+ [  3 738  20   3   2  47   3   3   0  53]
+ [ 41  11 361  63  16   3  89  87  24  81]
+ [ 65   3  56 528  38   3  42  59  41  17]
+ [ 81   4  24  62 446   0  17  13  27   1]
+ [  5  56   3   1   1 650  11  11   8  62]
+ [ 42   2  89  59  29  10 292  47  29  32]
+ [ 33   8  91  64  16   9  69 380  42  41]
+ [ 78   0  25  17  24   4  29  24 538   3]
+ [ 13  43  95  15   6  49  56  41   5 556]]
+2024-11-03 09:50:17,106 - INFO - Decision Tree confusion matrix saved as 'decision_tree_confusion_matrix.png'.
+2024-11-03 09:50:17,107 - INFO - Starting hyperparameter tuning for K-Nearest Neighbors...
+2024-11-03 09:50:56,664 - INFO - K-Nearest Neighbors hyperparameter tuning completed in 39.56 seconds.
+2024-11-03 09:50:56,665 - INFO - K-Nearest Neighbors Best Parameters: {'metric': 'manhattan', 'n_neighbors': 9, 'weights': 'distance'}
+2024-11-03 09:50:56,665 - INFO - K-Nearest Neighbors Best Cross-Validation Accuracy: 66.17%
+2024-11-03 09:50:58,558 - INFO - K-Nearest Neighbors Test Accuracy: 66.68%
+2024-11-03 09:50:58,560 - INFO - K-Nearest Neighbors Confusion Matrix:
+[[414   0  23  30 113   1  43  18 139  10]
+ [  1 723  28  24   4  15   7   8   3  59]
+ [ 23  14 339  69  25   5  81  94  33  93]
+ [ 40  10  48 572  22   0  42  49  34  35]
+ [ 59   4  21  40 482   0  26  12  29   2]
+ [  2  25   4   4   0 658  15  20  10  70]
+ [ 23   0  85  44  17   6 302  50  35  69]
+ [ 24   0  38  31  23   1  53 478  45  60]
+ [ 61   0  11  12  28   1  32  19 570   8]
+ [ 11  15  52  21   7  39  39  32  14 649]]
+2024-11-03 09:50:58,840 - INFO - K-Nearest Neighbors confusion matrix saved as 'k-nearest_neighbors_confusion_matrix.png'.
+2024-11-03 09:50:58,841 - INFO - Starting hyperparameter tuning for Support Vector Machine...
+2024-11-03 10:03:06,769 - INFO - Support Vector Machine hyperparameter tuning completed in 727.93 seconds.
+2024-11-03 10:03:06,770 - INFO - Support Vector Machine Best Parameters: {'C': 10, 'gamma': 'auto', 'kernel': 'rbf'}
+2024-11-03 10:03:06,770 - INFO - Support Vector Machine Best Cross-Validation Accuracy: 74.39%
+2024-11-03 10:03:15,466 - INFO - Support Vector Machine Test Accuracy: 74.88%
+2024-11-03 10:03:15,468 - INFO - Support Vector Machine Confusion Matrix:
+[[502   1  16  18  97   1  28   9 116   3]
+ [  1 792  10   2   4  28   2   1   2  30]
+ [ 31  12 462  42  13   4  60  71  24  57]
+ [ 37   3  27 641  28   0  30  48  30   8]
+ [ 30   1   8  27 559   0  12   2  35   1]
+ [  0  32   5   2   1 709  12  13   6  28]
+ [ 25   2  84  32  18   7 375  44  17  27]
+ [ 20   2  55  38  18   7  44 503  32  34]
+ [ 39   0  14  12  17   1  20  19 620   0]
+ [  9  28  51  17   3  40  38  23   8 662]]
+2024-11-03 10:03:15,710 - INFO - Support Vector Machine confusion matrix saved as 'support_vector_machine_confusion_matrix.png'.
+2024-11-03 10:03:15,711 - INFO - Starting hyperparameter tuning for Naive Bayes...
+2024-11-03 10:03:16,158 - INFO - Naive Bayes hyperparameter tuning completed in 0.45 seconds.
+2024-11-03 10:03:16,159 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 1e-09}
+2024-11-03 10:03:16,159 - INFO - Naive Bayes Best Cross-Validation Accuracy: 37.75%
+2024-11-03 10:03:16,170 - INFO - Naive Bayes Test Accuracy: 37.13%
+2024-11-03 10:03:16,173 - INFO - Naive Bayes Confusion Matrix:
+[[321   0  11  78  16   2  38  16 240  69]
+ [  2 141  26  83  16 441   1  12  47 103]
+ [ 57   6  45 193   0  16  23  67 125 244]
+ [ 56   7  16 469  15   3  30  75 136  45]
+ [240   0  15  98  54   4  10  18 215  21]
+ [  9  68   6  20   7 552   4   5  28 109]
+ [ 57   0  22 130   2  20  92  23 112 173]
+ [ 79   4  18 145   1  12  19 191 186  98]
+ [ 57   0   1  95   4  14  34   6 496  35]
+ [ 31  34  24  13   1 103  34  26  86 527]]
+2024-11-03 10:03:16,421 - INFO - Naive Bayes confusion matrix saved as 'naive_bayes_confusion_matrix.png'.
+2024-11-05 08:23:10,464 - INFO - Training set: 31114 samples
+2024-11-05 08:23:10,465 - INFO - Test set: 7779 samples
+2024-11-05 08:23:10,466 - INFO - Starting feature selection with Random Forest...
+2024-11-05 08:23:14,485 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ']
+2024-11-05 08:23:14,492 - INFO - Using 5-fold cross-validation.
+2024-11-05 08:23:14,492 - INFO - Starting hyperparameter tuning for Logistic Regression...
+2024-11-05 08:23:20,858 - INFO - Logistic Regression hyperparameter tuning completed in 6.37 seconds.
+2024-11-05 08:23:20,859 - INFO - Logistic Regression Best Parameters: {'C': 1, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-05 08:23:20,859 - INFO - Logistic Regression Best Cross-Validation Accuracy: 57.37%
+2024-11-05 08:23:20,867 - INFO - Logistic Regression Test Accuracy: 57.68%
+2024-11-05 08:23:20,875 - INFO - Logistic Regression Confusion Matrix:
+[[405   0  36  41 108   1  33  35 114  18]
+ [  0 695  18   3   4  69   1   3   3  76]
+ [ 26  14 277  89  30   8  57  91  53 131]
+ [ 88   2  47 449  88   3  36  72  52  15]
+ [ 57   3  38  43 478   0   6  21  20   9]
+ [  2  98   3   2   2 584  17   3  10  87]
+ [ 29   1 110  49  40   6 220  61  36  79]
+ [ 43   7  72 102  34   4  61 267  93  70]
+ [ 44   0  13  16  27   3  48  34 549   8]
+ [ 19  48  63   2  10  76  41  38  19 563]]
+2024-11-05 08:23:21,220 - INFO - Logistic Regression confusion matrix saved as 'logistic_regression_confusion_matrix.png'.
+2024-11-05 08:23:21,221 - INFO - Starting hyperparameter tuning for Decision Tree...
+2024-11-05 08:24:16,810 - INFO - Decision Tree hyperparameter tuning completed in 55.59 seconds.
+2024-11-05 08:24:16,811 - INFO - Decision Tree Best Parameters: {'criterion': 'gini', 'max_depth': 15, 'min_samples_leaf': 4, 'min_samples_split': 2}
+2024-11-05 08:24:16,811 - INFO - Decision Tree Best Cross-Validation Accuracy: 62.17%
+2024-11-05 08:24:16,815 - INFO - Decision Tree Test Accuracy: 63.30%
+2024-11-05 08:24:16,818 - INFO - Decision Tree Confusion Matrix:
+[[451   3  27  44  87   2  39  31 103   4]
+ [  2 752  14   3   3  34   6   3   0  55]
+ [ 44  12 368  61  21   6  74  95  23  72]
+ [ 61   3  71 516  46   2  49  53  36  15]
+ [ 92   3  25  53 459   0  13  12  16   2]
+ [  7  39  10   3   0 646  11  18   5  69]
+ [ 50   9  78  58  25   8 276  60  27  40]
+ [ 35   8  93  78  15  10  56 395  32  31]
+ [ 84   1  21  20  25   3  29  21 534   4]
+ [ 10  48 105  18   7  64  54  40   6 527]]
+2024-11-05 08:24:17,067 - INFO - Decision Tree confusion matrix saved as 'decision_tree_confusion_matrix.png'.
+2024-11-05 08:24:17,068 - INFO - Starting hyperparameter tuning for K-Nearest Neighbors...
+2024-11-05 08:24:43,428 - INFO - K-Nearest Neighbors hyperparameter tuning completed in 26.36 seconds.
+2024-11-05 08:24:43,429 - INFO - K-Nearest Neighbors Best Parameters: {'metric': 'manhattan', 'n_neighbors': 7, 'weights': 'distance'}
+2024-11-05 08:24:43,429 - INFO - K-Nearest Neighbors Best Cross-Validation Accuracy: 69.35%
+2024-11-05 08:24:44,545 - INFO - K-Nearest Neighbors Test Accuracy: 69.39%
+2024-11-05 08:24:44,548 - INFO - K-Nearest Neighbors Confusion Matrix:
+[[438   0  14  35 109   1  45  10 131   8]
+ [  0 743  19  10   2  20   5   7   3  63]
+ [ 25   7 377  72  14   4  74  88  30  85]
+ [ 43   3  42 594  27   0  40  53  33  17]
+ [ 48   0  13  37 516   0  27   8  24   2]
+ [  3  23   5   1   1 675  17  16   8  59]
+ [ 30   1  88  42  19   9 311  45  31  55]
+ [ 27   0  65  29  16   4  49 490  34  39]
+ [ 58   0   9   8  25   3  22  20 591   6]
+ [ 10  19  47  13   9  30  48  28  12 663]]
+2024-11-05 08:24:44,798 - INFO - K-Nearest Neighbors confusion matrix saved as 'k-nearest_neighbors_confusion_matrix.png'.
+2024-11-05 08:24:44,799 - INFO - Starting hyperparameter tuning for Naive Bayes...
+2024-11-05 08:24:45,115 - INFO - Naive Bayes hyperparameter tuning completed in 0.32 seconds.
+2024-11-05 08:24:45,116 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 1e-09}
+2024-11-05 08:24:45,116 - INFO - Naive Bayes Best Cross-Validation Accuracy: 42.91%
+2024-11-05 08:24:45,123 - INFO - Naive Bayes Test Accuracy: 42.99%
+2024-11-05 08:24:45,126 - INFO - Naive Bayes Confusion Matrix:
+[[476   0  11  68  17   2  22  23  70 102]
+ [  2 431  27  75   4 161   2   9   0 161]
+ [ 64   4  59 173   0   8  20  91  16 341]
+ [123   4  15 472  14   1  25  94  26  78]
+ [387   0  15 100  83   0   4  18   8  60]
+ [  4  75   3  16   0 562   8   2   7 131]
+ [ 59   0  22 115   4   7 105  41  11 267]
+ [ 90   2  15 171   1   4  21 198  38 213]
+ [208   0   0  94   3   5  35   6 318  73]
+ [ 23  18  28  15   2  92  23  30   8 640]]
+2024-11-05 08:24:45,410 - INFO - Naive Bayes confusion matrix saved as 'naive_bayes_confusion_matrix.png'.
+2024-11-05 08:24:45,410 - INFO - Starting hyperparameter tuning for Random Forest...
+2024-11-05 08:28:36,352 - INFO - Training set: 31114 samples
+2024-11-05 08:28:36,353 - INFO - Test set: 7779 samples
+2024-11-05 08:28:36,353 - INFO - Starting feature selection with Random Forest...
+2024-11-05 08:28:39,828 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ']
+2024-11-05 08:28:39,834 - INFO - Using 5-fold cross-validation.
+2024-11-05 08:28:39,835 - INFO - Starting hyperparameter tuning for Logistic Regression...
+2024-11-05 08:28:46,437 - INFO - Logistic Regression hyperparameter tuning completed in 6.60 seconds.
+2024-11-05 08:28:46,438 - INFO - Logistic Regression Best Parameters: {'C': 1, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-05 08:28:46,439 - INFO - Logistic Regression Best Cross-Validation Accuracy: 57.37%
+2024-11-05 08:28:46,449 - INFO - Logistic Regression Test Accuracy: 57.68%
+2024-11-05 08:28:46,460 - INFO - Logistic Regression Confusion Matrix:
+[[405   0  36  41 108   1  33  35 114  18]
+ [  0 695  18   3   4  69   1   3   3  76]
+ [ 26  14 277  89  30   8  57  91  53 131]
+ [ 88   2  47 449  88   3  36  72  52  15]
+ [ 57   3  38  43 478   0   6  21  20   9]
+ [  2  98   3   2   2 584  17   3  10  87]
+ [ 29   1 110  49  40   6 220  61  36  79]
+ [ 43   7  72 102  34   4  61 267  93  70]
+ [ 44   0  13  16  27   3  48  34 549   8]
+ [ 19  48  63   2  10  76  41  38  19 563]]
+2024-11-05 08:28:46,823 - INFO - Logistic Regression confusion matrix saved as 'logistic_regression_confusion_matrix.png'.
+2024-11-05 08:28:46,824 - INFO - Starting hyperparameter tuning for Naive Bayes...
+2024-11-05 08:28:47,142 - INFO - Naive Bayes hyperparameter tuning completed in 0.32 seconds.
+2024-11-05 08:28:47,143 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 1e-09}
+2024-11-05 08:28:47,143 - INFO - Naive Bayes Best Cross-Validation Accuracy: 42.91%
+2024-11-05 08:28:47,151 - INFO - Naive Bayes Test Accuracy: 42.99%
+2024-11-05 08:28:47,153 - INFO - Naive Bayes Confusion Matrix:
+[[476   0  11  68  17   2  22  23  70 102]
+ [  2 431  27  75   4 161   2   9   0 161]
+ [ 64   4  59 173   0   8  20  91  16 341]
+ [123   4  15 472  14   1  25  94  26  78]
+ [387   0  15 100  83   0   4  18   8  60]
+ [  4  75   3  16   0 562   8   2   7 131]
+ [ 59   0  22 115   4   7 105  41  11 267]
+ [ 90   2  15 171   1   4  21 198  38 213]
+ [208   0   0  94   3   5  35   6 318  73]
+ [ 23  18  28  15   2  92  23  30   8 640]]
+2024-11-05 08:28:47,402 - INFO - Naive Bayes confusion matrix saved as 'naive_bayes_confusion_matrix.png'.
+2024-11-05 08:28:47,402 - INFO - Starting hyperparameter tuning for Random Forest...
+2024-11-05 08:29:04,864 - INFO - Training set: 31114 samples
+2024-11-05 08:29:04,864 - INFO - Test set: 7779 samples
+2024-11-05 08:29:04,865 - INFO - Starting feature selection with Random Forest...
+2024-11-05 08:29:08,255 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ']
+2024-11-05 08:29:08,260 - INFO - Using 5-fold cross-validation.
+2024-11-05 08:29:08,260 - INFO - Starting hyperparameter tuning for Logistic Regression...
+2024-11-05 08:29:14,141 - INFO - Logistic Regression hyperparameter tuning completed in 5.88 seconds.
+2024-11-05 08:29:14,142 - INFO - Logistic Regression Best Parameters: {'C': 1, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-05 08:29:14,146 - INFO - Logistic Regression Best Cross-Validation Accuracy: 57.37%
+2024-11-05 08:29:14,157 - INFO - Logistic Regression Test Accuracy: 57.68%
+2024-11-05 08:29:14,165 - INFO - Logistic Regression Confusion Matrix:
+[[405   0  36  41 108   1  33  35 114  18]
+ [  0 695  18   3   4  69   1   3   3  76]
+ [ 26  14 277  89  30   8  57  91  53 131]
+ [ 88   2  47 449  88   3  36  72  52  15]
+ [ 57   3  38  43 478   0   6  21  20   9]
+ [  2  98   3   2   2 584  17   3  10  87]
+ [ 29   1 110  49  40   6 220  61  36  79]
+ [ 43   7  72 102  34   4  61 267  93  70]
+ [ 44   0  13  16  27   3  48  34 549   8]
+ [ 19  48  63   2  10  76  41  38  19 563]]
+2024-11-05 08:29:14,505 - INFO - Logistic Regression confusion matrix saved as 'logistic_regression_confusion_matrix.png'.
+2024-11-05 08:29:14,505 - INFO - Starting hyperparameter tuning for Naive Bayes...
+2024-11-05 08:29:14,819 - INFO - Naive Bayes hyperparameter tuning completed in 0.31 seconds.
+2024-11-05 08:29:14,820 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 1e-09}
+2024-11-05 08:29:14,820 - INFO - Naive Bayes Best Cross-Validation Accuracy: 42.91%
+2024-11-05 08:29:14,828 - INFO - Naive Bayes Test Accuracy: 42.99%
+2024-11-05 08:29:14,831 - INFO - Naive Bayes Confusion Matrix:
+[[476   0  11  68  17   2  22  23  70 102]
+ [  2 431  27  75   4 161   2   9   0 161]
+ [ 64   4  59 173   0   8  20  91  16 341]
+ [123   4  15 472  14   1  25  94  26  78]
+ [387   0  15 100  83   0   4  18   8  60]
+ [  4  75   3  16   0 562   8   2   7 131]
+ [ 59   0  22 115   4   7 105  41  11 267]
+ [ 90   2  15 171   1   4  21 198  38 213]
+ [208   0   0  94   3   5  35   6 318  73]
+ [ 23  18  28  15   2  92  23  30   8 640]]
+2024-11-05 08:29:15,110 - INFO - Naive Bayes confusion matrix saved as 'naive_bayes_confusion_matrix.png'.
+2024-11-05 08:29:15,110 - INFO - Starting hyperparameter tuning for Random Forest...
+2024-11-05 08:29:34,289 - INFO - Random Forest hyperparameter tuning completed in 19.18 seconds.
+2024-11-05 08:29:34,289 - INFO - Random Forest Best Parameters: {'bootstrap': True, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 100}
+2024-11-05 08:29:34,290 - INFO - Random Forest Best Cross-Validation Accuracy: 69.07%
+2024-11-05 08:29:34,350 - INFO - Random Forest Test Accuracy: 69.04%
+2024-11-05 08:29:34,353 - INFO - Random Forest Confusion Matrix:
+[[416   0  11  41 113   0  35  22 150   3]
+ [  0 775   9   2   2  24   2   3   3  52]
+ [ 25   6 320  81  11   3  64 122  32 112]
+ [ 56   4  24 589  30   0  26  67  45  11]
+ [ 27   0  11  50 526   0   9  13  38   1]
+ [  2  33   4   2   1 675  14  11  10  56]
+ [ 31   1  72  65  19   2 309  62  31  39]
+ [ 16   5  36  50  21   0  47 495  50  33]
+ [ 35   0   6   9  25   0  23  18 624   2]
+ [  5  30  54   5   4  40  43  45  11 642]]
+2024-11-05 08:29:34,613 - INFO - Random Forest confusion matrix saved as 'random_forest_confusion_matrix.png'.
+2024-11-05 08:29:34,613 - INFO - ########################################################################################################################
+2024-11-05 08:30:00,879 - INFO - Training set: 31114 samples
+2024-11-05 08:30:00,879 - INFO - Test set: 7779 samples
+2024-11-05 08:30:00,880 - INFO - Starting feature selection with Random Forest...
+2024-11-05 08:30:04,155 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ']
+2024-11-05 08:30:04,160 - INFO - Using 5-fold cross-validation.
+2024-11-05 08:30:04,160 - INFO - Starting hyperparameter tuning for Logistic Regression...
+2024-11-05 08:30:09,724 - INFO - Logistic Regression hyperparameter tuning completed in 5.56 seconds.
+2024-11-05 08:30:09,725 - INFO - Logistic Regression Best Parameters: {'C': 1, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-05 08:30:09,725 - INFO - Logistic Regression Best Cross-Validation Accuracy: 57.37%
+2024-11-05 08:30:09,731 - INFO - Logistic Regression Test Accuracy: 57.68%
+2024-11-05 08:30:09,736 - INFO - Logistic Regression Confusion Matrix:
+[[405   0  36  41 108   1  33  35 114  18]
+ [  0 695  18   3   4  69   1   3   3  76]
+ [ 26  14 277  89  30   8  57  91  53 131]
+ [ 88   2  47 449  88   3  36  72  52  15]
+ [ 57   3  38  43 478   0   6  21  20   9]
+ [  2  98   3   2   2 584  17   3  10  87]
+ [ 29   1 110  49  40   6 220  61  36  79]
+ [ 43   7  72 102  34   4  61 267  93  70]
+ [ 44   0  13  16  27   3  48  34 549   8]
+ [ 19  48  63   2  10  76  41  38  19 563]]
+2024-11-05 08:30:10,058 - INFO - Logistic Regression confusion matrix saved as 'logistic_regression_confusion_matrix.png'.
+2024-11-05 08:30:10,059 - INFO - Starting hyperparameter tuning for Naive Bayes...
+2024-11-05 08:30:10,368 - INFO - Naive Bayes hyperparameter tuning completed in 0.31 seconds.
+2024-11-05 08:30:10,369 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 1e-09}
+2024-11-05 08:30:10,369 - INFO - Naive Bayes Best Cross-Validation Accuracy: 42.91%
+2024-11-05 08:30:10,375 - INFO - Naive Bayes Test Accuracy: 42.99%
+2024-11-05 08:30:10,378 - INFO - Naive Bayes Confusion Matrix:
+[[476   0  11  68  17   2  22  23  70 102]
+ [  2 431  27  75   4 161   2   9   0 161]
+ [ 64   4  59 173   0   8  20  91  16 341]
+ [123   4  15 472  14   1  25  94  26  78]
+ [387   0  15 100  83   0   4  18   8  60]
+ [  4  75   3  16   0 562   8   2   7 131]
+ [ 59   0  22 115   4   7 105  41  11 267]
+ [ 90   2  15 171   1   4  21 198  38 213]
+ [208   0   0  94   3   5  35   6 318  73]
+ [ 23  18  28  15   2  92  23  30   8 640]]
+2024-11-05 08:30:10,619 - INFO - Naive Bayes confusion matrix saved as 'naive_bayes_confusion_matrix.png'.
+2024-11-05 08:30:10,619 - INFO - Starting hyperparameter tuning for Random Forest...
+2024-11-05 08:30:29,398 - INFO - Random Forest hyperparameter tuning completed in 18.78 seconds.
+2024-11-05 08:30:29,398 - INFO - Random Forest Best Parameters: {'bootstrap': True, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 100}
+2024-11-05 08:30:29,399 - INFO - Random Forest Best Cross-Validation Accuracy: 69.07%
+2024-11-05 08:30:29,459 - INFO - Random Forest Test Accuracy: 69.04%
+2024-11-05 08:30:29,462 - INFO - Random Forest Confusion Matrix:
+[[416   0  11  41 113   0  35  22 150   3]
+ [  0 775   9   2   2  24   2   3   3  52]
+ [ 25   6 320  81  11   3  64 122  32 112]
+ [ 56   4  24 589  30   0  26  67  45  11]
+ [ 27   0  11  50 526   0   9  13  38   1]
+ [  2  33   4   2   1 675  14  11  10  56]
+ [ 31   1  72  65  19   2 309  62  31  39]
+ [ 16   5  36  50  21   0  47 495  50  33]
+ [ 35   0   6   9  25   0  23  18 624   2]
+ [  5  30  54   5   4  40  43  45  11 642]]
+2024-11-05 08:30:29,705 - INFO - Random Forest confusion matrix saved as 'random_forest_confusion_matrix.png'.
+2024-11-05 08:30:29,705 - INFO - ########################################################################################################################
+2024-11-05 08:30:44,270 - INFO - Training set: 31114 samples
+2024-11-05 08:30:44,271 - INFO - Test set: 7779 samples
+2024-11-05 08:30:44,272 - INFO - Starting feature selection with Random Forest...
+2024-11-05 08:30:47,894 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ']
+2024-11-05 08:30:47,899 - INFO - Using 5-fold cross-validation.
+2024-11-05 08:30:47,900 - INFO - Starting hyperparameter tuning for Logistic Regression...
+2024-11-05 08:30:54,623 - INFO - Logistic Regression hyperparameter tuning completed in 6.72 seconds.
+2024-11-05 08:30:54,629 - INFO - Logistic Regression Best Parameters: {'C': 1, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-05 08:30:54,629 - INFO - Logistic Regression Best Cross-Validation Accuracy: 57.37%
+2024-11-05 08:30:54,634 - INFO - Logistic Regression Test Accuracy: 57.68%
+2024-11-05 08:30:54,640 - INFO - Logistic Regression Confusion Matrix:
+[[405   0  36  41 108   1  33  35 114  18]
+ [  0 695  18   3   4  69   1   3   3  76]
+ [ 26  14 277  89  30   8  57  91  53 131]
+ [ 88   2  47 449  88   3  36  72  52  15]
+ [ 57   3  38  43 478   0   6  21  20   9]
+ [  2  98   3   2   2 584  17   3  10  87]
+ [ 29   1 110  49  40   6 220  61  36  79]
+ [ 43   7  72 102  34   4  61 267  93  70]
+ [ 44   0  13  16  27   3  48  34 549   8]
+ [ 19  48  63   2  10  76  41  38  19 563]]
+2024-11-05 08:30:55,079 - INFO - Logistic Regression confusion matrix saved as 'logistic_regression_confusion_matrix.png'.
+2024-11-05 08:30:55,079 - INFO - Starting hyperparameter tuning for Naive Bayes...
+2024-11-05 08:30:55,463 - INFO - Naive Bayes hyperparameter tuning completed in 0.38 seconds.
+2024-11-05 08:30:55,463 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 1e-09}
+2024-11-05 08:30:55,464 - INFO - Naive Bayes Best Cross-Validation Accuracy: 42.91%
+2024-11-05 08:30:55,470 - INFO - Naive Bayes Test Accuracy: 42.99%
+2024-11-05 08:30:55,473 - INFO - Naive Bayes Confusion Matrix:
+[[476   0  11  68  17   2  22  23  70 102]
+ [  2 431  27  75   4 161   2   9   0 161]
+ [ 64   4  59 173   0   8  20  91  16 341]
+ [123   4  15 472  14   1  25  94  26  78]
+ [387   0  15 100  83   0   4  18   8  60]
+ [  4  75   3  16   0 562   8   2   7 131]
+ [ 59   0  22 115   4   7 105  41  11 267]
+ [ 90   2  15 171   1   4  21 198  38 213]
+ [208   0   0  94   3   5  35   6 318  73]
+ [ 23  18  28  15   2  92  23  30   8 640]]
+2024-11-05 08:30:55,773 - INFO - Naive Bayes confusion matrix saved as 'naive_bayes_confusion_matrix.png'.
+2024-11-05 08:30:55,774 - INFO - Starting hyperparameter tuning for Random Forest...
+2024-11-05 08:32:00,380 - INFO - Training set: 31114 samples
+2024-11-05 08:32:00,381 - INFO - Test set: 7779 samples
+2024-11-05 08:32:00,381 - INFO - Starting feature selection with Random Forest...
+2024-11-05 08:32:04,258 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ']
+2024-11-05 08:32:04,265 - INFO - Using 5-fold cross-validation.
+2024-11-05 08:32:04,265 - INFO - Starting hyperparameter tuning for Logistic Regression...
+2024-11-05 08:32:11,152 - INFO - Logistic Regression hyperparameter tuning completed in 6.89 seconds.
+2024-11-05 08:32:11,153 - INFO - Logistic Regression Best Parameters: {'C': 1, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-05 08:32:11,153 - INFO - Logistic Regression Best Cross-Validation Accuracy: 57.37%
+2024-11-05 08:32:11,160 - INFO - Logistic Regression Test Accuracy: 57.68%
+2024-11-05 08:32:11,174 - INFO - Logistic Regression Confusion Matrix:
+[[405   0  36  41 108   1  33  35 114  18]
+ [  0 695  18   3   4  69   1   3   3  76]
+ [ 26  14 277  89  30   8  57  91  53 131]
+ [ 88   2  47 449  88   3  36  72  52  15]
+ [ 57   3  38  43 478   0   6  21  20   9]
+ [  2  98   3   2   2 584  17   3  10  87]
+ [ 29   1 110  49  40   6 220  61  36  79]
+ [ 43   7  72 102  34   4  61 267  93  70]
+ [ 44   0  13  16  27   3  48  34 549   8]
+ [ 19  48  63   2  10  76  41  38  19 563]]
+2024-11-05 08:32:11,545 - INFO - Logistic Regression confusion matrix saved as 'logistic_regression_confusion_matrix.png'.
+2024-11-05 08:32:11,546 - INFO - Starting hyperparameter tuning for Naive Bayes...
+2024-11-05 08:32:11,906 - INFO - Naive Bayes hyperparameter tuning completed in 0.36 seconds.
+2024-11-05 08:32:11,907 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 1e-09}
+2024-11-05 08:32:11,907 - INFO - Naive Bayes Best Cross-Validation Accuracy: 42.91%
+2024-11-05 08:32:11,915 - INFO - Naive Bayes Test Accuracy: 42.99%
+2024-11-05 08:32:11,917 - INFO - Naive Bayes Confusion Matrix:
+[[476   0  11  68  17   2  22  23  70 102]
+ [  2 431  27  75   4 161   2   9   0 161]
+ [ 64   4  59 173   0   8  20  91  16 341]
+ [123   4  15 472  14   1  25  94  26  78]
+ [387   0  15 100  83   0   4  18   8  60]
+ [  4  75   3  16   0 562   8   2   7 131]
+ [ 59   0  22 115   4   7 105  41  11 267]
+ [ 90   2  15 171   1   4  21 198  38 213]
+ [208   0   0  94   3   5  35   6 318  73]
+ [ 23  18  28  15   2  92  23  30   8 640]]
+2024-11-05 08:32:12,189 - INFO - Naive Bayes confusion matrix saved as 'naive_bayes_confusion_matrix.png'.
+2024-11-05 08:32:12,190 - INFO - Starting hyperparameter tuning for Random Forest...
+2024-11-05 08:32:32,577 - INFO - Random Forest hyperparameter tuning completed in 20.39 seconds.
+2024-11-05 08:32:32,578 - INFO - Random Forest Best Parameters: {'bootstrap': True, 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 100}
+2024-11-05 08:32:32,578 - INFO - Random Forest Best Cross-Validation Accuracy: 69.07%
+2024-11-05 08:32:32,638 - INFO - Random Forest Test Accuracy: 69.04%
+2024-11-05 08:32:32,641 - INFO - Random Forest Confusion Matrix:
+[[416   0  11  41 113   0  35  22 150   3]
+ [  0 775   9   2   2  24   2   3   3  52]
+ [ 25   6 320  81  11   3  64 122  32 112]
+ [ 56   4  24 589  30   0  26  67  45  11]
+ [ 27   0  11  50 526   0   9  13  38   1]
+ [  2  33   4   2   1 675  14  11  10  56]
+ [ 31   1  72  65  19   2 309  62  31  39]
+ [ 16   5  36  50  21   0  47 495  50  33]
+ [ 35   0   6   9  25   0  23  18 624   2]
+ [  5  30  54   5   4  40  43  45  11 642]]
+2024-11-05 08:32:32,901 - INFO - Random Forest confusion matrix saved as 'random_forest_confusion_matrix.png'.
+2024-11-05 08:32:32,902 - INFO - ########################################################################################################################
+2024-11-05 08:32:44,231 - INFO - Training set: 31114 samples
+2024-11-05 08:32:44,232 - INFO - Test set: 7779 samples
+2024-11-05 08:32:44,232 - INFO - Starting feature selection with Random Forest...
+2024-11-05 08:32:47,736 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ']
+2024-11-05 08:32:47,741 - INFO - Using 5-fold cross-validation.
+2024-11-05 08:32:47,742 - INFO - Starting hyperparameter tuning for Logistic Regression...
+2024-11-05 08:32:53,572 - INFO - Logistic Regression hyperparameter tuning completed in 5.83 seconds.
+2024-11-05 08:32:53,572 - INFO - Logistic Regression Best Parameters: {'C': 1, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-05 08:32:53,573 - INFO - Logistic Regression Best Cross-Validation Accuracy: 57.37%
+2024-11-05 08:32:53,579 - INFO - Logistic Regression Test Accuracy: 57.68%
+2024-11-05 08:32:53,585 - INFO - Logistic Regression Confusion Matrix:
+[[405   0  36  41 108   1  33  35 114  18]
+ [  0 695  18   3   4  69   1   3   3  76]
+ [ 26  14 277  89  30   8  57  91  53 131]
+ [ 88   2  47 449  88   3  36  72  52  15]
+ [ 57   3  38  43 478   0   6  21  20   9]
+ [  2  98   3   2   2 584  17   3  10  87]
+ [ 29   1 110  49  40   6 220  61  36  79]
+ [ 43   7  72 102  34   4  61 267  93  70]
+ [ 44   0  13  16  27   3  48  34 549   8]
+ [ 19  48  63   2  10  76  41  38  19 563]]
+2024-11-05 08:32:53,914 - INFO - Logistic Regression confusion matrix saved as 'logistic_regression_confusion_matrix.png'.
+2024-11-05 08:32:53,915 - INFO - Starting hyperparameter tuning for Naive Bayes...
+2024-11-05 08:32:54,233 - INFO - Naive Bayes hyperparameter tuning completed in 0.32 seconds.
+2024-11-05 08:32:54,233 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 1e-09}
+2024-11-05 08:32:54,234 - INFO - Naive Bayes Best Cross-Validation Accuracy: 42.91%
+2024-11-05 08:32:54,240 - INFO - Naive Bayes Test Accuracy: 42.99%
+2024-11-05 08:32:54,243 - INFO - Naive Bayes Confusion Matrix:
+[[476   0  11  68  17   2  22  23  70 102]
+ [  2 431  27  75   4 161   2   9   0 161]
+ [ 64   4  59 173   0   8  20  91  16 341]
+ [123   4  15 472  14   1  25  94  26  78]
+ [387   0  15 100  83   0   4  18   8  60]
+ [  4  75   3  16   0 562   8   2   7 131]
+ [ 59   0  22 115   4   7 105  41  11 267]
+ [ 90   2  15 171   1   4  21 198  38 213]
+ [208   0   0  94   3   5  35   6 318  73]
+ [ 23  18  28  15   2  92  23  30   8 640]]
+2024-11-05 08:32:54,485 - INFO - Naive Bayes confusion matrix saved as 'naive_bayes_confusion_matrix.png'.
+2024-11-05 08:32:54,486 - INFO - Starting hyperparameter tuning for Random Forest...
+2024-11-05 08:34:26,102 - INFO - Random Forest hyperparameter tuning completed in 91.62 seconds.
+2024-11-05 08:34:26,103 - INFO - Random Forest Best Parameters: {'bootstrap': True, 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 100}
+2024-11-05 08:34:26,104 - INFO - Random Forest Best Cross-Validation Accuracy: 68.09%
+2024-11-05 08:34:26,169 - INFO - Random Forest Test Accuracy: 67.58%
+2024-11-05 08:34:26,172 - INFO - Random Forest Confusion Matrix:
+[[424   0  19  39 109   0  44  18 134   4]
+ [  1 761  12   4   1  22   1   2   3  65]
+ [ 19   3 311  92  17   4 101 102  30  97]
+ [ 48   2  18 581  38   1  46  64  41  13]
+ [ 35   0  16  46 535   0   7  12  22   2]
+ [  1  47   5   2   1 650  19  12   8  63]
+ [ 35   0  72  62  21   2 319  51  26  43]
+ [ 21   5  32  64  23   0  62 460  43  43]
+ [ 51   0   7  10  25   0  34  18 594   3]
+ [  1  28  60  13   7  40  62  40   6 622]]
+2024-11-05 08:34:26,462 - INFO - Random Forest confusion matrix saved as 'random_forest_confusion_matrix.png'.
+2024-11-05 08:34:26,463 - INFO - ########################################################################################################################
+2024-11-05 09:21:12,147 - INFO - Training set: 31114 samples
+2024-11-05 09:21:12,147 - INFO - Test set: 7779 samples
+2024-11-05 09:21:12,148 - INFO - Starting feature selection with Random Forest...
+2024-11-05 09:21:15,585 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ']
+2024-11-05 09:21:15,591 - INFO - Using 5-fold cross-validation.
+2024-11-05 09:21:15,595 - INFO - Starting hyperparameter tuning for Logistic Regression...
+2024-11-05 09:21:15,596 - INFO - Using GridSearchCV for Logistic Regression
+2024-11-05 09:21:20,699 - INFO - Logistic Regression hyperparameter tuning completed in 5.10 seconds.
+2024-11-05 09:21:20,702 - INFO - Logistic Regression Best Parameters: {'C': 1, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-05 09:21:20,702 - INFO - Logistic Regression Best Cross-Validation Accuracy: 57.37%
+2024-11-05 09:21:20,711 - INFO - Logistic Regression Test Accuracy: 57.68%
+2024-11-05 09:21:20,721 - INFO - Logistic Regression Confusion Matrix:
+[[405   0  36  41 108   1  33  35 114  18]
+ [  0 695  18   3   4  69   1   3   3  76]
+ [ 26  14 277  89  30   8  57  91  53 131]
+ [ 88   2  47 449  88   3  36  72  52  15]
+ [ 57   3  38  43 478   0   6  21  20   9]
+ [  2  98   3   2   2 584  17   3  10  87]
+ [ 29   1 110  49  40   6 220  61  36  79]
+ [ 43   7  72 102  34   4  61 267  93  70]
+ [ 44   0  13  16  27   3  48  34 549   8]
+ [ 19  48  63   2  10  76  41  38  19 563]]
+2024-11-05 09:21:20,753 - INFO - Logistic Regression Precision: 56.61%
+2024-11-05 09:21:20,756 - INFO - Logistic Regression Recall: 57.08%
+2024-11-05 09:21:20,758 - INFO - Logistic Regression F1 Score: 56.51%
+2024-11-05 09:21:20,759 - INFO - Logistic Regression Specificity: 95.30%
+2024-11-05 09:21:21,168 - INFO - Logistic Regression confusion matrix saved as 'logistic_regression_confusion_matrix.png'.
+2024-11-05 09:21:21,177 - INFO - Logistic Regression confusion matrix saved as CSV for MATLAB.
+2024-11-05 09:21:21,178 - INFO - Starting hyperparameter tuning for Decision Tree...
+2024-11-05 09:21:21,178 - INFO - Using GridSearchCV for Decision Tree
+2024-11-05 09:21:24,430 - INFO - Decision Tree hyperparameter tuning completed in 3.25 seconds.
+2024-11-05 09:21:24,431 - INFO - Decision Tree Best Parameters: {'criterion': 'gini', 'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2}
+2024-11-05 09:21:24,431 - INFO - Decision Tree Best Cross-Validation Accuracy: 60.31%
+2024-11-05 09:21:24,434 - INFO - Decision Tree Test Accuracy: 61.22%
+2024-11-05 09:21:24,436 - INFO - Decision Tree Confusion Matrix:
+[[446   1  24  45  74   2  50  29 106  14]
+ [  4 738  19   3   2  38   3   3   1  61]
+ [ 41  11 335  57  23  12 106  95  16  80]
+ [ 54   4  73 515  49   6  62  45  32  12]
+ [ 85   7  26  49 442   2  19  21  18   6]
+ [  3  37  11   2   0 636  11  18   4  86]
+ [ 41   6  79  54  30  20 261  55  39  46]
+ [ 28  10  91  68  21  18  62 381  40  34]
+ [116   0  16  30  22   6  30  29 486   7]
+ [ 16  42  91  19   6  63  65  45  10 522]]
+2024-11-05 09:21:24,449 - INFO - Decision Tree Precision: 60.65%
+2024-11-05 09:21:24,449 - INFO - Decision Tree Recall: 60.57%
+2024-11-05 09:21:24,450 - INFO - Decision Tree F1 Score: 60.60%
+2024-11-05 09:21:24,450 - INFO - Decision Tree Specificity: 95.69%
+2024-11-05 09:21:24,747 - INFO - Decision Tree confusion matrix saved as 'decision_tree_confusion_matrix.png'.
+2024-11-05 09:21:24,752 - INFO - Decision Tree confusion matrix saved as CSV for MATLAB.
+2024-11-05 09:21:24,753 - INFO - Starting hyperparameter tuning for K-Nearest Neighbors...
+2024-11-05 09:21:24,753 - INFO - Using GridSearchCV for K-Nearest Neighbors
+2024-11-05 09:21:26,857 - INFO - K-Nearest Neighbors hyperparameter tuning completed in 2.10 seconds.
+2024-11-05 09:21:26,857 - INFO - K-Nearest Neighbors Best Parameters: {'metric': 'euclidean', 'n_neighbors': 5, 'weights': 'uniform'}
+2024-11-05 09:21:26,858 - INFO - K-Nearest Neighbors Best Cross-Validation Accuracy: 66.39%
+2024-11-05 09:21:27,564 - INFO - K-Nearest Neighbors Test Accuracy: 66.95%
+2024-11-05 09:21:27,567 - INFO - K-Nearest Neighbors Confusion Matrix:
+[[459   0  21  38  97   1  42  14 111   8]
+ [  1 740  29   5   3  22   4   6   4  58]
+ [ 49  12 405  65  15   5  73  77  19  56]
+ [ 60   7  56 572  28   2  37  41  32  17]
+ [ 78   0  30  48 474   1  19   1  21   3]
+ [  4  31  11   2   0 672  20  12   5  51]
+ [ 55   6 109  40  16  10 296  39  30  30]
+ [ 41   3  90  40  17   6  49 444  28  35]
+ [ 82   0  13  17  21   4  31  22 551   1]
+ [ 18  27  84  18   7  50  44  23  13 595]]
+2024-11-05 09:21:27,578 - INFO - K-Nearest Neighbors Precision: 66.70%
+2024-11-05 09:21:27,579 - INFO - K-Nearest Neighbors Recall: 66.34%
+2024-11-05 09:21:27,579 - INFO - K-Nearest Neighbors F1 Score: 66.46%
+2024-11-05 09:21:27,579 - INFO - K-Nearest Neighbors Specificity: 96.33%
+2024-11-05 09:21:27,835 - INFO - K-Nearest Neighbors confusion matrix saved as 'k-nearest_neighbors_confusion_matrix.png'.
+2024-11-05 09:21:27,840 - INFO - K-Nearest Neighbors confusion matrix saved as CSV for MATLAB.
+2024-11-05 09:21:27,841 - INFO - Starting hyperparameter tuning for Support Vector Machine...
+2024-11-05 09:21:27,841 - INFO - Using GridSearchCV for Support Vector Machine
+2024-11-05 09:22:56,884 - INFO - Support Vector Machine hyperparameter tuning completed in 89.04 seconds.
+2024-11-05 09:22:56,885 - INFO - Support Vector Machine Best Parameters: {'C': 1, 'gamma': 'scale', 'kernel': 'linear'}
+2024-11-05 09:22:56,886 - INFO - Support Vector Machine Best Cross-Validation Accuracy: 59.43%
+2024-11-05 09:23:01,239 - INFO - Support Vector Machine Test Accuracy: 60.10%
+2024-11-05 09:23:01,243 - INFO - Support Vector Machine Confusion Matrix:
+[[404   0  39  30 115   1  43  20 122  17]
+ [  1 715  12   1   3  58   1   3   2  76]
+ [ 32  11 319  79  28   7  57  83  45 115]
+ [ 79   4  58 450  91   2  49  56  56   7]
+ [ 37   0  38  45 498   0   9  17  25   6]
+ [  1  83   4   1   1 595  23   6  10  84]
+ [ 34   2  95  55  38   1 277  47  25  57]
+ [ 39   3  90  84  43   0  70 295  82  47]
+ [ 35   0  14  15  31   1  49  26 562   9]
+ [ 16  39  76   5  17  70  46  32  18 560]]
+2024-11-05 09:23:01,259 - INFO - Support Vector Machine Precision: 59.46%
+2024-11-05 09:23:01,259 - INFO - Support Vector Machine Recall: 59.69%
+2024-11-05 09:23:01,260 - INFO - Support Vector Machine F1 Score: 59.22%
+2024-11-05 09:23:01,260 - INFO - Support Vector Machine Specificity: 95.57%
+2024-11-05 09:23:01,530 - INFO - Support Vector Machine confusion matrix saved as 'support_vector_machine_confusion_matrix.png'.
+2024-11-05 09:23:01,535 - INFO - Support Vector Machine confusion matrix saved as CSV for MATLAB.
+2024-11-05 09:23:01,535 - INFO - Starting hyperparameter tuning for Naive Bayes...
+2024-11-05 09:23:01,536 - INFO - Using GridSearchCV for Naive Bayes
+2024-11-05 09:23:01,716 - INFO - Naive Bayes hyperparameter tuning completed in 0.18 seconds.
+2024-11-05 09:23:01,716 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 1e-09}
+2024-11-05 09:23:01,717 - INFO - Naive Bayes Best Cross-Validation Accuracy: 42.91%
+2024-11-05 09:23:01,723 - INFO - Naive Bayes Test Accuracy: 42.99%
+2024-11-05 09:23:01,725 - INFO - Naive Bayes Confusion Matrix:
+[[476   0  11  68  17   2  22  23  70 102]
+ [  2 431  27  75   4 161   2   9   0 161]
+ [ 64   4  59 173   0   8  20  91  16 341]
+ [123   4  15 472  14   1  25  94  26  78]
+ [387   0  15 100  83   0   4  18   8  60]
+ [  4  75   3  16   0 562   8   2   7 131]
+ [ 59   0  22 115   4   7 105  41  11 267]
+ [ 90   2  15 171   1   4  21 198  38 213]
+ [208   0   0  94   3   5  35   6 318  73]
+ [ 23  18  28  15   2  92  23  30   8 640]]
+2024-11-05 09:23:01,737 - INFO - Naive Bayes Precision: 48.47%
+2024-11-05 09:23:01,737 - INFO - Naive Bayes Recall: 41.31%
+2024-11-05 09:23:01,738 - INFO - Naive Bayes F1 Score: 39.82%
+2024-11-05 09:23:01,738 - INFO - Naive Bayes Specificity: 93.63%
+2024-11-05 09:23:01,979 - INFO - Naive Bayes confusion matrix saved as 'naive_bayes_confusion_matrix.png'.
+2024-11-05 09:23:01,984 - INFO - Naive Bayes confusion matrix saved as CSV for MATLAB.
+2024-11-05 09:23:01,985 - INFO - Starting hyperparameter tuning for Random Forest...
+2024-11-05 09:23:01,985 - INFO - Using GridSearchCV for Random Forest
+2024-11-05 09:23:31,060 - INFO - Random Forest hyperparameter tuning completed in 29.07 seconds.
+2024-11-05 09:23:31,060 - INFO - Random Forest Best Parameters: {'bootstrap': True, 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}
+2024-11-05 09:23:31,061 - INFO - Random Forest Best Cross-Validation Accuracy: 73.96%
+2024-11-05 09:23:31,186 - INFO - Random Forest Test Accuracy: 73.99%
+2024-11-05 09:23:31,188 - INFO - Random Forest Confusion Matrix:
+[[494   0  13  25  98   0  28  12 118   3]
+ [  1 787  11   3   2  27   1   1   2  37]
+ [ 28   6 422  55  13   3  56  90  21  82]
+ [ 54   4  22 624  32   1  27  49  28  11]
+ [ 37   0  12  32 558   0   8   5  22   1]
+ [  2  21   1   3   1 700   8  16   3  53]
+ [ 27   2  72  42  13   1 369  46  25  34]
+ [ 20   3  45  40  14   1  42 525  34  29]
+ [ 54   0   9   5  26   0  22  13 613   0]
+ [  6  24  53  11   4  38  42  32   5 664]]
+2024-11-05 09:23:31,200 - INFO - Random Forest Precision: 73.43%
+2024-11-05 09:23:31,201 - INFO - Random Forest Recall: 73.60%
+2024-11-05 09:23:31,201 - INFO - Random Forest F1 Score: 73.37%
+2024-11-05 09:23:31,201 - INFO - Random Forest Specificity: 97.11%
+2024-11-05 09:23:31,526 - INFO - Random Forest confusion matrix saved as 'random_forest_confusion_matrix.png'.
+2024-11-05 09:23:31,531 - INFO - Random Forest confusion matrix saved as CSV for MATLAB.
+2024-11-05 09:23:31,532 - INFO - ########################################################################################################################
+2024-11-05 09:28:22,245 - INFO - Training set: 31114 samples
+2024-11-05 09:28:22,246 - INFO - Test set: 7779 samples
+2024-11-05 09:28:22,246 - INFO - Starting feature selection with Random Forest...
+2024-11-05 09:28:25,452 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ']
+2024-11-05 09:28:25,457 - INFO - Using 5-fold cross-validation.
+2024-11-05 09:28:25,461 - INFO - Starting hyperparameter tuning for Logistic Regression...
+2024-11-05 09:28:25,462 - INFO - Using GridSearchCV for Logistic Regression
+2024-11-05 09:28:29,423 - INFO - Logistic Regression hyperparameter tuning completed in 3.96 seconds.
+2024-11-05 09:28:29,423 - INFO - Logistic Regression Best Parameters: {'C': 1, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-05 09:28:29,424 - INFO - Logistic Regression Best Cross-Validation Accuracy: 57.37%
+2024-11-05 09:28:29,432 - INFO - Logistic Regression Test Accuracy: 57.68%
+2024-11-05 09:28:29,440 - INFO - Logistic Regression Confusion Matrix:
+[[405   0  36  41 108   1  33  35 114  18]
+ [  0 695  18   3   4  69   1   3   3  76]
+ [ 26  14 277  89  30   8  57  91  53 131]
+ [ 88   2  47 449  88   3  36  72  52  15]
+ [ 57   3  38  43 478   0   6  21  20   9]
+ [  2  98   3   2   2 584  17   3  10  87]
+ [ 29   1 110  49  40   6 220  61  36  79]
+ [ 43   7  72 102  34   4  61 267  93  70]
+ [ 44   0  13  16  27   3  48  34 549   8]
+ [ 19  48  63   2  10  76  41  38  19 563]]
+2024-11-05 09:28:29,477 - INFO - Logistic Regression Precision: 56.61%
+2024-11-05 09:28:29,478 - INFO - Logistic Regression Recall: 57.08%
+2024-11-05 09:28:29,478 - INFO - Logistic Regression F1 Score: 56.51%
+2024-11-05 09:28:29,478 - INFO - Logistic Regression Specificity: 95.30%
+2024-11-05 09:28:29,833 - INFO - Logistic Regression confusion matrix saved as 'Results/logistic_regression/logistic_regression_confusion_matrix.png'.
+2024-11-05 09:28:29,841 - INFO - Logistic Regression confusion matrix saved as CSV for MATLAB at 'Results/logistic_regression/logistic_regression_confusion_matrix.csv'.
+2024-11-05 09:28:29,842 - INFO - Starting hyperparameter tuning for Decision Tree...
+2024-11-05 09:28:29,842 - INFO - Using GridSearchCV for Decision Tree
+2024-11-05 09:28:32,617 - INFO - Decision Tree hyperparameter tuning completed in 2.77 seconds.
+2024-11-05 09:28:32,618 - INFO - Decision Tree Best Parameters: {'criterion': 'gini', 'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2}
+2024-11-05 09:28:32,618 - INFO - Decision Tree Best Cross-Validation Accuracy: 60.31%
+2024-11-05 09:28:32,621 - INFO - Decision Tree Test Accuracy: 61.22%
+2024-11-05 09:28:32,623 - INFO - Decision Tree Confusion Matrix:
+[[446   1  24  45  74   2  50  29 106  14]
+ [  4 738  19   3   2  38   3   3   1  61]
+ [ 41  11 335  57  23  12 106  95  16  80]
+ [ 54   4  73 515  49   6  62  45  32  12]
+ [ 85   7  26  49 442   2  19  21  18   6]
+ [  3  37  11   2   0 636  11  18   4  86]
+ [ 41   6  79  54  30  20 261  55  39  46]
+ [ 28  10  91  68  21  18  62 381  40  34]
+ [116   0  16  30  22   6  30  29 486   7]
+ [ 16  42  91  19   6  63  65  45  10 522]]
+2024-11-05 09:28:32,635 - INFO - Decision Tree Precision: 60.65%
+2024-11-05 09:28:32,635 - INFO - Decision Tree Recall: 60.57%
+2024-11-05 09:28:32,636 - INFO - Decision Tree F1 Score: 60.60%
+2024-11-05 09:28:32,636 - INFO - Decision Tree Specificity: 95.69%
+2024-11-05 09:28:32,948 - INFO - Decision Tree confusion matrix saved as 'Results/decision_tree/decision_tree_confusion_matrix.png'.
+2024-11-05 09:28:32,956 - INFO - Decision Tree confusion matrix saved as CSV for MATLAB at 'Results/decision_tree/decision_tree_confusion_matrix.csv'.
+2024-11-05 09:28:32,957 - INFO - Starting hyperparameter tuning for K-Nearest Neighbors...
+2024-11-05 09:28:32,957 - INFO - Using GridSearchCV for K-Nearest Neighbors
+2024-11-05 09:28:34,721 - INFO - K-Nearest Neighbors hyperparameter tuning completed in 1.76 seconds.
+2024-11-05 09:28:34,721 - INFO - K-Nearest Neighbors Best Parameters: {'metric': 'euclidean', 'n_neighbors': 5, 'weights': 'uniform'}
+2024-11-05 09:28:34,722 - INFO - K-Nearest Neighbors Best Cross-Validation Accuracy: 66.39%
+2024-11-05 09:28:35,332 - INFO - K-Nearest Neighbors Test Accuracy: 66.95%
+2024-11-05 09:28:35,335 - INFO - K-Nearest Neighbors Confusion Matrix:
+[[459   0  21  38  97   1  42  14 111   8]
+ [  1 740  29   5   3  22   4   6   4  58]
+ [ 49  12 405  65  15   5  73  77  19  56]
+ [ 60   7  56 572  28   2  37  41  32  17]
+ [ 78   0  30  48 474   1  19   1  21   3]
+ [  4  31  11   2   0 672  20  12   5  51]
+ [ 55   6 109  40  16  10 296  39  30  30]
+ [ 41   3  90  40  17   6  49 444  28  35]
+ [ 82   0  13  17  21   4  31  22 551   1]
+ [ 18  27  84  18   7  50  44  23  13 595]]
+2024-11-05 09:28:35,346 - INFO - K-Nearest Neighbors Precision: 66.70%
+2024-11-05 09:28:35,347 - INFO - K-Nearest Neighbors Recall: 66.34%
+2024-11-05 09:28:35,347 - INFO - K-Nearest Neighbors F1 Score: 66.46%
+2024-11-05 09:28:35,348 - INFO - K-Nearest Neighbors Specificity: 96.33%
+2024-11-05 09:28:35,606 - INFO - K-Nearest Neighbors confusion matrix saved as 'Results/k-nearest_neighbors/k-nearest_neighbors_confusion_matrix.png'.
+2024-11-05 09:28:35,615 - INFO - K-Nearest Neighbors confusion matrix saved as CSV for MATLAB at 'Results/k-nearest_neighbors/k-nearest_neighbors_confusion_matrix.csv'.
+2024-11-05 09:28:35,615 - INFO - Starting hyperparameter tuning for Support Vector Machine...
+2024-11-05 09:28:35,616 - INFO - Using GridSearchCV for Support Vector Machine
+2024-11-05 09:29:19,444 - INFO - Support Vector Machine hyperparameter tuning completed in 43.83 seconds.
+2024-11-05 09:29:19,445 - INFO - Support Vector Machine Best Parameters: {'C': 10, 'gamma': 'scale', 'kernel': 'rbf'}
+2024-11-05 09:29:19,445 - INFO - Support Vector Machine Best Cross-Validation Accuracy: 73.43%
+2024-11-05 09:29:26,137 - INFO - Support Vector Machine Test Accuracy: 73.75%
+2024-11-05 09:29:26,140 - INFO - Support Vector Machine Confusion Matrix:
+[[491   0  12  20 106   0  31   9 118   4]
+ [  0 784   7   2   3  20   6   1   2  47]
+ [ 31   9 431  42  12   4  66  79  32  70]
+ [ 39   4  31 621  34   0  33  45  38   7]
+ [ 29   0  14  22 556   0  14   0  39   1]
+ [  3  27   5   3   1 700  12  10   4  43]
+ [ 27   0  92  36  15   6 369  42  16  28]
+ [ 23   2  55  40  18   5  49 490  40  31]
+ [ 29   0   7   9  19   2  23  14 639   0]
+ [  6  19  48  16   7  40  53  25   9 656]]
+2024-11-05 09:29:26,151 - INFO - Support Vector Machine Precision: 73.23%
+2024-11-05 09:29:26,151 - INFO - Support Vector Machine Recall: 73.37%
+2024-11-05 09:29:26,152 - INFO - Support Vector Machine F1 Score: 73.09%
+2024-11-05 09:29:26,152 - INFO - Support Vector Machine Specificity: 97.09%
+2024-11-05 09:29:26,423 - INFO - Support Vector Machine confusion matrix saved as 'Results/support_vector_machine/support_vector_machine_confusion_matrix.png'.
+2024-11-05 09:29:26,431 - INFO - Support Vector Machine confusion matrix saved as CSV for MATLAB at 'Results/support_vector_machine/support_vector_machine_confusion_matrix.csv'.
+2024-11-05 09:29:26,431 - INFO - Starting hyperparameter tuning for Naive Bayes...
+2024-11-05 09:29:26,432 - INFO - Using GridSearchCV for Naive Bayes
+2024-11-05 09:29:26,612 - INFO - Naive Bayes hyperparameter tuning completed in 0.18 seconds.
+2024-11-05 09:29:26,612 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 1e-09}
+2024-11-05 09:29:26,613 - INFO - Naive Bayes Best Cross-Validation Accuracy: 42.91%
+2024-11-05 09:29:26,619 - INFO - Naive Bayes Test Accuracy: 42.99%
+2024-11-05 09:29:26,623 - INFO - Naive Bayes Confusion Matrix:
+[[476   0  11  68  17   2  22  23  70 102]
+ [  2 431  27  75   4 161   2   9   0 161]
+ [ 64   4  59 173   0   8  20  91  16 341]
+ [123   4  15 472  14   1  25  94  26  78]
+ [387   0  15 100  83   0   4  18   8  60]
+ [  4  75   3  16   0 562   8   2   7 131]
+ [ 59   0  22 115   4   7 105  41  11 267]
+ [ 90   2  15 171   1   4  21 198  38 213]
+ [208   0   0  94   3   5  35   6 318  73]
+ [ 23  18  28  15   2  92  23  30   8 640]]
+2024-11-05 09:29:26,633 - INFO - Naive Bayes Precision: 48.47%
+2024-11-05 09:29:26,634 - INFO - Naive Bayes Recall: 41.31%
+2024-11-05 09:29:26,634 - INFO - Naive Bayes F1 Score: 39.82%
+2024-11-05 09:29:26,635 - INFO - Naive Bayes Specificity: 93.63%
+2024-11-05 09:29:26,898 - INFO - Naive Bayes confusion matrix saved as 'Results/naive_bayes/naive_bayes_confusion_matrix.png'.
+2024-11-05 09:29:26,904 - INFO - Naive Bayes confusion matrix saved as CSV for MATLAB at 'Results/naive_bayes/naive_bayes_confusion_matrix.csv'.
+2024-11-05 09:29:26,904 - INFO - Starting hyperparameter tuning for Random Forest...
+2024-11-05 09:29:26,905 - INFO - Using GridSearchCV for Random Forest
+2024-11-05 09:29:54,147 - INFO - Random Forest hyperparameter tuning completed in 27.24 seconds.
+2024-11-05 09:29:54,147 - INFO - Random Forest Best Parameters: {'bootstrap': True, 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}
+2024-11-05 09:29:54,148 - INFO - Random Forest Best Cross-Validation Accuracy: 73.96%
+2024-11-05 09:29:54,269 - INFO - Random Forest Test Accuracy: 73.99%
+2024-11-05 09:29:54,271 - INFO - Random Forest Confusion Matrix:
+[[494   0  13  25  98   0  28  12 118   3]
+ [  1 787  11   3   2  27   1   1   2  37]
+ [ 28   6 422  55  13   3  56  90  21  82]
+ [ 54   4  22 624  32   1  27  49  28  11]
+ [ 37   0  12  32 558   0   8   5  22   1]
+ [  2  21   1   3   1 700   8  16   3  53]
+ [ 27   2  72  42  13   1 369  46  25  34]
+ [ 20   3  45  40  14   1  42 525  34  29]
+ [ 54   0   9   5  26   0  22  13 613   0]
+ [  6  24  53  11   4  38  42  32   5 664]]
+2024-11-05 09:29:54,283 - INFO - Random Forest Precision: 73.43%
+2024-11-05 09:29:54,283 - INFO - Random Forest Recall: 73.60%
+2024-11-05 09:29:54,283 - INFO - Random Forest F1 Score: 73.37%
+2024-11-05 09:29:54,284 - INFO - Random Forest Specificity: 97.11%
+2024-11-05 09:29:54,592 - INFO - Random Forest confusion matrix saved as 'Results/random_forest/random_forest_confusion_matrix.png'.
+2024-11-05 09:29:54,599 - INFO - Random Forest confusion matrix saved as CSV for MATLAB at 'Results/random_forest/random_forest_confusion_matrix.csv'.
+2024-11-05 09:29:54,599 - INFO - ########################################################################################################################
+2024-11-05 09:32:59,826 - INFO - Training set: 31114 samples
+2024-11-05 09:32:59,826 - INFO - Test set: 7779 samples
+2024-11-05 09:32:59,827 - INFO - Starting feature selection with Random Forest...
+2024-11-05 09:33:13,638 - INFO - Training set: 31114 samples
+2024-11-05 09:33:13,639 - INFO - Test set: 7779 samples
+2024-11-05 09:33:13,639 - INFO - Starting feature selection with Random Forest...
+2024-11-05 09:33:16,790 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ']
+2024-11-05 09:33:16,794 - INFO - Using 5-fold cross-validation.
+2024-11-05 09:33:16,799 - INFO - Starting hyperparameter tuning for Logistic Regression...
+2024-11-05 09:33:16,799 - INFO - Using GridSearchCV for Logistic Regression
+2024-11-05 09:33:20,319 - INFO - Logistic Regression hyperparameter tuning completed in 3.52 seconds.
+2024-11-05 09:33:20,320 - INFO - Logistic Regression Best Parameters: {'C': 1, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-05 09:33:20,320 - INFO - Logistic Regression Best Cross-Validation Accuracy: 57.37%
+2024-11-05 09:33:20,324 - INFO - Logistic Regression Test Accuracy: 57.68%
+2024-11-05 09:33:20,329 - INFO - Logistic Regression Confusion Matrix:
+[[405   0  36  41 108   1  33  35 114  18]
+ [  0 695  18   3   4  69   1   3   3  76]
+ [ 26  14 277  89  30   8  57  91  53 131]
+ [ 88   2  47 449  88   3  36  72  52  15]
+ [ 57   3  38  43 478   0   6  21  20   9]
+ [  2  98   3   2   2 584  17   3  10  87]
+ [ 29   1 110  49  40   6 220  61  36  79]
+ [ 43   7  72 102  34   4  61 267  93  70]
+ [ 44   0  13  16  27   3  48  34 549   8]
+ [ 19  48  63   2  10  76  41  38  19 563]]
+2024-11-05 09:33:20,357 - INFO - Logistic Regression Precision: 56.61%
+2024-11-05 09:33:20,359 - INFO - Logistic Regression Recall: 57.08%
+2024-11-05 09:33:20,362 - INFO - Logistic Regression F1 Score: 56.51%
+2024-11-05 09:33:20,362 - INFO - Logistic Regression Specificity: 95.30%
+2024-11-05 09:33:20,676 - INFO - Logistic Regression confusion matrix saved as 'Results/logistic_regression/logistic_regression_confusion_matrix.png'.
+2024-11-05 09:33:20,684 - INFO - Logistic Regression confusion matrix saved as CSV for MATLAB at 'Results/logistic_regression/logistic_regression_confusion_matrix.csv'.
+2024-11-05 09:33:20,684 - INFO - Starting hyperparameter tuning for Decision Tree...
+2024-11-05 09:33:20,684 - INFO - Using GridSearchCV for Decision Tree
+2024-11-05 09:33:23,435 - INFO - Decision Tree hyperparameter tuning completed in 2.75 seconds.
+2024-11-05 09:33:23,435 - INFO - Decision Tree Best Parameters: {'criterion': 'gini', 'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2}
+2024-11-05 09:33:23,436 - INFO - Decision Tree Best Cross-Validation Accuracy: 60.31%
+2024-11-05 09:33:23,439 - INFO - Decision Tree Test Accuracy: 61.22%
+2024-11-05 09:33:23,441 - INFO - Decision Tree Confusion Matrix:
+[[446   1  24  45  74   2  50  29 106  14]
+ [  4 738  19   3   2  38   3   3   1  61]
+ [ 41  11 335  57  23  12 106  95  16  80]
+ [ 54   4  73 515  49   6  62  45  32  12]
+ [ 85   7  26  49 442   2  19  21  18   6]
+ [  3  37  11   2   0 636  11  18   4  86]
+ [ 41   6  79  54  30  20 261  55  39  46]
+ [ 28  10  91  68  21  18  62 381  40  34]
+ [116   0  16  30  22   6  30  29 486   7]
+ [ 16  42  91  19   6  63  65  45  10 522]]
+2024-11-05 09:33:23,453 - INFO - Decision Tree Precision: 60.65%
+2024-11-05 09:33:23,453 - INFO - Decision Tree Recall: 60.57%
+2024-11-05 09:33:23,454 - INFO - Decision Tree F1 Score: 60.60%
+2024-11-05 09:33:23,454 - INFO - Decision Tree Specificity: 95.69%
+2024-11-05 09:33:23,722 - INFO - Decision Tree confusion matrix saved as 'Results/decision_tree/decision_tree_confusion_matrix.png'.
+2024-11-05 09:33:23,730 - INFO - Decision Tree confusion matrix saved as CSV for MATLAB at 'Results/decision_tree/decision_tree_confusion_matrix.csv'.
+2024-11-05 09:33:23,730 - INFO - Starting hyperparameter tuning for K-Nearest Neighbors...
+2024-11-05 09:33:23,731 - INFO - Using GridSearchCV for K-Nearest Neighbors
+2024-11-05 09:33:25,546 - INFO - K-Nearest Neighbors hyperparameter tuning completed in 1.81 seconds.
+2024-11-05 09:33:25,546 - INFO - K-Nearest Neighbors Best Parameters: {'metric': 'euclidean', 'n_neighbors': 5, 'weights': 'uniform'}
+2024-11-05 09:33:25,547 - INFO - K-Nearest Neighbors Best Cross-Validation Accuracy: 66.39%
+2024-11-05 09:33:26,132 - INFO - K-Nearest Neighbors Test Accuracy: 66.95%
+2024-11-05 09:33:26,134 - INFO - K-Nearest Neighbors Confusion Matrix:
+[[459   0  21  38  97   1  42  14 111   8]
+ [  1 740  29   5   3  22   4   6   4  58]
+ [ 49  12 405  65  15   5  73  77  19  56]
+ [ 60   7  56 572  28   2  37  41  32  17]
+ [ 78   0  30  48 474   1  19   1  21   3]
+ [  4  31  11   2   0 672  20  12   5  51]
+ [ 55   6 109  40  16  10 296  39  30  30]
+ [ 41   3  90  40  17   6  49 444  28  35]
+ [ 82   0  13  17  21   4  31  22 551   1]
+ [ 18  27  84  18   7  50  44  23  13 595]]
+2024-11-05 09:33:26,145 - INFO - K-Nearest Neighbors Precision: 66.70%
+2024-11-05 09:33:26,145 - INFO - K-Nearest Neighbors Recall: 66.34%
+2024-11-05 09:33:26,146 - INFO - K-Nearest Neighbors F1 Score: 66.46%
+2024-11-05 09:33:26,146 - INFO - K-Nearest Neighbors Specificity: 96.33%
+2024-11-05 09:33:26,405 - INFO - K-Nearest Neighbors confusion matrix saved as 'Results/k-nearest_neighbors/k-nearest_neighbors_confusion_matrix.png'.
+2024-11-05 09:33:26,412 - INFO - K-Nearest Neighbors confusion matrix saved as CSV for MATLAB at 'Results/k-nearest_neighbors/k-nearest_neighbors_confusion_matrix.csv'.
+2024-11-05 09:33:26,412 - INFO - Starting hyperparameter tuning for Support Vector Machine...
+2024-11-05 09:33:26,413 - INFO - Using GridSearchCV for Support Vector Machine
+2024-11-05 09:34:11,328 - INFO - Support Vector Machine hyperparameter tuning completed in 44.91 seconds.
+2024-11-05 09:34:11,328 - INFO - Support Vector Machine Best Parameters: {'C': 10, 'gamma': 'scale', 'kernel': 'rbf'}
+2024-11-05 09:34:11,329 - INFO - Support Vector Machine Best Cross-Validation Accuracy: 73.43%
+2024-11-05 09:34:18,434 - INFO - Support Vector Machine Test Accuracy: 73.75%
+2024-11-05 09:34:18,437 - INFO - Support Vector Machine Confusion Matrix:
+[[491   0  12  20 106   0  31   9 118   4]
+ [  0 784   7   2   3  20   6   1   2  47]
+ [ 31   9 431  42  12   4  66  79  32  70]
+ [ 39   4  31 621  34   0  33  45  38   7]
+ [ 29   0  14  22 556   0  14   0  39   1]
+ [  3  27   5   3   1 700  12  10   4  43]
+ [ 27   0  92  36  15   6 369  42  16  28]
+ [ 23   2  55  40  18   5  49 490  40  31]
+ [ 29   0   7   9  19   2  23  14 639   0]
+ [  6  19  48  16   7  40  53  25   9 656]]
+2024-11-05 09:34:18,449 - INFO - Support Vector Machine Precision: 73.23%
+2024-11-05 09:34:18,450 - INFO - Support Vector Machine Recall: 73.37%
+2024-11-05 09:34:18,450 - INFO - Support Vector Machine F1 Score: 73.09%
+2024-11-05 09:34:18,451 - INFO - Support Vector Machine Specificity: 97.09%
+2024-11-05 09:34:18,719 - INFO - Support Vector Machine confusion matrix saved as 'Results/support_vector_machine/support_vector_machine_confusion_matrix.png'.
+2024-11-05 09:34:18,727 - INFO - Support Vector Machine confusion matrix saved as CSV for MATLAB at 'Results/support_vector_machine/support_vector_machine_confusion_matrix.csv'.
+2024-11-05 09:34:18,728 - INFO - Starting hyperparameter tuning for Naive Bayes...
+2024-11-05 09:34:18,728 - INFO - Using GridSearchCV for Naive Bayes
+2024-11-05 09:34:18,887 - INFO - Naive Bayes hyperparameter tuning completed in 0.16 seconds.
+2024-11-05 09:34:18,887 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 1e-09}
+2024-11-05 09:34:18,888 - INFO - Naive Bayes Best Cross-Validation Accuracy: 42.91%
+2024-11-05 09:34:18,894 - INFO - Naive Bayes Test Accuracy: 42.99%
+2024-11-05 09:34:18,897 - INFO - Naive Bayes Confusion Matrix:
+[[476   0  11  68  17   2  22  23  70 102]
+ [  2 431  27  75   4 161   2   9   0 161]
+ [ 64   4  59 173   0   8  20  91  16 341]
+ [123   4  15 472  14   1  25  94  26  78]
+ [387   0  15 100  83   0   4  18   8  60]
+ [  4  75   3  16   0 562   8   2   7 131]
+ [ 59   0  22 115   4   7 105  41  11 267]
+ [ 90   2  15 171   1   4  21 198  38 213]
+ [208   0   0  94   3   5  35   6 318  73]
+ [ 23  18  28  15   2  92  23  30   8 640]]
+2024-11-05 09:34:18,908 - INFO - Naive Bayes Precision: 48.47%
+2024-11-05 09:34:18,908 - INFO - Naive Bayes Recall: 41.31%
+2024-11-05 09:34:18,909 - INFO - Naive Bayes F1 Score: 39.82%
+2024-11-05 09:34:18,909 - INFO - Naive Bayes Specificity: 93.63%
+2024-11-05 09:34:19,189 - INFO - Naive Bayes confusion matrix saved as 'Results/naive_bayes/naive_bayes_confusion_matrix.png'.
+2024-11-05 09:34:19,197 - INFO - Naive Bayes confusion matrix saved as CSV for MATLAB at 'Results/naive_bayes/naive_bayes_confusion_matrix.csv'.
+2024-11-05 09:34:19,197 - INFO - Starting hyperparameter tuning for Random Forest...
+2024-11-05 09:34:19,198 - INFO - Using GridSearchCV for Random Forest
+2024-11-05 09:34:48,106 - INFO - Random Forest hyperparameter tuning completed in 28.91 seconds.
+2024-11-05 09:34:48,107 - INFO - Random Forest Best Parameters: {'bootstrap': True, 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}
+2024-11-05 09:34:48,107 - INFO - Random Forest Best Cross-Validation Accuracy: 73.96%
+2024-11-05 09:34:48,251 - INFO - Random Forest Test Accuracy: 73.99%
+2024-11-05 09:34:48,253 - INFO - Random Forest Confusion Matrix:
+[[494   0  13  25  98   0  28  12 118   3]
+ [  1 787  11   3   2  27   1   1   2  37]
+ [ 28   6 422  55  13   3  56  90  21  82]
+ [ 54   4  22 624  32   1  27  49  28  11]
+ [ 37   0  12  32 558   0   8   5  22   1]
+ [  2  21   1   3   1 700   8  16   3  53]
+ [ 27   2  72  42  13   1 369  46  25  34]
+ [ 20   3  45  40  14   1  42 525  34  29]
+ [ 54   0   9   5  26   0  22  13 613   0]
+ [  6  24  53  11   4  38  42  32   5 664]]
+2024-11-05 09:34:48,266 - INFO - Random Forest Precision: 73.43%
+2024-11-05 09:34:48,266 - INFO - Random Forest Recall: 73.60%
+2024-11-05 09:34:48,266 - INFO - Random Forest F1 Score: 73.37%
+2024-11-05 09:34:48,267 - INFO - Random Forest Specificity: 97.11%
+2024-11-05 09:34:48,599 - INFO - Random Forest confusion matrix saved as 'Results/random_forest/random_forest_confusion_matrix.png'.
+2024-11-05 09:34:48,607 - INFO - Random Forest confusion matrix saved as CSV for MATLAB at 'Results/random_forest/random_forest_confusion_matrix.csv'.
+2024-11-05 09:34:48,608 - INFO - ########################################################################################################################
+2024-11-05 09:53:10,092 - INFO - Training set: 31114 samples
+2024-11-05 09:53:10,093 - INFO - Test set: 7779 samples
+2024-11-05 09:53:10,093 - INFO - Starting feature selection with Random Forest...
+2024-11-05 09:53:13,405 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ']
+2024-11-05 09:53:13,410 - INFO - Using 5-fold cross-validation.
+2024-11-05 09:53:13,416 - INFO - Starting hyperparameter tuning for Logistic Regression...
+2024-11-05 09:53:13,417 - INFO - Using GridSearchCV for Logistic Regression
+2024-11-05 09:53:17,004 - INFO - Logistic Regression hyperparameter tuning completed in 3.59 seconds.
+2024-11-05 09:53:17,004 - INFO - Logistic Regression Best Parameters: {'C': 1, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-05 09:53:17,005 - INFO - Logistic Regression Best Cross-Validation Accuracy: 57.37%
+2024-11-05 09:53:17,008 - INFO - Logistic Regression Test Accuracy: 57.68%
+2024-11-05 09:53:17,013 - INFO - Logistic Regression Confusion Matrix:
+[[405   0  36  41 108   1  33  35 114  18]
+ [  0 695  18   3   4  69   1   3   3  76]
+ [ 26  14 277  89  30   8  57  91  53 131]
+ [ 88   2  47 449  88   3  36  72  52  15]
+ [ 57   3  38  43 478   0   6  21  20   9]
+ [  2  98   3   2   2 584  17   3  10  87]
+ [ 29   1 110  49  40   6 220  61  36  79]
+ [ 43   7  72 102  34   4  61 267  93  70]
+ [ 44   0  13  16  27   3  48  34 549   8]
+ [ 19  48  63   2  10  76  41  38  19 563]]
+2024-11-05 09:53:17,039 - INFO - Logistic Regression Precision: 56.61%
+2024-11-05 09:53:17,039 - INFO - Logistic Regression Recall: 57.08%
+2024-11-05 09:53:17,040 - INFO - Logistic Regression F1 Score: 56.51%
+2024-11-05 09:53:17,040 - INFO - Logistic Regression Specificity: 95.30%
+2024-11-05 09:53:17,062 - INFO - Logistic Regression confusion matrix saved as CSV for MATLAB at 'Results/logistic_regression/logistic_regression_confusion_matrix.csv'.
+2024-11-05 09:53:17,064 - INFO - Starting hyperparameter tuning for Decision Tree...
+2024-11-05 09:53:17,066 - INFO - Using GridSearchCV for Decision Tree
+2024-11-05 09:53:20,052 - INFO - Decision Tree hyperparameter tuning completed in 2.99 seconds.
+2024-11-05 09:53:20,053 - INFO - Decision Tree Best Parameters: {'criterion': 'gini', 'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2}
+2024-11-05 09:53:20,053 - INFO - Decision Tree Best Cross-Validation Accuracy: 60.31%
+2024-11-05 09:53:20,056 - INFO - Decision Tree Test Accuracy: 61.22%
+2024-11-05 09:53:20,058 - INFO - Decision Tree Confusion Matrix:
+[[446   1  24  45  74   2  50  29 106  14]
+ [  4 738  19   3   2  38   3   3   1  61]
+ [ 41  11 335  57  23  12 106  95  16  80]
+ [ 54   4  73 515  49   6  62  45  32  12]
+ [ 85   7  26  49 442   2  19  21  18   6]
+ [  3  37  11   2   0 636  11  18   4  86]
+ [ 41   6  79  54  30  20 261  55  39  46]
+ [ 28  10  91  68  21  18  62 381  40  34]
+ [116   0  16  30  22   6  30  29 486   7]
+ [ 16  42  91  19   6  63  65  45  10 522]]
+2024-11-05 09:53:20,069 - INFO - Decision Tree Precision: 60.65%
+2024-11-05 09:53:20,070 - INFO - Decision Tree Recall: 60.57%
+2024-11-05 09:53:20,070 - INFO - Decision Tree F1 Score: 60.60%
+2024-11-05 09:53:20,070 - INFO - Decision Tree Specificity: 95.69%
+2024-11-05 09:53:20,083 - INFO - Decision Tree confusion matrix saved as CSV for MATLAB at 'Results/decision_tree/decision_tree_confusion_matrix.csv'.
+2024-11-05 09:53:20,083 - INFO - Starting hyperparameter tuning for K-Nearest Neighbors...
+2024-11-05 09:53:20,083 - INFO - Using GridSearchCV for K-Nearest Neighbors
+2024-11-05 09:53:21,674 - INFO - K-Nearest Neighbors hyperparameter tuning completed in 1.59 seconds.
+2024-11-05 09:53:21,674 - INFO - K-Nearest Neighbors Best Parameters: {'metric': 'euclidean', 'n_neighbors': 5, 'weights': 'uniform'}
+2024-11-05 09:53:21,675 - INFO - K-Nearest Neighbors Best Cross-Validation Accuracy: 66.39%
+2024-11-05 09:53:22,333 - INFO - K-Nearest Neighbors Test Accuracy: 66.95%
+2024-11-05 09:53:22,335 - INFO - K-Nearest Neighbors Confusion Matrix:
+[[459   0  21  38  97   1  42  14 111   8]
+ [  1 740  29   5   3  22   4   6   4  58]
+ [ 49  12 405  65  15   5  73  77  19  56]
+ [ 60   7  56 572  28   2  37  41  32  17]
+ [ 78   0  30  48 474   1  19   1  21   3]
+ [  4  31  11   2   0 672  20  12   5  51]
+ [ 55   6 109  40  16  10 296  39  30  30]
+ [ 41   3  90  40  17   6  49 444  28  35]
+ [ 82   0  13  17  21   4  31  22 551   1]
+ [ 18  27  84  18   7  50  44  23  13 595]]
+2024-11-05 09:53:22,347 - INFO - K-Nearest Neighbors Precision: 66.70%
+2024-11-05 09:53:22,348 - INFO - K-Nearest Neighbors Recall: 66.34%
+2024-11-05 09:53:22,348 - INFO - K-Nearest Neighbors F1 Score: 66.46%
+2024-11-05 09:53:22,349 - INFO - K-Nearest Neighbors Specificity: 96.33%
+2024-11-05 09:53:22,358 - INFO - K-Nearest Neighbors confusion matrix saved as CSV for MATLAB at 'Results/k-nearest_neighbors/k-nearest_neighbors_confusion_matrix.csv'.
+2024-11-05 09:53:22,358 - INFO - Starting hyperparameter tuning for Support Vector Machine...
+2024-11-05 09:53:22,358 - INFO - Using GridSearchCV for Support Vector Machine
+2024-11-05 09:54:07,314 - INFO - Support Vector Machine hyperparameter tuning completed in 44.96 seconds.
+2024-11-05 09:54:07,315 - INFO - Support Vector Machine Best Parameters: {'C': 10, 'gamma': 'scale', 'kernel': 'rbf'}
+2024-11-05 09:54:07,315 - INFO - Support Vector Machine Best Cross-Validation Accuracy: 73.43%
+2024-11-05 09:54:15,483 - INFO - Support Vector Machine Test Accuracy: 73.75%
+2024-11-05 09:54:15,485 - INFO - Support Vector Machine Confusion Matrix:
+[[491   0  12  20 106   0  31   9 118   4]
+ [  0 784   7   2   3  20   6   1   2  47]
+ [ 31   9 431  42  12   4  66  79  32  70]
+ [ 39   4  31 621  34   0  33  45  38   7]
+ [ 29   0  14  22 556   0  14   0  39   1]
+ [  3  27   5   3   1 700  12  10   4  43]
+ [ 27   0  92  36  15   6 369  42  16  28]
+ [ 23   2  55  40  18   5  49 490  40  31]
+ [ 29   0   7   9  19   2  23  14 639   0]
+ [  6  19  48  16   7  40  53  25   9 656]]
+2024-11-05 09:54:15,496 - INFO - Support Vector Machine Precision: 73.23%
+2024-11-05 09:54:15,496 - INFO - Support Vector Machine Recall: 73.37%
+2024-11-05 09:54:15,496 - INFO - Support Vector Machine F1 Score: 73.09%
+2024-11-05 09:54:15,497 - INFO - Support Vector Machine Specificity: 97.09%
+2024-11-05 09:54:15,507 - INFO - Support Vector Machine confusion matrix saved as CSV for MATLAB at 'Results/support_vector_machine/support_vector_machine_confusion_matrix.csv'.
+2024-11-05 09:54:15,507 - INFO - Starting hyperparameter tuning for Naive Bayes...
+2024-11-05 09:54:15,508 - INFO - Using GridSearchCV for Naive Bayes
+2024-11-05 09:54:15,676 - INFO - Naive Bayes hyperparameter tuning completed in 0.17 seconds.
+2024-11-05 09:54:15,677 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 1e-09}
+2024-11-05 09:54:15,677 - INFO - Naive Bayes Best Cross-Validation Accuracy: 42.91%
+2024-11-05 09:54:15,683 - INFO - Naive Bayes Test Accuracy: 42.99%
+2024-11-05 09:54:15,686 - INFO - Naive Bayes Confusion Matrix:
+[[476   0  11  68  17   2  22  23  70 102]
+ [  2 431  27  75   4 161   2   9   0 161]
+ [ 64   4  59 173   0   8  20  91  16 341]
+ [123   4  15 472  14   1  25  94  26  78]
+ [387   0  15 100  83   0   4  18   8  60]
+ [  4  75   3  16   0 562   8   2   7 131]
+ [ 59   0  22 115   4   7 105  41  11 267]
+ [ 90   2  15 171   1   4  21 198  38 213]
+ [208   0   0  94   3   5  35   6 318  73]
+ [ 23  18  28  15   2  92  23  30   8 640]]
+2024-11-05 09:54:15,696 - INFO - Naive Bayes Precision: 48.47%
+2024-11-05 09:54:15,697 - INFO - Naive Bayes Recall: 41.31%
+2024-11-05 09:54:15,697 - INFO - Naive Bayes F1 Score: 39.82%
+2024-11-05 09:54:15,698 - INFO - Naive Bayes Specificity: 93.63%
+2024-11-05 09:54:15,708 - INFO - Naive Bayes confusion matrix saved as CSV for MATLAB at 'Results/naive_bayes/naive_bayes_confusion_matrix.csv'.
+2024-11-05 09:54:15,708 - INFO - Starting hyperparameter tuning for Random Forest...
+2024-11-05 09:54:15,708 - INFO - Using GridSearchCV for Random Forest
+2024-11-05 09:54:43,538 - INFO - Random Forest hyperparameter tuning completed in 27.83 seconds.
+2024-11-05 09:54:43,538 - INFO - Random Forest Best Parameters: {'bootstrap': True, 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}
+2024-11-05 09:54:43,539 - INFO - Random Forest Best Cross-Validation Accuracy: 73.96%
+2024-11-05 09:54:43,670 - INFO - Random Forest Test Accuracy: 73.99%
+2024-11-05 09:54:43,673 - INFO - Random Forest Confusion Matrix:
+[[494   0  13  25  98   0  28  12 118   3]
+ [  1 787  11   3   2  27   1   1   2  37]
+ [ 28   6 422  55  13   3  56  90  21  82]
+ [ 54   4  22 624  32   1  27  49  28  11]
+ [ 37   0  12  32 558   0   8   5  22   1]
+ [  2  21   1   3   1 700   8  16   3  53]
+ [ 27   2  72  42  13   1 369  46  25  34]
+ [ 20   3  45  40  14   1  42 525  34  29]
+ [ 54   0   9   5  26   0  22  13 613   0]
+ [  6  24  53  11   4  38  42  32   5 664]]
+2024-11-05 09:54:43,684 - INFO - Random Forest Precision: 73.43%
+2024-11-05 09:54:43,685 - INFO - Random Forest Recall: 73.60%
+2024-11-05 09:54:43,685 - INFO - Random Forest F1 Score: 73.37%
+2024-11-05 09:54:43,686 - INFO - Random Forest Specificity: 97.11%
+2024-11-05 09:54:43,700 - INFO - Random Forest confusion matrix saved as CSV for MATLAB at 'Results/random_forest/random_forest_confusion_matrix.csv'.
+2024-11-05 09:54:43,701 - INFO - ########################################################################################################################
