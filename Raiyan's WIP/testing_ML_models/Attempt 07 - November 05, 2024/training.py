@@ -17,7 +17,6 @@ from xgboost import XGBClassifier
 from scipy.stats import randint, uniform
 
 # Configure logging
-os.makedirs('logs', exist_ok=True)
 logging.basicConfig(filename='training.log', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -78,111 +77,7 @@ X_test_selected = X_test[:, top_indices]
 k_folds = 5
 logging.info(f"Using {k_folds}-fold cross-validation.")
 
-# Define extensive parameter grids for hyperparameter tuning
-extensive_param_grids = {
-    'Logistic Regression': {
-        'C': [0.01, 0.1, 1, 10, 100],
-        'penalty': ['l2'],
-        'solver': ['lbfgs'],
-        'multi_class': ['multinomial'],
-        'max_iter': [1000]
-    },
-    'Decision Tree': {
-        'max_depth': [None, 5, 10, 15, 20],
-        'min_samples_split': [2, 5, 10],
-        'min_samples_leaf': [1, 2, 4],
-        'criterion': ['gini', 'entropy']
-    },
-    'K-Nearest Neighbors': {
-        'n_neighbors': [3, 5, 7, 9, 11],
-        'weights': ['uniform', 'distance'],
-        'metric': ['euclidean', 'manhattan']
-    },
-    'Support Vector Machine': {
-        'C': [0.1, 1, 10, 100],
-        'kernel': ['linear', 'rbf', 'poly'],
-        'gamma': ['scale', 'auto']
-    },
-    'Naive Bayes': {
-        'var_smoothing': np.logspace(-9, -6, 4)
-    },
-    'Random Forest': {
-        'n_estimators': [100, 200, 500],
-        'max_depth': [None, 10, 20, 30],
-        'min_samples_split': [2, 5, 10],
-        'min_samples_leaf': [1, 2, 4],
-        'max_features': ['sqrt', 'log2', None],
-        'bootstrap': [True, False]
-    },
-    'XGBoost': {
-        'max_depth': [3, 6, 9, 12],
-        'learning_rate': [0.01, 0.1, 0.2],
-        'n_estimators': [100, 300, 500],
-        'subsample': [0.6, 0.8, 1.0],
-        'colsample_bytree': [0.6, 0.8, 1.0],
-        'gamma': [0, 0.1, 0.2],
-        'min_child_weight': [1, 3, 5],
-        'reg_alpha': [0, 0.1, 0.5],
-        'reg_lambda': [1, 1.5, 2]
-    }
-}
-
-# Define simplified parameter grids for quick testing
-simplified_param_grids = {
-    'Logistic Regression': {
-        'C': [1],
-        'penalty': ['l2'],
-        'solver': ['lbfgs'],
-        'multi_class': ['multinomial'],
-        'max_iter': [1000]
-    },
-    'Decision Tree': {
-        'max_depth': [None],
-        'min_samples_split': [2],
-        'min_samples_leaf': [1],
-        'criterion': ['gini']
-    },
-    'K-Nearest Neighbors': {
-        'n_neighbors': [5],
-        'weights': ['uniform'],
-        'metric': ['euclidean']
-    },
-    'Support Vector Machine': {
-        'C': [1],
-        'kernel': ['rbf'],
-        'gamma': ['scale']
-    },
-    'Naive Bayes': {
-        'var_smoothing': [1e-09]
-    },
-    'Random Forest': {
-        'n_estimators': [100],
-        'max_depth': [None],
-        'min_samples_split': [2],
-        'min_samples_leaf': [1],
-        'max_features': ['sqrt'],
-        'bootstrap': [True]
-    },
-    'XGBoost': {
-        'max_depth': [6],
-        'learning_rate': [0.1],
-        'n_estimators': [100],
-        'subsample': [0.8],
-        'colsample_bytree': [0.8],
-        'gamma': [0],
-        'min_child_weight': [1],
-        'reg_alpha': [0],
-        'reg_lambda': [1]
-    }
-}
-
-# Choose parameter grids to use
-# Uncomment one of the following lines to select the parameter grid
-
-# param_grids = extensive_param_grids  # Use extensive parameter grids for thorough search
-param_grids = simplified_param_grids  # Use simplified parameter grids for quick testing
-
-# Define parameter distributions for RandomizedSearchCV (only for extensive search)
+# Define parameter distributions for RandomizedSearchCV
 param_distributions = {
     'Logistic Regression': {
         'C': uniform(0.01, 100),
@@ -260,38 +155,20 @@ for model_name, model in models.items():
     logging.info(f"Starting hyperparameter tuning for {model_name}...")
     start_time = time.time()
 
-    # Get the parameter grid or distributions
-    param_grid = param_grids[model_name]
-
-    # Hyperparameter tuning using GridSearchCV or RandomizedSearchCV
-    # Uncomment the desired search method and comment out the other
-
-    # --- GridSearchCV ---
-    logging.info(f"Using GridSearchCV for {model_name}")
-    param_search = GridSearchCV(
+    # --- RandomizedSearchCV ---
+    logging.info(f"Using RandomizedSearchCV for {model_name}")
+    param_dist = param_distributions[model_name]
+    param_search = RandomizedSearchCV(
         estimator=model,
-        param_grid=param_grid,
+        param_distributions=param_dist,
+        n_iter=50,
         cv=k_folds,
         scoring='accuracy',
         n_jobs=-1,
+        random_state=42,
         verbose=0
     )
     param_search.fit(X_train_selected, y_train_full)
-
-    # --- RandomizedSearchCV ---
-    # logging.info(f"Using RandomizedSearchCV for {model_name}")
-    # param_dist = param_distributions[model_name]
-    # param_search = RandomizedSearchCV(
-    #     estimator=model,
-    #     param_distributions=param_dist,
-    #     n_iter=50,
-    #     cv=k_folds,
-    #     scoring='accuracy',
-    #     n_jobs=-1,
-    #     random_state=42,
-    #     verbose=0
-    # )
-    # param_search.fit(X_train_selected, y_train_full)
 
     # Best estimator
     best_model = param_search.best_estimator_

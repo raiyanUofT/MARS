@@ -1,0 +1,8 @@
+Model,Best Parameters,Accuracy,Precision,Recall,F1 Score,Specificity
+Logistic Regression,"{'C': 30.47137691733707, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}",57.64237048,56.5496186,57.03533898,56.47266935,95.29372115
+Decision Tree,"{'criterion': 'gini', 'max_depth': 13, 'min_samples_leaf': 4, 'min_samples_split': 4}",63.53001671,63.02993595,62.97844854,62.96706935,95.95145461
+K-Nearest Neighbors,"{'metric': 'manhattan', 'n_neighbors': 11, 'weights': 'distance'}",69.54621417,69.19908328,69.00189063,68.86157889,96.62122667
+Support Vector Machine,"{'C': 52.577466025838916, 'gamma': 'scale', 'kernel': 'rbf'}",74.0840725,73.47330777,73.68065551,73.46381648,97.12557176
+Naive Bayes,{'var_smoothing': 3.755401188473625e-07},42.98753053,48.46597539,41.30587307,39.82201908,93.62511011
+Random Forest,"{'bootstrap': False, 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'n_estimators': 291}",74.77824913,74.25775596,74.38060232,74.13553533,97.2014271
+XGBoost,"{'colsample_bytree': 0.9768807022739411, 'gamma': 0.11265764356910786, 'learning_rate': 0.08322913548258405, 'max_depth': 12, 'min_child_weight': 5, 'n_estimators': 485, 'reg_alpha': 0.34211651325607845, 'reg_lambda': 1.4401524937396013, 'subsample': 0.6488152939379115}",77.09217123,76.64206502,76.73438885,76.59594453,97.45794406
