@@ -2,16 +2,16 @@ import pandas as pd
 import numpy as np
 import time
 import xgboost as xgb
-import matplotlib.pyplot as plt
-import seaborn as sns
+import os
 import logging
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV, RandomizedSearchCV
+from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV
 from sklearn.preprocessing import LabelEncoder, StandardScaler
-from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn.metrics import accuracy_score, confusion_matrix, precision_score, recall_score, f1_score
 
 # Configure logging
-logging.basicConfig(filename='training_xgboost.log', level=logging.INFO, 
+os.makedirs('logs', exist_ok=True)
+logging.basicConfig(filename='logs/training_xgboost.log', level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Set random seed for reproducibility
@@ -68,18 +68,6 @@ X_val_selected = X_val[:, indices[:top_n]]
 X_test_selected = X_test[:, indices[:top_n]]
 
 # Hyperparameter grid for full training
-# param_grid = {
-#     'max_depth': [9, 12],
-#     'learning_rate': [0.1],
-#     'n_estimators': [300, 500],
-#     'subsample': [0.75, 0.8],
-#     'colsample_bytree': [0.8, 1.0],
-#     'gamma': [0, 0.1, 0.3],
-#     'min_child_weight': [3, 5],
-#     'reg_alpha': [1, 5],  # L1 regularization
-#     'reg_lambda': [1, 5]     # L2 regularization
-# }
-
 param_grid = {
     'max_depth': [9],
     'learning_rate': [0.1],
@@ -88,8 +76,8 @@ param_grid = {
     'colsample_bytree': [1.0],
     'gamma': [0.1],
     'min_child_weight': [3],
-    'reg_alpha': [5],  # L1 regularization
-    'reg_lambda': [5]     # L2 regularization
+    'reg_alpha': [0],  # L1 regularization
+    'reg_lambda': [1]  # L2 regularization
 }
 
 # XGBoost model with GPU support
@@ -147,20 +135,53 @@ logging.info(f"Test Accuracy: {test_accuracy * 100:.2f}%")
 print(f"Validation Accuracy: {val_accuracy * 100:.2f}%")
 print(f"Test Accuracy: {test_accuracy * 100:.2f}%")
 
-# Generate and save confusion matrix
+# Generate confusion matrix and additional metrics
 conf_matrix = confusion_matrix(y_test, y_test_pred)
-logging.info(f"Confusion Matrix:\n{conf_matrix}")
+precision = precision_score(y_test, y_test_pred, average='macro', zero_division=0)
+recall = recall_score(y_test, y_test_pred, average='macro', zero_division=0)
+f1 = f1_score(y_test, y_test_pred, average='macro', zero_division=0)
 
-plt.figure(figsize=(8, 6))
-sns.heatmap(conf_matrix, annot=True, cmap='Blues', fmt='d', 
-            xticklabels=np.unique(y), yticklabels=np.unique(y))
-plt.xlabel('Predicted Label')
-plt.ylabel('True Label')
-plt.title('XGBoost Confusion Matrix')
-plt.savefig('full_confusion_matrix.png')
-logging.info("Confusion matrix saved as 'full_confusion_matrix.png'.")
-print("Confusion matrix saved as 'full_confusion_matrix.png'.")
+# Calculate specificity
+TN = []
+FP = []
+for i in range(len(conf_matrix)):
+    tn = conf_matrix.sum() - (conf_matrix[i, :].sum() + conf_matrix[:, i].sum() - conf_matrix[i, i])
+    fp = conf_matrix[:, i].sum() - conf_matrix[i, i]
+    TN.append(tn)
+    FP.append(fp)
+specificity_per_class = np.array(TN) / (np.array(TN) + np.array(FP) + 1e-6)  # Avoid division by zero
+specificity = np.mean(specificity_per_class)
 
+# Log additional metrics
+logging.info(f"Precision: {precision * 100:.2f}%")
+logging.info(f"Recall: {recall * 100:.2f}%")
+logging.info(f"F1 Score: {f1 * 100:.2f}%")
+logging.info(f"Specificity: {specificity * 100:.2f}%")
+
+# Print additional metrics
+print(f"Precision: {precision * 100:.2f}%")
+print(f"Recall: {recall * 100:.2f}%")
+print(f"F1 Score: {f1 * 100:.2f}%")
+print(f"Specificity: {specificity * 100:.2f}%")
+
+# Create Results directory for XGBoost if it doesn't exist
+results_dir = 'Results/XGBoost'
+os.makedirs(results_dir, exist_ok=True)
+
+# Save metrics and best parameters to a CSV file
+metrics_df = pd.DataFrame({
+    'Metric': ['Best Cross-Validation Accuracy', 'Validation Accuracy', 'Test Accuracy', 'Precision', 'Recall', 'F1 Score', 'Specificity'],
+    'Value (%)': [best_score, val_accuracy * 100, test_accuracy * 100, precision * 100, recall * 100, f1 * 100, specificity * 100]
+})
+metrics_df.to_csv(os.path.join(results_dir, '../metrics_xgboost.csv'), index=False)
+logging.info("Metrics and best parameters saved to 'Results/metrics_xgboost.csv'.")
+
+# Save confusion matrix to CSV file for MATLAB
+conf_matrix_df = pd.DataFrame(conf_matrix)
+conf_matrix_csv_path = os.path.join(results_dir, 'xgboost_confusion_matrix.csv')
+conf_matrix_df.to_csv(conf_matrix_csv_path, index=False)
+logging.info(f"Confusion matrix saved as CSV for MATLAB at '{conf_matrix_csv_path}'.")
+print("Confusion matrix CSV saved for MATLAB.")
 
 ###################################################################################################################################################
 # 2024-11-02 07:39:17,260 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 
