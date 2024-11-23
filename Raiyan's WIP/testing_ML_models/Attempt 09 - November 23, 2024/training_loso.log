@@ -1,141 +1,33 @@
-2024-11-23 07:54:41,461 - INFO - Using 2-fold cross-validation within LOSO.
-2024-11-23 07:54:41,482 - INFO - LOSO iteration 1: Leaving out subject subject1
-2024-11-23 07:54:44,583 - INFO - Starting hyperparameter tuning for Logistic Regression within LOSO (subject subject1)...
-2024-11-23 07:54:49,169 - INFO - Logistic Regression hyperparameter tuning completed in 4.59 seconds.
-2024-11-23 07:54:49,170 - INFO - Logistic Regression Best Parameters: {'C': 59.87584841970366, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
-2024-11-23 07:54:49,170 - INFO - Logistic Regression Best Cross-Validation Accuracy: 60.11%
-2024-11-23 07:54:49,175 - INFO - Logistic Regression Test Accuracy on subject subject1: 46.06%
-2024-11-23 07:54:49,180 - INFO - Logistic Regression Confusion Matrix:
-[[403  16  51  56 115  18  23 117 263  67]
- [  0 846  50  29   1 117   1  18   0 229]
- [ 27  40 347 109  99   2  25 291  55 258]
- [107   5  62 390 328   0  12 147 115   4]
- [ 28  33  37  36 580   2   2  56  21  51]
- [  6  47  62  15   5 433  31  35  48 279]
- [ 18  22 219 121  33  10  87 307  74 403]
- [ 29   6 111  49  21   2  33 488 147 154]
- [ 33   6  24  17  33  20  11 129 674  77]
- [  2  27 104  19   4  16  18 137  19 966]]
-2024-11-23 07:54:49,216 - INFO - Logistic Regression Precision: 48.93%
-2024-11-23 07:54:49,216 - INFO - Logistic Regression Recall: 46.90%
-2024-11-23 07:54:49,217 - INFO - Logistic Regression F1 Score: 44.99%
-2024-11-23 07:54:49,217 - INFO - Logistic Regression Specificity: 94.00%
-2024-11-23 07:54:49,228 - INFO - Logistic Regression confusion matrix saved at 'Results_LOSO/logistic_regression_confusion_matrix_subject_subject1.csv'.
-2024-11-23 07:54:49,228 - INFO - --------------------------------------------------------
-2024-11-23 07:54:49,229 - INFO - Completed LOSO iteration for subject subject1
-2024-11-23 07:54:49,229 - INFO - ########################################################################################################################
-2024-11-23 07:54:49,263 - INFO - LOSO iteration 2: Leaving out subject subject2
-2024-11-23 07:54:52,497 - INFO - Starting hyperparameter tuning for Logistic Regression within LOSO (subject subject2)...
-2024-11-23 07:54:56,177 - INFO - Logistic Regression hyperparameter tuning completed in 3.68 seconds.
-2024-11-23 07:54:56,178 - INFO - Logistic Regression Best Parameters: {'C': 37.464011884736244, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
-2024-11-23 07:54:56,178 - INFO - Logistic Regression Best Cross-Validation Accuracy: 56.63%
-2024-11-23 07:54:56,184 - INFO - Logistic Regression Test Accuracy on subject subject2: 49.77%
-2024-11-23 07:54:56,191 - INFO - Logistic Regression Confusion Matrix:
-[[284   2  76 265 137   0  60 124 152  37]
- [  0 941  20   3   4 163   9  19   6 154]
- [  1  63 204  90   7  44  45  50   8 476]
- [178   2  50 676  88   1  86 124  51  67]
- [ 67   5  87 120 424   0  37  47  63  45]
- [  1 315   2   0   2 954   8   5   8  21]
- [ 81   0 131  40  16   0 349  63  63 226]
- [ 17  16 134 215  10  10  96 235 117 111]
- [ 58   0  13  25  59   0   7  40 881   1]
- [  0 180   0   0   0 442   6   4   1 678]]
-2024-11-23 07:54:56,223 - INFO - Logistic Regression Precision: 47.98%
-2024-11-23 07:54:56,223 - INFO - Logistic Regression Recall: 48.14%
-2024-11-23 07:54:56,224 - INFO - Logistic Regression F1 Score: 47.27%
-2024-11-23 07:54:56,224 - INFO - Logistic Regression Specificity: 94.39%
-2024-11-23 07:54:56,230 - INFO - Logistic Regression confusion matrix saved at 'Results_LOSO/logistic_regression_confusion_matrix_subject_subject2.csv'.
-2024-11-23 07:54:56,231 - INFO - --------------------------------------------------------
-2024-11-23 07:54:56,231 - INFO - Completed LOSO iteration for subject subject2
-2024-11-23 07:54:56,232 - INFO - ########################################################################################################################
-2024-11-23 07:54:56,266 - INFO - LOSO iteration 3: Leaving out subject subject3
-2024-11-23 07:55:00,206 - INFO - Starting hyperparameter tuning for Logistic Regression within LOSO (subject subject3)...
-2024-11-23 07:55:03,181 - INFO - Logistic Regression hyperparameter tuning completed in 2.97 seconds.
-2024-11-23 07:55:03,184 - INFO - Logistic Regression Best Parameters: {'C': 15.611864044243651, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
-2024-11-23 07:55:03,186 - INFO - Logistic Regression Best Cross-Validation Accuracy: 58.22%
-2024-11-23 07:55:03,199 - INFO - Logistic Regression Test Accuracy on subject subject3: 52.75%
-2024-11-23 07:55:03,208 - INFO - Logistic Regression Confusion Matrix:
-[[461   1  52  73 154   4  55  27  39   1]
- [  0 756  10   0   1  78   1   0   0  49]
- [ 19   4 353  76   8   5 168 121  28 112]
- [ 62   3 109 363  57   1  49 198  25  15]
- [ 55   1 109  71 551   2  10  34  32   0]
- [  0 161   0   0   0 645   0   0   0  76]
- [ 61   2 143 183  72   9 224 136  31  30]
- [ 15   6 224 140  28  18  56 315  16  69]
- [146   1  32   7  38   1 145  53 450   2]
- [ 14  49 108   1  19  65  45  34  10 532]]
-2024-11-23 07:55:03,241 - INFO - Logistic Regression Precision: 53.55%
-2024-11-23 07:55:03,245 - INFO - Logistic Regression Recall: 52.79%
-2024-11-23 07:55:03,246 - INFO - Logistic Regression F1 Score: 52.90%
-2024-11-23 07:55:03,246 - INFO - Logistic Regression Specificity: 94.75%
-2024-11-23 07:55:03,253 - INFO - Logistic Regression confusion matrix saved at 'Results_LOSO/logistic_regression_confusion_matrix_subject_subject3.csv'.
-2024-11-23 07:55:03,254 - INFO - --------------------------------------------------------
-2024-11-23 07:55:03,254 - INFO - Completed LOSO iteration for subject subject3
-2024-11-23 07:55:03,255 - INFO - ########################################################################################################################
-2024-11-23 07:55:03,284 - INFO - LOSO iteration 4: Leaving out subject subject4
-2024-11-23 07:55:07,077 - INFO - Starting hyperparameter tuning for Logistic Regression within LOSO (subject subject4)...
-2024-11-23 07:55:10,332 - INFO - Logistic Regression hyperparameter tuning completed in 3.25 seconds.
-2024-11-23 07:55:10,333 - INFO - Logistic Regression Best Parameters: {'C': 95.08143064099163, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
-2024-11-23 07:55:10,333 - INFO - Logistic Regression Best Cross-Validation Accuracy: 59.16%
-2024-11-23 07:55:10,341 - INFO - Logistic Regression Test Accuracy on subject subject4: 53.09%
-2024-11-23 07:55:10,350 - INFO - Logistic Regression Confusion Matrix:
-[[498   0   0  46 101   0   5   1 172   0]
- [  0 752   8   2   9  31   2   1   0  52]
- [ 65   1   7 197  84   0 116 124 150   0]
- [ 99   2  38 344  86   7 138  50  83  40]
- [117   0   0  76 539   0   0   0  37   0]
- [  0  69   6   0   1 746   7   2   3  45]
- [  0   0   0   0   0   0   0   0   0   0]
- [147   0  23 186  90   0  68 211 143  10]
- [ 85   0   0  36  53   1   3   3 545   0]
- [ 78  47 108  14  31  71 167  16  44 316]]
-2024-11-23 07:55:10,377 - INFO - Logistic Regression Precision: 48.16%
-2024-11-23 07:55:10,378 - INFO - Logistic Regression Recall: 47.75%
-2024-11-23 07:55:10,378 - INFO - Logistic Regression F1 Score: 46.30%
-2024-11-23 07:55:10,378 - INFO - Logistic Regression Specificity: 94.82%
-2024-11-23 07:55:10,391 - INFO - Logistic Regression confusion matrix saved at 'Results_LOSO/logistic_regression_confusion_matrix_subject_subject4.csv'.
-2024-11-23 07:55:10,393 - INFO - --------------------------------------------------------
-2024-11-23 07:55:10,395 - INFO - Completed LOSO iteration for subject subject4
-2024-11-23 07:55:10,396 - INFO - ########################################################################################################################
-2024-11-23 07:55:10,417 - INFO - Per-subject LOSO results saved to 'Results_LOSO/loso_per_subject_metrics.csv'
-2024-11-23 07:55:10,422 - INFO - Logistic Regression LOSO Average Accuracy: 50.42%
-2024-11-23 07:55:10,422 - INFO - Logistic Regression LOSO Average Precision: 49.66%
-2024-11-23 07:55:10,423 - INFO - Logistic Regression LOSO Average Recall: 48.89%
-2024-11-23 07:55:10,423 - INFO - Logistic Regression LOSO Average F1 Score: 47.86%
-2024-11-23 07:55:10,424 - INFO - Logistic Regression LOSO Average Specificity: 94.49%
-2024-11-23 07:55:10,438 - INFO - Aggregated LOSO results saved to 'Results_LOSO/loso_aggregate_metrics.csv'
-2024-11-23 07:59:58,221 - INFO - Using 2-fold cross-validation within LOSO.
-2024-11-23 07:59:58,242 - INFO - LOSO iteration 1: Leaving out subject subject1
-2024-11-23 08:00:01,335 - INFO - Starting hyperparameter tuning for Logistic Regression within LOSO (subject subject1)...
-2024-11-23 08:00:06,227 - INFO - Logistic Regression hyperparameter tuning completed in 4.89 seconds.
-2024-11-23 08:00:06,227 - INFO - Logistic Regression Best Parameters: {'C': 59.87584841970366, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
-2024-11-23 08:00:06,228 - INFO - Logistic Regression Best Cross-Validation Accuracy: 60.11%
-2024-11-23 08:00:06,232 - INFO - Logistic Regression Test Accuracy on subject subject1: 46.06%
-2024-11-23 08:00:06,237 - INFO - Logistic Regression Confusion Matrix:
-[[403  16  51  56 115  18  23 117 263  67]
- [  0 846  50  29   1 117   1  18   0 229]
- [ 27  40 347 109  99   2  25 291  55 258]
- [107   5  62 390 328   0  12 147 115   4]
- [ 28  33  37  36 580   2   2  56  21  51]
- [  6  47  62  15   5 433  31  35  48 279]
- [ 18  22 219 121  33  10  87 307  74 403]
- [ 29   6 111  49  21   2  33 488 147 154]
- [ 33   6  24  17  33  20  11 129 674  77]
- [  2  27 104  19   4  16  18 137  19 966]]
-2024-11-23 08:00:06,268 - INFO - Logistic Regression Precision: 48.93%
-2024-11-23 08:00:06,269 - INFO - Logistic Regression Recall: 46.90%
-2024-11-23 08:00:06,269 - INFO - Logistic Regression F1 Score: 44.99%
-2024-11-23 08:00:06,270 - INFO - Logistic Regression Specificity: 94.00%
-2024-11-23 08:00:06,282 - INFO - Logistic Regression confusion matrix saved at 'Results_LOSO/logistic_regression_confusion_matrix_subject_subject1.csv'.
-2024-11-23 08:00:06,283 - INFO - --------------------------------------------------------
-2024-11-23 08:00:06,283 - INFO - Starting hyperparameter tuning for Naive Bayes within LOSO (subject subject1)...
-2024-11-23 08:00:07,077 - INFO - Naive Bayes hyperparameter tuning completed in 0.79 seconds.
-2024-11-23 08:00:07,078 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 3.755401188473625e-07}
-2024-11-23 08:00:07,078 - INFO - Naive Bayes Best Cross-Validation Accuracy: 49.18%
-2024-11-23 08:00:07,084 - INFO - Naive Bayes Test Accuracy on subject subject1: 36.69%
-2024-11-23 08:00:07,086 - INFO - Naive Bayes Confusion Matrix:
+2024-11-23 08:24:02,746 - INFO - Using 2-fold cross-validation within LOSO.
+2024-11-23 08:24:02,771 - INFO - LOSO iteration 1: Leaving out subject subject1
+2024-11-23 08:24:06,227 - INFO - Starting hyperparameter tuning for Logistic Regression within LOSO (subject subject1)...
+2024-11-23 08:24:10,996 - INFO - Logistic Regression hyperparameter tuning completed in 4.77 seconds.
+2024-11-23 08:24:10,997 - INFO - Logistic Regression Best Parameters: {'C': 156.0286404424365, 'max_iter': 100, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-23 08:24:10,998 - INFO - Logistic Regression Best Cross-Validation Accuracy: 60.09%
+2024-11-23 08:24:11,003 - INFO - Logistic Regression Test Accuracy on subject subject1: 46.02%
+2024-11-23 08:24:11,011 - INFO - Logistic Regression Confusion Matrix:
+[[395  16  53  56 116  17  23 118 268  67]
+ [  0 844  50  28   1 117   1  20   0 230]
+ [ 26  39 350 108 100   2  22 296  55 255]
+ [105   5  61 390 328   0  13 149 115   4]
+ [ 28  30  36  36 581   2   2  58  21  52]
+ [  6  46  61  15   5 433  32  34  49 280]
+ [ 18  21 219 119  32  10  89 309  79 398]
+ [ 28   6 105  52  24   2  36 485 149 153]
+ [ 34   6  22  18  32  20  11 129 676  76]
+ [  2  28 101  19   4  14  20 138  19 967]]
+2024-11-23 08:24:11,040 - INFO - Logistic Regression Precision: 48.96%
+2024-11-23 08:24:11,042 - INFO - Logistic Regression Recall: 46.86%
+2024-11-23 08:24:11,047 - INFO - Logistic Regression F1 Score: 44.96%
+2024-11-23 08:24:11,048 - INFO - Logistic Regression Specificity: 94.00%
+2024-11-23 08:24:11,065 - INFO - Logistic Regression confusion matrix saved at 'Results_LOSO/logistic_regression_confusion_matrix_subject_subject1.csv'.
+2024-11-23 08:24:11,065 - INFO - --------------------------------------------------------
+2024-11-23 08:24:11,068 - INFO - Starting hyperparameter tuning for Naive Bayes within LOSO (subject subject1)...
+2024-11-23 08:24:11,874 - INFO - Naive Bayes hyperparameter tuning completed in 0.80 seconds.
+2024-11-23 08:24:11,875 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 3.755401188473625e-07}
+2024-11-23 08:24:11,875 - INFO - Naive Bayes Best Cross-Validation Accuracy: 49.18%
+2024-11-23 08:24:11,883 - INFO - Naive Bayes Test Accuracy on subject subject1: 36.69%
+2024-11-23 08:24:11,886 - INFO - Naive Bayes Confusion Matrix:
 [[460   0  10  63 126   0  25  19 351  75]
  [  2 443  91 195  16 132   0  22  30 360]
  [138   1  32 263  44   0   7 182 168 418]
@@ -146,43 +38,43 @@
  [168   2  12 179  32   1  16 234 241 155]
  [129   0   3  82  78   0  23  18 657  34]
  [ 62   4  61  66  16   7  92  66  66 872]]
-2024-11-23 08:00:07,097 - INFO - Naive Bayes Precision: 40.80%
-2024-11-23 08:00:07,098 - INFO - Naive Bayes Recall: 37.38%
-2024-11-23 08:00:07,098 - INFO - Naive Bayes F1 Score: 34.77%
-2024-11-23 08:00:07,099 - INFO - Naive Bayes Specificity: 92.96%
-2024-11-23 08:00:07,104 - INFO - Naive Bayes confusion matrix saved at 'Results_LOSO/naive_bayes_confusion_matrix_subject_subject1.csv'.
-2024-11-23 08:00:07,105 - INFO - --------------------------------------------------------
-2024-11-23 08:00:07,105 - INFO - Completed LOSO iteration for subject subject1
-2024-11-23 08:00:07,106 - INFO - ########################################################################################################################
-2024-11-23 08:00:07,116 - INFO - LOSO iteration 2: Leaving out subject subject2
-2024-11-23 08:00:10,319 - INFO - Starting hyperparameter tuning for Logistic Regression within LOSO (subject subject2)...
-2024-11-23 08:00:13,734 - INFO - Logistic Regression hyperparameter tuning completed in 3.41 seconds.
-2024-11-23 08:00:13,735 - INFO - Logistic Regression Best Parameters: {'C': 37.464011884736244, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
-2024-11-23 08:00:13,735 - INFO - Logistic Regression Best Cross-Validation Accuracy: 56.63%
-2024-11-23 08:00:13,742 - INFO - Logistic Regression Test Accuracy on subject subject2: 49.77%
-2024-11-23 08:00:13,747 - INFO - Logistic Regression Confusion Matrix:
-[[284   2  76 265 137   0  60 124 152  37]
- [  0 941  20   3   4 163   9  19   6 154]
- [  1  63 204  90   7  44  45  50   8 476]
- [178   2  50 676  88   1  86 124  51  67]
- [ 67   5  87 120 424   0  37  47  63  45]
- [  1 315   2   0   2 954   8   5   8  21]
- [ 81   0 131  40  16   0 349  63  63 226]
- [ 17  16 134 215  10  10  96 235 117 111]
- [ 58   0  13  25  59   0   7  40 881   1]
- [  0 180   0   0   0 442   6   4   1 678]]
-2024-11-23 08:00:13,780 - INFO - Logistic Regression Precision: 47.98%
-2024-11-23 08:00:13,781 - INFO - Logistic Regression Recall: 48.14%
-2024-11-23 08:00:13,781 - INFO - Logistic Regression F1 Score: 47.27%
-2024-11-23 08:00:13,782 - INFO - Logistic Regression Specificity: 94.39%
-2024-11-23 08:00:13,796 - INFO - Logistic Regression confusion matrix saved at 'Results_LOSO/logistic_regression_confusion_matrix_subject_subject2.csv'.
-2024-11-23 08:00:13,796 - INFO - --------------------------------------------------------
-2024-11-23 08:00:13,797 - INFO - Starting hyperparameter tuning for Naive Bayes within LOSO (subject subject2)...
-2024-11-23 08:00:14,089 - INFO - Naive Bayes hyperparameter tuning completed in 0.29 seconds.
-2024-11-23 08:00:14,089 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 3.755401188473625e-07}
-2024-11-23 08:00:14,090 - INFO - Naive Bayes Best Cross-Validation Accuracy: 43.90%
-2024-11-23 08:00:14,096 - INFO - Naive Bayes Test Accuracy on subject subject2: 41.29%
-2024-11-23 08:00:14,098 - INFO - Naive Bayes Confusion Matrix:
+2024-11-23 08:24:11,898 - INFO - Naive Bayes Precision: 40.80%
+2024-11-23 08:24:11,898 - INFO - Naive Bayes Recall: 37.38%
+2024-11-23 08:24:11,898 - INFO - Naive Bayes F1 Score: 34.77%
+2024-11-23 08:24:11,899 - INFO - Naive Bayes Specificity: 92.96%
+2024-11-23 08:24:11,905 - INFO - Naive Bayes confusion matrix saved at 'Results_LOSO/naive_bayes_confusion_matrix_subject_subject1.csv'.
+2024-11-23 08:24:11,906 - INFO - --------------------------------------------------------
+2024-11-23 08:24:11,906 - INFO - Completed LOSO iteration for subject subject1
+2024-11-23 08:24:11,907 - INFO - ########################################################################################################################
+2024-11-23 08:24:11,920 - INFO - LOSO iteration 2: Leaving out subject subject2
+2024-11-23 08:24:17,109 - INFO - Starting hyperparameter tuning for Logistic Regression within LOSO (subject subject2)...
+2024-11-23 08:24:20,555 - INFO - Logistic Regression hyperparameter tuning completed in 3.45 seconds.
+2024-11-23 08:24:20,557 - INFO - Logistic Regression Best Parameters: {'C': 732.0039418114051, 'max_iter': 100, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-23 08:24:20,561 - INFO - Logistic Regression Best Cross-Validation Accuracy: 56.63%
+2024-11-23 08:24:20,566 - INFO - Logistic Regression Test Accuracy on subject subject2: 49.79%
+2024-11-23 08:24:20,571 - INFO - Logistic Regression Confusion Matrix:
+[[287   2  71 271 135   0  59 123 151  38]
+ [  0 946  23   3   4 163   9  19   6 146]
+ [  2  61 200  97   7  44  46  50   7 474]
+ [177   1  52 684  88   1  79 118  51  72]
+ [ 68   5  87 123 421   0  37  46  63  45]
+ [  1 313   2   0   2 957   8   5   8  20]
+ [ 86   0 129  42  17   0 343  59  63 230]
+ [ 17  16 132 217  10  10  97 236 114 112]
+ [ 61   0  14  24  59   0   7  40 878   1]
+ [  0 178   0   0   0 447   5   4   1 676]]
+2024-11-23 08:24:20,601 - INFO - Logistic Regression Precision: 48.00%
+2024-11-23 08:24:20,602 - INFO - Logistic Regression Recall: 48.12%
+2024-11-23 08:24:20,602 - INFO - Logistic Regression F1 Score: 47.25%
+2024-11-23 08:24:20,603 - INFO - Logistic Regression Specificity: 94.39%
+2024-11-23 08:24:20,619 - INFO - Logistic Regression confusion matrix saved at 'Results_LOSO/logistic_regression_confusion_matrix_subject_subject2.csv'.
+2024-11-23 08:24:20,619 - INFO - --------------------------------------------------------
+2024-11-23 08:24:20,620 - INFO - Starting hyperparameter tuning for Naive Bayes within LOSO (subject subject2)...
+2024-11-23 08:24:20,914 - INFO - Naive Bayes hyperparameter tuning completed in 0.29 seconds.
+2024-11-23 08:24:20,914 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 3.755401188473625e-07}
+2024-11-23 08:24:20,915 - INFO - Naive Bayes Best Cross-Validation Accuracy: 43.90%
+2024-11-23 08:24:20,924 - INFO - Naive Bayes Test Accuracy on subject subject2: 41.29%
+2024-11-23 08:24:20,927 - INFO - Naive Bayes Confusion Matrix:
 [[318   2  22  50  51   2  42  61 327 262]
  [  2 686  25  52   4 315   7  18  20 190]
  [  5   9 186 178   0  15   9  25  27 534]
@@ -193,43 +85,43 @@
  [ 16  10 120 237   4   4  37 184 109 240]
  [ 81   0  25  75   3   7  35  12 794  52]
  [  1 120   5   1   2 746   4   1   8 423]]
-2024-11-23 08:00:14,110 - INFO - Naive Bayes Precision: 44.97%
-2024-11-23 08:00:14,111 - INFO - Naive Bayes Recall: 39.42%
-2024-11-23 08:00:14,111 - INFO - Naive Bayes F1 Score: 39.15%
-2024-11-23 08:00:14,112 - INFO - Naive Bayes Specificity: 93.42%
-2024-11-23 08:00:14,118 - INFO - Naive Bayes confusion matrix saved at 'Results_LOSO/naive_bayes_confusion_matrix_subject_subject2.csv'.
-2024-11-23 08:00:14,118 - INFO - --------------------------------------------------------
-2024-11-23 08:00:14,119 - INFO - Completed LOSO iteration for subject subject2
-2024-11-23 08:00:14,119 - INFO - ########################################################################################################################
-2024-11-23 08:00:14,130 - INFO - LOSO iteration 3: Leaving out subject subject3
-2024-11-23 08:00:17,767 - INFO - Starting hyperparameter tuning for Logistic Regression within LOSO (subject subject3)...
-2024-11-23 08:00:20,569 - INFO - Logistic Regression hyperparameter tuning completed in 2.80 seconds.
-2024-11-23 08:00:20,570 - INFO - Logistic Regression Best Parameters: {'C': 15.611864044243651, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
-2024-11-23 08:00:20,570 - INFO - Logistic Regression Best Cross-Validation Accuracy: 58.22%
-2024-11-23 08:00:20,577 - INFO - Logistic Regression Test Accuracy on subject subject3: 52.75%
-2024-11-23 08:00:20,583 - INFO - Logistic Regression Confusion Matrix:
-[[461   1  52  73 154   4  55  27  39   1]
- [  0 756  10   0   1  78   1   0   0  49]
- [ 19   4 353  76   8   5 168 121  28 112]
- [ 62   3 109 363  57   1  49 198  25  15]
- [ 55   1 109  71 551   2  10  34  32   0]
+2024-11-23 08:24:20,943 - INFO - Naive Bayes Precision: 44.97%
+2024-11-23 08:24:20,943 - INFO - Naive Bayes Recall: 39.42%
+2024-11-23 08:24:20,944 - INFO - Naive Bayes F1 Score: 39.15%
+2024-11-23 08:24:20,944 - INFO - Naive Bayes Specificity: 93.42%
+2024-11-23 08:24:20,954 - INFO - Naive Bayes confusion matrix saved at 'Results_LOSO/naive_bayes_confusion_matrix_subject_subject2.csv'.
+2024-11-23 08:24:20,955 - INFO - --------------------------------------------------------
+2024-11-23 08:24:20,955 - INFO - Completed LOSO iteration for subject subject2
+2024-11-23 08:24:20,956 - INFO - ########################################################################################################################
+2024-11-23 08:24:20,967 - INFO - LOSO iteration 3: Leaving out subject subject3
+2024-11-23 08:24:25,076 - INFO - Starting hyperparameter tuning for Logistic Regression within LOSO (subject subject3)...
+2024-11-23 08:24:28,197 - INFO - Logistic Regression hyperparameter tuning completed in 3.12 seconds.
+2024-11-23 08:24:28,202 - INFO - Logistic Regression Best Parameters: {'C': 374.55011884736246, 'max_iter': 100, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-23 08:24:28,203 - INFO - Logistic Regression Best Cross-Validation Accuracy: 58.23%
+2024-11-23 08:24:28,213 - INFO - Logistic Regression Test Accuracy on subject subject3: 52.73%
+2024-11-23 08:24:28,226 - INFO - Logistic Regression Confusion Matrix:
+[[460   1  53  73 154   4  55  27  39   1]
+ [  0 754  10   0   1  79   1   0   0  50]
+ [ 19   4 351  76   8   5 169 121  28 113]
+ [ 61   3 109 364  57   1  50 198  25  14]
+ [ 57   1 109  71 549   2  10  36  30   0]
  [  0 161   0   0   0 645   0   0   0  76]
- [ 61   2 143 183  72   9 224 136  31  30]
- [ 15   6 224 140  28  18  56 315  16  69]
+ [ 61   2 143 183  72   9 225 135  31  30]
+ [ 15   6 223 142  28  18  54 316  16  69]
  [146   1  32   7  38   1 145  53 450   2]
- [ 14  49 108   1  19  65  45  34  10 532]]
-2024-11-23 08:00:20,609 - INFO - Logistic Regression Precision: 53.55%
-2024-11-23 08:00:20,610 - INFO - Logistic Regression Recall: 52.79%
-2024-11-23 08:00:20,610 - INFO - Logistic Regression F1 Score: 52.90%
-2024-11-23 08:00:20,612 - INFO - Logistic Regression Specificity: 94.75%
-2024-11-23 08:00:20,623 - INFO - Logistic Regression confusion matrix saved at 'Results_LOSO/logistic_regression_confusion_matrix_subject_subject3.csv'.
-2024-11-23 08:00:20,623 - INFO - --------------------------------------------------------
-2024-11-23 08:00:20,624 - INFO - Starting hyperparameter tuning for Naive Bayes within LOSO (subject subject3)...
-2024-11-23 08:00:20,962 - INFO - Naive Bayes hyperparameter tuning completed in 0.34 seconds.
-2024-11-23 08:00:20,962 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 3.755401188473625e-07}
-2024-11-23 08:00:20,963 - INFO - Naive Bayes Best Cross-Validation Accuracy: 43.97%
-2024-11-23 08:00:20,973 - INFO - Naive Bayes Test Accuracy on subject subject3: 37.19%
-2024-11-23 08:00:20,976 - INFO - Naive Bayes Confusion Matrix:
+ [ 13  49 109   1  19  65  43  34  10 534]]
+2024-11-23 08:24:28,275 - INFO - Logistic Regression Precision: 53.56%
+2024-11-23 08:24:28,276 - INFO - Logistic Regression Recall: 52.76%
+2024-11-23 08:24:28,276 - INFO - Logistic Regression F1 Score: 52.89%
+2024-11-23 08:24:28,277 - INFO - Logistic Regression Specificity: 94.75%
+2024-11-23 08:24:28,305 - INFO - Logistic Regression confusion matrix saved at 'Results_LOSO/logistic_regression_confusion_matrix_subject_subject3.csv'.
+2024-11-23 08:24:28,307 - INFO - --------------------------------------------------------
+2024-11-23 08:24:28,308 - INFO - Starting hyperparameter tuning for Naive Bayes within LOSO (subject subject3)...
+2024-11-23 08:24:28,526 - INFO - Naive Bayes hyperparameter tuning completed in 0.22 seconds.
+2024-11-23 08:24:28,527 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 3.755401188473625e-07}
+2024-11-23 08:24:28,528 - INFO - Naive Bayes Best Cross-Validation Accuracy: 43.97%
+2024-11-23 08:24:28,550 - INFO - Naive Bayes Test Accuracy on subject subject3: 37.19%
+2024-11-23 08:24:28,552 - INFO - Naive Bayes Confusion Matrix:
 [[452   4  27 152  49   1  62  23  12  85]
  [  3 502  98  55   1 102   0   3   0 131]
  [160  11  77 213   3   8  38  86   4 294]
@@ -240,43 +132,43 @@
  [150   3  22 303  10  25  35 245  13  81]
  [480   0   3 131  16   4  95  25  85  36]
  [136  45  26  21   7  16  14  20   3 589]]
-2024-11-23 08:00:20,992 - INFO - Naive Bayes Precision: 43.67%
-2024-11-23 08:00:20,992 - INFO - Naive Bayes Recall: 37.20%
-2024-11-23 08:00:20,993 - INFO - Naive Bayes F1 Score: 35.00%
-2024-11-23 08:00:20,993 - INFO - Naive Bayes Specificity: 93.02%
-2024-11-23 08:00:21,000 - INFO - Naive Bayes confusion matrix saved at 'Results_LOSO/naive_bayes_confusion_matrix_subject_subject3.csv'.
-2024-11-23 08:00:21,000 - INFO - --------------------------------------------------------
-2024-11-23 08:00:21,001 - INFO - Completed LOSO iteration for subject subject3
-2024-11-23 08:00:21,001 - INFO - ########################################################################################################################
-2024-11-23 08:00:21,020 - INFO - LOSO iteration 4: Leaving out subject subject4
-2024-11-23 08:00:25,461 - INFO - Starting hyperparameter tuning for Logistic Regression within LOSO (subject subject4)...
-2024-11-23 08:00:28,600 - INFO - Logistic Regression hyperparameter tuning completed in 3.14 seconds.
-2024-11-23 08:00:28,600 - INFO - Logistic Regression Best Parameters: {'C': 95.08143064099163, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
-2024-11-23 08:00:28,601 - INFO - Logistic Regression Best Cross-Validation Accuracy: 59.16%
-2024-11-23 08:00:28,605 - INFO - Logistic Regression Test Accuracy on subject subject4: 53.09%
-2024-11-23 08:00:28,610 - INFO - Logistic Regression Confusion Matrix:
+2024-11-23 08:24:28,564 - INFO - Naive Bayes Precision: 43.67%
+2024-11-23 08:24:28,564 - INFO - Naive Bayes Recall: 37.20%
+2024-11-23 08:24:28,565 - INFO - Naive Bayes F1 Score: 35.00%
+2024-11-23 08:24:28,565 - INFO - Naive Bayes Specificity: 93.02%
+2024-11-23 08:24:28,569 - INFO - Naive Bayes confusion matrix saved at 'Results_LOSO/naive_bayes_confusion_matrix_subject_subject3.csv'.
+2024-11-23 08:24:28,569 - INFO - --------------------------------------------------------
+2024-11-23 08:24:28,569 - INFO - Completed LOSO iteration for subject subject3
+2024-11-23 08:24:28,570 - INFO - ########################################################################################################################
+2024-11-23 08:24:28,583 - INFO - LOSO iteration 4: Leaving out subject subject4
+2024-11-23 08:24:32,839 - INFO - Starting hyperparameter tuning for Logistic Regression within LOSO (subject subject4)...
+2024-11-23 08:24:35,896 - INFO - Logistic Regression hyperparameter tuning completed in 3.06 seconds.
+2024-11-23 08:24:35,897 - INFO - Logistic Regression Best Parameters: {'C': 374.55011884736246, 'max_iter': 100, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-23 08:24:35,900 - INFO - Logistic Regression Best Cross-Validation Accuracy: 59.15%
+2024-11-23 08:24:35,908 - INFO - Logistic Regression Test Accuracy on subject subject4: 53.07%
+2024-11-23 08:24:35,912 - INFO - Logistic Regression Confusion Matrix:
 [[498   0   0  46 101   0   5   1 172   0]
  [  0 752   8   2   9  31   2   1   0  52]
- [ 65   1   7 197  84   0 116 124 150   0]
- [ 99   2  38 344  86   7 138  50  83  40]
- [117   0   0  76 539   0   0   0  37   0]
+ [ 65   1   7 197  84   0 118 123 149   0]
+ [ 98   2  39 342  86   7 140  51  83  39]
+ [116   0   0  76 540   0   0   0  37   0]
  [  0  69   6   0   1 746   7   2   3  45]
  [  0   0   0   0   0   0   0   0   0   0]
  [147   0  23 186  90   0  68 211 143  10]
- [ 85   0   0  36  53   1   3   3 545   0]
- [ 78  47 108  14  31  71 167  16  44 316]]
-2024-11-23 08:00:28,633 - INFO - Logistic Regression Precision: 48.16%
-2024-11-23 08:00:28,633 - INFO - Logistic Regression Recall: 47.75%
-2024-11-23 08:00:28,634 - INFO - Logistic Regression F1 Score: 46.30%
-2024-11-23 08:00:28,634 - INFO - Logistic Regression Specificity: 94.82%
-2024-11-23 08:00:28,648 - INFO - Logistic Regression confusion matrix saved at 'Results_LOSO/logistic_regression_confusion_matrix_subject_subject4.csv'.
-2024-11-23 08:00:28,648 - INFO - --------------------------------------------------------
-2024-11-23 08:00:28,649 - INFO - Starting hyperparameter tuning for Naive Bayes within LOSO (subject subject4)...
-2024-11-23 08:00:28,990 - INFO - Naive Bayes hyperparameter tuning completed in 0.34 seconds.
-2024-11-23 08:00:28,991 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 3.755401188473625e-07}
-2024-11-23 08:00:28,991 - INFO - Naive Bayes Best Cross-Validation Accuracy: 42.91%
-2024-11-23 08:00:28,997 - INFO - Naive Bayes Test Accuracy on subject subject4: 47.90%
-2024-11-23 08:00:28,999 - INFO - Naive Bayes Confusion Matrix:
+ [ 84   0   0  36  54   1   3   3 545   0]
+ [ 79  47 109  15  31  71 166  15  44 315]]
+2024-11-23 08:24:35,937 - INFO - Logistic Regression Precision: 48.17%
+2024-11-23 08:24:35,937 - INFO - Logistic Regression Recall: 47.73%
+2024-11-23 08:24:35,938 - INFO - Logistic Regression F1 Score: 46.29%
+2024-11-23 08:24:35,938 - INFO - Logistic Regression Specificity: 94.82%
+2024-11-23 08:24:35,948 - INFO - Logistic Regression confusion matrix saved at 'Results_LOSO/logistic_regression_confusion_matrix_subject_subject4.csv'.
+2024-11-23 08:24:35,948 - INFO - --------------------------------------------------------
+2024-11-23 08:24:35,949 - INFO - Starting hyperparameter tuning for Naive Bayes within LOSO (subject subject4)...
+2024-11-23 08:24:36,256 - INFO - Naive Bayes hyperparameter tuning completed in 0.31 seconds.
+2024-11-23 08:24:36,256 - INFO - Naive Bayes Best Parameters: {'var_smoothing': 3.755401188473625e-07}
+2024-11-23 08:24:36,257 - INFO - Naive Bayes Best Cross-Validation Accuracy: 42.91%
+2024-11-23 08:24:36,263 - INFO - Naive Bayes Test Accuracy on subject subject4: 47.90%
+2024-11-23 08:24:36,265 - INFO - Naive Bayes Confusion Matrix:
 [[474   0   0  62  25   3   8   6 238   7]
  [  7 513   3  10  28 142   3   3   0 148]
  [122   1   1 250  24   5  77 112 138  14]
@@ -287,23 +179,25 @@
  [244   0   5 184   8   0  23 209 180  25]
  [ 79   0   0 108  12   1  10   3 507   6]
  [114  15  34   8   1  23  27  22  85 563]]
-2024-11-23 08:00:29,008 - INFO - Naive Bayes Precision: 44.91%
-2024-11-23 08:00:29,009 - INFO - Naive Bayes Recall: 42.59%
-2024-11-23 08:00:29,009 - INFO - Naive Bayes F1 Score: 41.33%
-2024-11-23 08:00:29,010 - INFO - Naive Bayes Specificity: 94.18%
-2024-11-23 08:00:29,018 - INFO - Naive Bayes confusion matrix saved at 'Results_LOSO/naive_bayes_confusion_matrix_subject_subject4.csv'.
-2024-11-23 08:00:29,019 - INFO - --------------------------------------------------------
-2024-11-23 08:00:29,019 - INFO - Completed LOSO iteration for subject subject4
-2024-11-23 08:00:29,020 - INFO - ########################################################################################################################
-2024-11-23 08:00:29,031 - INFO - Per-subject LOSO results saved to 'Results_LOSO/loso_per_subject_metrics.csv'
-2024-11-23 08:00:29,033 - INFO - Logistic Regression LOSO Average Accuracy: 50.42%
-2024-11-23 08:00:29,033 - INFO - Logistic Regression LOSO Average Precision: 49.66%
-2024-11-23 08:00:29,034 - INFO - Logistic Regression LOSO Average Recall: 48.89%
-2024-11-23 08:00:29,034 - INFO - Logistic Regression LOSO Average F1 Score: 47.86%
-2024-11-23 08:00:29,035 - INFO - Logistic Regression LOSO Average Specificity: 94.49%
-2024-11-23 08:00:29,036 - INFO - Naive Bayes LOSO Average Accuracy: 40.77%
-2024-11-23 08:00:29,037 - INFO - Naive Bayes LOSO Average Precision: 43.59%
-2024-11-23 08:00:29,037 - INFO - Naive Bayes LOSO Average Recall: 39.15%
-2024-11-23 08:00:29,038 - INFO - Naive Bayes LOSO Average F1 Score: 37.56%
-2024-11-23 08:00:29,038 - INFO - Naive Bayes LOSO Average Specificity: 93.39%
-2024-11-23 08:00:29,047 - INFO - Aggregated LOSO results saved to 'Results_LOSO/loso_aggregate_metrics.csv'
+2024-11-23 08:24:36,273 - INFO - Naive Bayes Precision: 44.91%
+2024-11-23 08:24:36,274 - INFO - Naive Bayes Recall: 42.59%
+2024-11-23 08:24:36,274 - INFO - Naive Bayes F1 Score: 41.33%
+2024-11-23 08:24:36,274 - INFO - Naive Bayes Specificity: 94.18%
+2024-11-23 08:24:36,280 - INFO - Naive Bayes confusion matrix saved at 'Results_LOSO/naive_bayes_confusion_matrix_subject_subject4.csv'.
+2024-11-23 08:24:36,281 - INFO - --------------------------------------------------------
+2024-11-23 08:24:36,281 - INFO - Completed LOSO iteration for subject subject4
+2024-11-23 08:24:36,281 - INFO - ########################################################################################################################
+2024-11-23 08:24:36,289 - INFO - Per-subject LOSO results saved to 'Results_LOSO/loso_per_subject_metrics.csv'
+2024-11-23 08:24:36,291 - INFO - Logistic Regression LOSO Average Training Time: 3.60 seconds
+2024-11-23 08:24:36,291 - INFO - Logistic Regression LOSO Average Accuracy: 50.40%
+2024-11-23 08:24:36,292 - INFO - Logistic Regression LOSO Average Precision: 49.67%
+2024-11-23 08:24:36,292 - INFO - Logistic Regression LOSO Average Recall: 48.87%
+2024-11-23 08:24:36,292 - INFO - Logistic Regression LOSO Average F1 Score: 47.85%
+2024-11-23 08:24:36,292 - INFO - Logistic Regression LOSO Average Specificity: 94.49%
+2024-11-23 08:24:36,294 - INFO - Naive Bayes LOSO Average Training Time: 0.41 seconds
+2024-11-23 08:24:36,294 - INFO - Naive Bayes LOSO Average Accuracy: 40.77%
+2024-11-23 08:24:36,294 - INFO - Naive Bayes LOSO Average Precision: 43.59%
+2024-11-23 08:24:36,295 - INFO - Naive Bayes LOSO Average Recall: 39.15%
+2024-11-23 08:24:36,295 - INFO - Naive Bayes LOSO Average F1 Score: 37.56%
+2024-11-23 08:24:36,296 - INFO - Naive Bayes LOSO Average Specificity: 93.39%
+2024-11-23 08:24:36,302 - INFO - Aggregated LOSO results saved to 'Results_LOSO/loso_aggregate_metrics.csv'

@@ -64,11 +64,11 @@ logging.info(f"Using {k_folds}-fold cross-validation within LOSO.")
 # Define parameter distributions for RandomizedSearchCV
 param_distributions = {
     'Logistic Regression': {
-        'C': uniform(0.01, 100),
+        'C': uniform(0.01, 1000),
         'penalty': ['l2'],
         'solver': ['lbfgs'],
         'multi_class': ['multinomial'],
-        'max_iter': [1000]
+        'max_iter': [100]
     },
     # 'Decision Tree': {
     #     'max_depth': [None] + list(range(5, 21)),
@@ -169,6 +169,7 @@ for fold, (train_index, test_index) in enumerate(logo.split(X_scaled, y, groups=
     # Train and evaluate each model using hyperparameter tuning within this LOSO fold
     for model_name, model in models.items():
         logging.info(f"Starting hyperparameter tuning for {model_name} within LOSO (subject {subject_id})...")
+        print(f"Starting hyperparameter tuning for {model_name} within LOSO (subject {subject_id})...")
         start_time = time.time()
 
         # Inner k-fold cross-validation for hyperparameter tuning
@@ -193,6 +194,7 @@ for fold, (train_index, test_index) in enumerate(logo.split(X_scaled, y, groups=
 
         training_time = time.time() - start_time
         logging.info(f"{model_name} hyperparameter tuning completed in {training_time:.2f} seconds.")
+        print(f"{model_name} hyperparameter tuning completed in {training_time:.2f} seconds.")
         logging.info(f"{model_name} Best Parameters: {best_params}")
         logging.info(f"{model_name} Best Cross-Validation Accuracy: {best_score * 100:.2f}%")
         print(f"{model_name} Best Cross-Validation Accuracy: {best_score * 100:.2f}%")
@@ -236,9 +238,10 @@ for fold, (train_index, test_index) in enumerate(logo.split(X_scaled, y, groups=
         print(f"{model_name} F1 Score: {f1 * 100:.2f}%")
         print(f"{model_name} Specificity: {specificity * 100:.2f}%")
 
-        # Append results to the LOSO iteration results
+        # Append results to the LOSO iteration results, including training time
         loso_iteration_results[model_name] = {
             'Best Parameters': best_params,
+            'Training Time (s)': training_time,
             'Accuracy': test_accuracy * 100,
             'Precision': precision * 100,
             'Recall': recall * 100,
@@ -274,6 +277,7 @@ for result in loso_results:
             per_subject_results.append({
                 'SubjectID': subject_id,
                 'Model': model_name,
+                'Training Time (s)': model_result.get('Training Time (s)', 0),
                 'Accuracy': model_result.get('Accuracy', 0),
                 'Precision': model_result.get('Precision', 0),
                 'Recall': model_result.get('Recall', 0),
@@ -289,11 +293,12 @@ per_subject_results_df.to_csv(per_subject_results_csv_path, index=False)
 print(f"Per-subject LOSO results saved to '{per_subject_results_csv_path}'")
 logging.info(f"Per-subject LOSO results saved to '{per_subject_results_csv_path}'")
 
-# Now aggregate the results across subjects for each model
+# Now aggregate the results across subjects for each model, including average training time
 aggregate_results = []
 
 for model_name in models.keys():
     model_results = per_subject_results_df[per_subject_results_df['Model'] == model_name]
+    avg_training_time = model_results['Training Time (s)'].mean()
     avg_accuracy = model_results['Accuracy'].mean()
     avg_precision = model_results['Precision'].mean()
     avg_recall = model_results['Recall'].mean()
@@ -301,12 +306,14 @@ for model_name in models.keys():
     avg_specificity = model_results['Specificity'].mean()
 
     # Log and print the aggregated results
+    logging.info(f"{model_name} LOSO Average Training Time: {avg_training_time:.2f} seconds")
     logging.info(f"{model_name} LOSO Average Accuracy: {avg_accuracy:.2f}%")
     logging.info(f"{model_name} LOSO Average Precision: {avg_precision:.2f}%")
     logging.info(f"{model_name} LOSO Average Recall: {avg_recall:.2f}%")
     logging.info(f"{model_name} LOSO Average F1 Score: {avg_f1_score:.2f}%")
     logging.info(f"{model_name} LOSO Average Specificity: {avg_specificity:.2f}%")
 
+    print(f"{model_name} LOSO Average Training Time: {avg_training_time:.2f} seconds")
     print(f"{model_name} LOSO Average Accuracy: {avg_accuracy:.2f}%")
     print(f"{model_name} LOSO Average Precision: {avg_precision:.2f}%")
     print(f"{model_name} LOSO Average Recall: {avg_recall:.2f}%")
@@ -316,6 +323,7 @@ for model_name in models.keys():
     # Append to aggregate results
     aggregate_results.append({
         'Model': model_name,
+        'Average Training Time (s)': avg_training_time,
         'LOSO Accuracy': avg_accuracy,
         'LOSO Precision': avg_precision,
         'LOSO Recall': avg_recall,
