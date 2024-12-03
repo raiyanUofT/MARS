@@ -157,6 +157,20 @@ for fold, (train_index, test_index) in enumerate(logo.split(X_scaled, y, groups=
     top_indices = indices[:top_n]
     top_features = [relevant_features[i] for i in top_indices]
 
+    import matplotlib.pyplot as plt
+
+    # Get feature importances
+    feature_names = X.columns
+    indices = np.argsort(importances)[::-1]
+
+    # Plot all feature importances
+    plt.figure(figsize=(12, 8))
+    plt.title('Feature Importances')
+    plt.bar(range(len(importances)), importances[indices], align='center')
+    plt.xticks(range(len(importances)), feature_names[indices], rotation=90)
+    plt.tight_layout()
+    plt.show()
+
     # Use only top features for training
     X_train_selected = X_train_full[:, top_indices]
     X_test_selected = X_test[:, top_indices]

@@ -165,3 +165,32 @@
 2024-11-05 10:42:30,951 - INFO - XGBoost confusion matrix saved as CSV for MATLAB at 'Results/xgboost_confusion_matrix.csv'.
 2024-11-05 10:42:30,952 - INFO - ########################################################################################################################
 2024-11-05 10:42:30,957 - INFO - Model results saved to 'Results/metrics.csv'
+2024-11-27 15:33:55,496 - INFO - Training set: 31114 samples
+2024-11-27 15:33:55,497 - INFO - Test set: 7779 samples
+2024-11-27 15:33:55,497 - INFO - Starting feature selection with Random Forest...
+2024-11-27 15:33:59,081 - INFO - Top 40 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'SkewX', 'StdDoppler', 'PCA_DirectionZ', 'MeanIntensity', 'PCA_DirectionX', 'CovXZ', 'PCA_DirectionY', 'EigVal1', 'CovYZ', 'TotalIntensity', 'CorrXZ', 'VoxelEntropy', 'RangeY', 'SkewY', 'StdZ', 'RangeZ', 'MeanGradX', 'CorrYZ', 'ConvexHullVolume', 'KurtX', 'StdY', 'EigVal2', 'MaxIntensity', 'StdIntensity', 'KurtDoppler', 'NumPoints', 'EigVal3', 'MeanDoppler', 'VoxelDensity']
+2024-11-27 15:33:59,092 - INFO - Using 5-fold cross-validation.
+2024-11-27 15:33:59,095 - INFO - Starting hyperparameter tuning for Logistic Regression...
+2024-11-27 15:33:59,095 - INFO - Using RandomizedSearchCV for Logistic Regression
+2024-11-27 15:35:43,878 - INFO - Logistic Regression hyperparameter tuning completed in 104.78 seconds.
+2024-11-27 15:35:43,879 - INFO - Logistic Regression Best Parameters: {'C': 2.0684494295802445, 'max_iter': 1000, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-11-27 15:35:43,879 - INFO - Logistic Regression Best Cross-Validation Accuracy: 60.44%
+2024-11-27 15:35:43,886 - INFO - Logistic Regression Test Accuracy: 60.14%
+2024-11-27 15:35:43,892 - INFO - Logistic Regression Confusion Matrix:
+[[414   1  25  44 112   2  24  36 119  14]
+ [  0 707  22   3   6  68   3   5   2  56]
+ [ 22  14 293  68  25   9  64 107  48 126]
+ [ 73   1  48 457  84   2  36  83  49  19]
+ [ 60   3  34  36 474   0  14  27  23   4]
+ [  1  79   6   2   1 621  16   7  11  64]
+ [ 28   1 100  47  26  12 254  62  33  68]
+ [ 31   2  88  74  44   5  68 307  74  60]
+ [ 53   1  11  11  32   3  42  28 553   8]
+ [ 13  38  64   6  10  62  41  32  15 598]]
+2024-11-27 15:35:43,921 - INFO - Logistic Regression Precision: 59.19%
+2024-11-27 15:35:43,921 - INFO - Logistic Regression Recall: 59.55%
+2024-11-27 15:35:43,922 - INFO - Logistic Regression F1 Score: 59.11%
+2024-11-27 15:35:43,922 - INFO - Logistic Regression Specificity: 95.57%
+2024-11-27 15:35:43,933 - INFO - Logistic Regression confusion matrix saved as CSV for MATLAB at 'Results/logistic_regression_confusion_matrix.csv'.
+2024-11-27 15:35:43,934 - INFO - ########################################################################################################################
+2024-11-27 15:35:43,950 - INFO - Model results saved to 'Results/metrics.csv'
