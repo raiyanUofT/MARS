@@ -1,0 +1,67 @@
+2024-11-28 20:04:07,516 - INFO - Starting fold 1/10
+2024-11-28 20:04:07,530 - INFO - Starting feature selection with Random Forest...
+2024-11-28 20:04:10,252 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'MeanY', 'CovXY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanZ', 'MeanIntensity', 'SkewX', 'StdDoppler', 'PCA_DirectionX', 'PCA_DirectionZ', 'PCA_DirectionY', 'TotalIntensity', 'CovXZ', 'StdIntensity']
+2024-11-28 20:04:10,258 - INFO - Starting hyperparameter tuning for Logistic Regression on fold 1
+2024-11-28 20:04:10,259 - INFO - Using RandomizedSearchCV for Logistic Regression
+2024-11-28 20:04:24,315 - INFO - Hyperparameter tuning for Logistic Regression completed in 14.06 seconds
+2024-11-28 20:04:24,316 - INFO - Logistic Regression Best Parameters: {'C': 13.203823484477883}
+2024-11-28 20:04:24,317 - INFO - Logistic Regression Best Cross-Validation Accuracy: 57.37%
+2024-11-28 20:04:25,335 - INFO - Training time for Logistic Regression: 1.0176 seconds
+2024-11-28 20:04:25,339 - INFO - Inference time for Logistic Regression: 0.0041 seconds
+2024-11-28 20:04:25,759 - INFO - ROC data saved for Logistic Regression at 'Results_radar_kfold/fold_1/logistic_regression_roc_data_fold_1.csv'
+2024-11-28 20:04:25,785 - INFO - Logistic Regression confusion matrix saved as CSV at 'Results_radar_kfold/fold_1/logistic_regression_confusion_matrix_fold_1.csv'.
+2024-11-28 20:04:25,786 - INFO - Logistic Regression Metrics for fold 1:
+2024-11-28 20:04:25,786 - INFO -   - Test Accuracy: 58.05%
+2024-11-28 20:04:25,786 - INFO -   - Precision: 56.80%
+2024-11-28 20:04:25,787 - INFO -   - Recall: 57.48%
+2024-11-28 20:04:25,787 - INFO -   - F1 Score: 56.86%
+2024-11-28 20:04:25,787 - INFO -   - Specificity: 95.34%
+2024-11-28 20:04:25,788 - INFO - Starting hyperparameter tuning for Random Forest on fold 1
+2024-11-28 20:04:25,788 - INFO - Using RandomizedSearchCV for Random Forest
+2024-11-28 20:07:08,327 - INFO - Hyperparameter tuning for Random Forest completed in 162.54 seconds
+2024-11-28 20:07:08,328 - INFO - Random Forest Best Parameters: {'n_estimators': 142}
+2024-11-28 20:07:08,328 - INFO - Random Forest Best Cross-Validation Accuracy: 71.82%
+2024-11-28 20:07:19,243 - INFO - Training time for Random Forest: 10.9147 seconds
+2024-11-28 20:07:19,566 - INFO - Inference time for Random Forest: 0.3220 seconds
+2024-11-28 20:07:20,108 - INFO - ROC data saved for Random Forest at 'Results_radar_kfold/fold_1/random_forest_roc_data_fold_1.csv'
+2024-11-28 20:07:20,133 - INFO - Random Forest confusion matrix saved as CSV at 'Results_radar_kfold/fold_1/random_forest_confusion_matrix_fold_1.csv'.
+2024-11-28 20:07:20,133 - INFO - Random Forest Metrics for fold 1:
+2024-11-28 20:07:20,133 - INFO -   - Test Accuracy: 73.40%
+2024-11-28 20:07:20,134 - INFO -   - Precision: 72.68%
+2024-11-28 20:07:20,134 - INFO -   - Recall: 72.98%
+2024-11-28 20:07:20,134 - INFO -   - F1 Score: 72.70%
+2024-11-28 20:07:20,134 - INFO -   - Specificity: 97.05%
+2024-11-28 20:07:20,135 - INFO - Starting fold 2/10
+2024-11-28 20:07:20,154 - INFO - Starting feature selection with Random Forest...
+2024-11-28 20:07:23,056 - INFO - Top 20 features selected: ['MinRadialDist', 'MeanX', 'MeanRadialDist', 'CorrXY', 'MaxRadialDist', 'CovXY', 'MeanY', 'StdRadialDist', 'StdX', 'RangeX', 'MeanIntensity', 'MeanZ', 'SkewX', 'PCA_DirectionZ', 'PCA_DirectionX', 'StdDoppler', 'PCA_DirectionY', 'TotalIntensity', 'EigVal1', 'StdZ']
+2024-11-28 20:07:23,065 - INFO - Starting hyperparameter tuning for Logistic Regression on fold 2
+2024-11-28 20:07:23,065 - INFO - Using RandomizedSearchCV for Logistic Regression
+2024-11-28 20:07:36,522 - INFO - Hyperparameter tuning for Logistic Regression completed in 13.46 seconds
+2024-11-28 20:07:36,523 - INFO - Logistic Regression Best Parameters: {'C': 84.24426408004217}
+2024-11-28 20:07:36,524 - INFO - Logistic Regression Best Cross-Validation Accuracy: 57.76%
+2024-11-28 20:07:37,562 - INFO - Training time for Logistic Regression: 1.0381 seconds
+2024-11-28 20:07:37,566 - INFO - Inference time for Logistic Regression: 0.0032 seconds
+2024-11-28 20:07:37,981 - INFO - ROC data saved for Logistic Regression at 'Results_radar_kfold/fold_2/logistic_regression_roc_data_fold_2.csv'
+2024-11-28 20:07:38,008 - INFO - Logistic Regression confusion matrix saved as CSV at 'Results_radar_kfold/fold_2/logistic_regression_confusion_matrix_fold_2.csv'.
+2024-11-28 20:07:38,008 - INFO - Logistic Regression Metrics for fold 2:
+2024-11-28 20:07:38,009 - INFO -   - Test Accuracy: 57.50%
+2024-11-28 20:07:38,009 - INFO -   - Precision: 56.41%
+2024-11-28 20:07:38,010 - INFO -   - Recall: 56.95%
+2024-11-28 20:07:38,010 - INFO -   - F1 Score: 56.43%
+2024-11-28 20:07:38,011 - INFO -   - Specificity: 95.28%
+2024-11-28 20:07:38,011 - INFO - Starting hyperparameter tuning for Random Forest on fold 2
+2024-11-28 20:07:38,011 - INFO - Using RandomizedSearchCV for Random Forest
+2024-11-28 20:10:25,209 - INFO - Hyperparameter tuning for Random Forest completed in 167.20 seconds
+2024-11-28 20:10:25,209 - INFO - Random Forest Best Parameters: {'n_estimators': 150}
+2024-11-28 20:10:25,210 - INFO - Random Forest Best Cross-Validation Accuracy: 72.16%
+2024-11-28 20:10:37,382 - INFO - Training time for Random Forest: 12.1722 seconds
+2024-11-28 20:10:37,674 - INFO - Inference time for Random Forest: 0.2907 seconds
+2024-11-28 20:10:38,175 - INFO - ROC data saved for Random Forest at 'Results_radar_kfold/fold_2/random_forest_roc_data_fold_2.csv'
+2024-11-28 20:10:38,200 - INFO - Random Forest confusion matrix saved as CSV at 'Results_radar_kfold/fold_2/random_forest_confusion_matrix_fold_2.csv'.
+2024-11-28 20:10:38,200 - INFO - Random Forest Metrics for fold 2:
+2024-11-28 20:10:38,201 - INFO -   - Test Accuracy: 73.20%
+2024-11-28 20:10:38,201 - INFO -   - Precision: 72.62%
+2024-11-28 20:10:38,202 - INFO -   - Recall: 72.82%
+2024-11-28 20:10:38,202 - INFO -   - F1 Score: 72.60%
+2024-11-28 20:10:38,202 - INFO -   - Specificity: 97.03%
+2024-11-28 20:10:38,210 - INFO - Model results saved to 'Results_radar_kfold/metrics_all_folds.csv'
